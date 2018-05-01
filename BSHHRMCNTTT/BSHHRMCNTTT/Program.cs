@@ -8,10 +8,13 @@ using DevExpress.LookAndFeel;
 using System.Threading;
 using System.Globalization;
 
+
 namespace BSHHRMCNTTT
 {
     static class Program
     {
+    
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -32,10 +35,17 @@ namespace BSHHRMCNTTT
             };
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
-            UserLookAndFeel.Default.SetSkinStyle("Dark Side");
+           
+            SkinManager.EnableMdiFormSkins();
+            //UserLookAndFeel.Default.SetSkinStyle("Summer");
+            UserLookAndFeel.Default.SkinName = "Caramel";
             DevExpress.XtraEditors.WindowsFormsSettings.DefaultFont = new System.Drawing.Font("Tahoma", 9);
-         
-            Application.Run(new SysForm.frmConnectDB());
+
+            //Application.Run(new SysForm.frmConnectDB());
+            SO.DBConnection.InforConnect("127.0.0.1,1433","BSHHRM","admin","admin");
+            SO.DBConnection.OpenConnection();
+            Application.Run(new GUI.BSH_ChucVu());
+           
         }
     }
 }

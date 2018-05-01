@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BSHHRMCNTTT.SysForm;
+using BSHHRMCNTTT.GUI;
 
 namespace BSHHRMCNTTT
 {
@@ -71,21 +72,38 @@ namespace BSHHRMCNTTT
            
         }
 
-        private void barButtonItemNSD_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            BSH_NSD frm = new BSH_NSD();
-        
-            ViewForm(frm);
-        }
+       
 
         private void frmmain_FormClosed(object sender, FormClosedEventArgs e)
         {
             
         }
 
-        private void barButtonItemDMK_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+    
+       
+
+        private void ItemMaNSD_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            BSH_NSD frm = new BSH_NSD();
+
+            ViewForm(frm);
+        }
+
+        private void ItemDMK_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             BSH_DMK frm = new BSH_DMK();
+            ViewForm(frm);
+        }
+
+        private void ItemHopdong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void ItemPB_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+            BSH_PBAN frm = new BSH_PBAN();
             ViewForm(frm);
         }
     }

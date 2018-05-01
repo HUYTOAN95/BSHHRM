@@ -69,7 +69,6 @@
             // 
             // grbcontrol
             // 
-            this.grbcontrol.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grbcontrol.Controls.Add(this.simpleButton5);
             this.grbcontrol.Controls.Add(this.simpleButton4);
             this.grbcontrol.Controls.Add(this.simpleButton3);
@@ -81,6 +80,7 @@
             this.grbcontrol.Size = new System.Drawing.Size(1042, 53);
             this.grbcontrol.TabIndex = 1;
             this.grbcontrol.Text = "groupControl1";
+            this.grbcontrol.Paint += new System.Windows.Forms.PaintEventHandler(this.grbcontrol_Paint);
             // 
             // simpleButton5
             // 
@@ -130,7 +130,6 @@
             // 
             this.gridview.AllowUserToAddRows = false;
             this.gridview.AllowUserToDeleteRows = false;
-            this.gridview.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gridview.BackgroundColor = System.Drawing.SystemColors.Control;
             this.gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridview.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -146,6 +145,7 @@
             this.gridview.Location = new System.Drawing.Point(12, 5);
             this.gridview.Name = "gridview";
             this.gridview.ReadOnly = true;
+            this.gridview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.gridview.Size = new System.Drawing.Size(1042, 305);
             this.gridview.TabIndex = 0;
             this.gridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridview_CellContentClick);
@@ -222,7 +222,6 @@
             // 
             // grbinfor
             // 
-            this.grbinfor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grbinfor.Controls.Add(this.label8);
             this.grbinfor.Controls.Add(this.t_email);
             this.grbinfor.Controls.Add(this.c_quyen);
@@ -378,7 +377,7 @@
             this.t_madv.TabIndex = 1;
             this.t_madv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.t_madv_KeyDown);
             // 
-            // frmUsers
+            // BSH_NSD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -387,7 +386,7 @@
             this.Controls.Add(this.grbcontrol);
             this.Controls.Add(this.gridview);
             this.KeyPreview = true;
-            this.Name = "frmUsers";
+            this.Name = "BSH_NSD";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh Sách Người Sử Dụng";
             this.Load += new System.EventHandler(this.frmUsers_Load);

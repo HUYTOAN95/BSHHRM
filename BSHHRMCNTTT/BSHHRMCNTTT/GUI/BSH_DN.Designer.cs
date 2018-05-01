@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmlogin));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.t_madv = new DevExpress.XtraEditors.TextEdit();
+            this.t_nsd = new DevExpress.XtraEditors.TextEdit();
+            this.t_pass = new DevExpress.XtraEditors.TextEdit();
             this.checksave = new DevExpress.XtraEditors.CheckEdit();
             this.linkfogetpass = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
@@ -38,15 +41,12 @@
             this.b_login = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.t_pass = new DevExpress.XtraEditors.TextEdit();
-            this.t_nsd = new DevExpress.XtraEditors.TextEdit();
-            this.t_madv = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checksave.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.t_pass.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.t_nsd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t_madv.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t_nsd.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t_pass.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checksave.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -67,6 +67,38 @@
             this.groupControl1.Size = new System.Drawing.Size(436, 277);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "BSH - Đăng Nhập ";
+            // 
+            // t_madv
+            // 
+            this.t_madv.EditValue = "000";
+            this.t_madv.Location = new System.Drawing.Point(149, 38);
+            this.t_madv.Name = "t_madv";
+            this.t_madv.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.t_madv.Properties.Appearance.Options.UseBackColor = true;
+            this.t_madv.Size = new System.Drawing.Size(187, 20);
+            this.t_madv.TabIndex = 13;
+            this.t_madv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.t_madv_KeyDown_2);
+            // 
+            // t_nsd
+            // 
+            this.t_nsd.EditValue = "ITTEST";
+            this.t_nsd.Location = new System.Drawing.Point(149, 73);
+            this.t_nsd.Name = "t_nsd";
+            this.t_nsd.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.t_nsd.Properties.Appearance.Options.UseBackColor = true;
+            this.t_nsd.Size = new System.Drawing.Size(187, 20);
+            this.t_nsd.TabIndex = 12;
+            // 
+            // t_pass
+            // 
+            this.t_pass.EditValue = "Q123456";
+            this.t_pass.Location = new System.Drawing.Point(149, 109);
+            this.t_pass.Name = "t_pass";
+            this.t_pass.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.t_pass.Properties.Appearance.Options.UseBackColor = true;
+            this.t_pass.Properties.UseSystemPasswordChar = true;
+            this.t_pass.Size = new System.Drawing.Size(187, 20);
+            this.t_pass.TabIndex = 11;
             // 
             // checksave
             // 
@@ -137,35 +169,6 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Tên Đăng Nhập";
             // 
-            // t_pass
-            // 
-            this.t_pass.Location = new System.Drawing.Point(149, 109);
-            this.t_pass.Name = "t_pass";
-            this.t_pass.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.t_pass.Properties.Appearance.Options.UseBackColor = true;
-            this.t_pass.Properties.UseSystemPasswordChar = true;
-            this.t_pass.Size = new System.Drawing.Size(187, 20);
-            this.t_pass.TabIndex = 11;
-            // 
-            // t_nsd
-            // 
-            this.t_nsd.Location = new System.Drawing.Point(149, 73);
-            this.t_nsd.Name = "t_nsd";
-            this.t_nsd.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.t_nsd.Properties.Appearance.Options.UseBackColor = true;
-            this.t_nsd.Size = new System.Drawing.Size(187, 20);
-            this.t_nsd.TabIndex = 12;
-            // 
-            // t_madv
-            // 
-            this.t_madv.Location = new System.Drawing.Point(149, 38);
-            this.t_madv.Name = "t_madv";
-            this.t_madv.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.t_madv.Properties.Appearance.Options.UseBackColor = true;
-            this.t_madv.Size = new System.Drawing.Size(187, 20);
-            this.t_madv.TabIndex = 13;
-            this.t_madv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.t_madv_KeyDown_2);
-            // 
             // frmlogin
             // 
             this.AcceptButton = this.b_login;
@@ -182,10 +185,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checksave.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.t_pass.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.t_nsd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.t_madv.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t_nsd.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t_pass.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checksave.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

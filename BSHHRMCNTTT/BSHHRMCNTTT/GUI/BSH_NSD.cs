@@ -10,15 +10,14 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.SqlClient;
 using BSHHRMCNTTT.SO;
-using BSHHRMCNTTT.BUS;
-using BSHHRMCNTTT.VO;
+
 
 namespace BSHHRMCNTTT.SysForm
 {
     public partial class BSH_NSD : DevExpress.XtraEditors.XtraForm
-    {
+    { private DBConnection db;
         public BSH_NSD()
-        {
+        {   db = new DBConnection();
             InitializeComponent();
         }
 
@@ -26,13 +25,126 @@ namespace BSHHRMCNTTT.SysForm
         {
             LoadData();
         }
+        // Xử lý đổ dữ liệu ra bảng  
+        #region[LoadData]
         private void LoadData()
         {
-            gridview.DataSource = NSDBUS.NSD_LKE();
+            try
+            {
+                string query = string.Format("SPBSH_NSD_LKE");
+                SqlParameter[] para = new SqlParameter [0];
+                gridview.DataSource = db.LKE(query);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
             d_ngayhh.Text = DateTime.Now.AddYears(3).ToString();
             
         }
+        #endregion
+        // Xử lý thêm bản ghi vào bảng 
+        #region
+       private void AddRecord()
+        {
+            try
+            {
+                string query = string.Format("SPBSH_NSD_NH");
+                SqlParameter[] para = {
+                new SqlParameter("@madv",t_madv.Text),
+                new SqlParameter("@nsd", t_nsd.Text),
+                new SqlParameter("@matkhau", t_matkhau.Text),
+                new SqlParameter("@manv", t_manv.Text),
+                new SqlParameter("@ngaydk", d_ngaydk.Text),
+                new SqlParameter("@ngayhh", d_ngayhh.Text),
+                new SqlParameter("@quyendn",c_quyen.Text),
+                new SqlParameter("@email", t_email.Text),
+                new SqlParameter("@StatementType", "ADD")
 
+            };
+                bool i = db.AddRecord(query, para);
+                if (i == true)
+                {
+                    XtraMessageBox.Show("Thêm mới bản ghi thành công !");
+                    LoadData();
+                }
+                else
+                    XtraMessageBox.Show("Thêm mới bản ghi lỗi !");
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+        // xóa bản ghi 
+        #region[DeleteRecord]
+        private void DeleteRecord()
+        {
+            string madv = gridview.CurrentRow.Cells[0].Value.ToString().Trim();
+            string nsd = gridview.CurrentRow.Cells[1].Value.ToString().Trim();
+            if (XtraMessageBox.Show("Bạn muốn xóa bản ghi  !", "Thông Báo !", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    string query = string.Format("SPBSH_NSD_XOA");
+                    SqlParameter[] para = {
+                new SqlParameter("@madv",madv),
+                new SqlParameter("@nsd",nsd),
+                };
+
+                    bool i = db.DeleteRecord(query, para);
+                    if (i == true)
+                    {
+                        XtraMessageBox.Show("Xóa bản ghi thành công !");
+                        LoadData();
+                    }
+                    else
+                        XtraMessageBox.Show("Xóa bản ghi lỗi !");
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+        #endregion
+        #region[UpdateRecord]
+        private void UpdateRecord()
+        {
+            string madv = gridview.CurrentRow.Cells[0].Value.ToString().Trim();
+            string nsd = gridview.CurrentRow.Cells[1].Value.ToString().Trim();
+            try
+            {
+                string query = string.Format("SPBSH_NSD_NH");
+                SqlParameter[] para = {
+                new SqlParameter("@madv",madv),
+                new SqlParameter("@nsd", nsd),
+                new SqlParameter("@matkhau", t_matkhau.Text),
+                new SqlParameter("@manv", t_manv.Text),
+                new SqlParameter("@ngaydk", d_ngaydk.Text),
+                new SqlParameter("@ngayhh", d_ngayhh.Text),
+                new SqlParameter("@quyendn",c_quyen.Text),
+                new SqlParameter("@email", t_email.Text),
+                new SqlParameter("@StatementType", "EDIT")
+
+            };
+                bool i = db.AddRecord(query, para);
+                if (i == true)
+                {
+                    XtraMessageBox.Show("Sửa đổi bản ghi thành công !");
+                    LoadData();
+                }
+                else
+                    XtraMessageBox.Show("Sửa đổi bản ghi lỗi !");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        #endregion
         private void gridview_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -58,52 +170,14 @@ namespace BSHHRMCNTTT.SysForm
                 t_manv.Focus();
                 return;
             }
-            NSDInfo obj = new NSDInfo();
-            obj.b_madv = t_madv.Text;
-            obj.b_nsd = t_nsd.Text;
-            obj.b_matkhau = t_matkhau.Text;
-            obj.b_manv = t_manv.Text;
-            obj.b_ngaydk = DateTime.Parse(d_ngaydk.Text);
-            obj.b_ngayhh = DateTime.Parse(d_ngayhh.Text);
-            obj.b_quyendn = c_quyen.Text;
-            obj.b_email = t_email.Text;
-            try
-            {
-                NSDBUS.NSD_NH(obj);
-                XtraMessageBox.Show("Thêm người dụng mới thành công");
-                LoadData();
-               
-            }
-            catch
-            {
-                MessageBox.Show(" Xảy ra sự cố !");
-              
-            }
+            AddRecord();
+           
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            string madv = gridview.CurrentRow.Cells[0].Value.ToString();
-            string nsd = gridview.CurrentRow.Cells[1].Value.ToString();
-            NSDInfo obj = new NSDInfo();
-            obj.b_madv = madv;
-            obj.b_nsd = nsd;
-            obj.b_matkhau = t_matkhau.Text;
-            obj.b_manv = t_manv.Text;
-            obj.b_ngaydk = DateTime.Parse(d_ngaydk.Text);
-            obj.b_ngayhh = DateTime.Parse(d_ngayhh.Text);
-            obj.b_quyendn = c_quyen.Text;
-            obj.b_email = t_email.Text;
-            try
-            {
-                NSDBUS.NSD_SUA(obj);
-                XtraMessageBox.Show("Cập nhật người sử dụng thành công");
-                LoadData();
-            }
-            catch
-            {
-                XtraMessageBox.Show("Lỗi cập nhật người sử dụng ");
-            }
+            UpdateRecord();
+
 
         }
 
@@ -121,21 +195,7 @@ namespace BSHHRMCNTTT.SysForm
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-            string madv = gridview.CurrentRow.Cells[0].Value.ToString();
-            string nsd = gridview.CurrentRow.Cells[1].Value.ToString();
-            NSDInfo obj = new NSDInfo();
-            obj.b_madv = madv;
-            obj.b_nsd = nsd;
-            //try
-            //{
-                NSDBUS.NSD_XOA(obj);
-                XtraMessageBox.Show("Xóa người sử dụng thành công");
-                LoadData();
-            //}
-            //catch
-            //{
-            //    XtraMessageBox.Show("Lỗi xóa người sử dụng !");
-            //}
+            DeleteRecord();
         }
 
         private void t_madv_KeyDown(object sender, KeyEventArgs e)
@@ -167,18 +227,12 @@ namespace BSHHRMCNTTT.SysForm
 
         private void simpleButton4_Click(object sender, EventArgs e)
         {
-            if(t_madv.Text != "")
-            {
-              
-                NSDBUS.NSD_LKE_ID("ma_dv",t_madv.Text);
-                
+           
+        }
 
-            }
-            else if(t_nsd.Text !="")
-            {
-                NSDBUS.NSD_LKE_ID("nsd", t_nsd.Text);
-            }
-            LoadData();
+        private void grbcontrol_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

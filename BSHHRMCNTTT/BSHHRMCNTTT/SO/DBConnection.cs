@@ -15,6 +15,7 @@ namespace BSHHRMCNTTT.SO
         public  static void  InforConnect(string ser, string db, string user, string pass)
         {
             string cnnstring = "Data Source=" + ser + ";Initial Catalog=" + db + ";User ID=" + user + ";Password=" + pass + ";Integrated Security=True";
+            //string cnnstring = "Data Source=127.0.0.1,1433;Initial Catalog=BSHHRM;User ID=admin;Password=admin;Integrated Security=True";
             cnn = new SqlConnection(cnnstring);
             
         }
@@ -52,8 +53,39 @@ namespace BSHHRMCNTTT.SO
             }
             return cnn;
         }
+        // xử lý liệt kê bản ghi 
         #region[LKE]
-        public DataTable LKE (string v_query , SqlParameter [] sqlprameter, CommandType Type)
+        public DataTable LKE (string v_nameproc)
+        {
+            SqlCommand cmd = new SqlCommand();
+            DataTable dt = new DataTable();
+            da = new SqlDataAdapter();
+            dt = null;
+            DataSet ds = new DataSet();
+            try
+            {
+                cmd.Connection = OpenConnection();
+                cmd.CommandText = v_nameproc;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.ExecuteNonQuery();
+                da.SelectCommand = cmd;
+                da.Fill(ds);
+                dt = ds.Tables[0];
+            }
+            catch (SqlException)
+            {
+                return null;
+            }
+            finally
+            {
+
+            }
+            return dt;
+        }
+        #endregion
+        // xử lý tìm kiếm bản ghi 
+        #region[TIMKIEM] 
+        public DataTable LKE_TIM(string v_query)
         {
             SqlCommand cmd = new SqlCommand();
             DataTable dt = new DataTable();
@@ -64,8 +96,7 @@ namespace BSHHRMCNTTT.SO
             {
                 cmd.Connection = OpenConnection();
                 cmd.CommandText = v_query;
-                cmd.CommandType = Type;
-                cmd.Parameters.AddRange(sqlprameter);
+                cmd.CommandType = CommandType.Text;
                 cmd.ExecuteNonQuery();
                 da.SelectCommand = cmd;
                 da.Fill(ds);
@@ -83,15 +114,15 @@ namespace BSHHRMCNTTT.SO
         }
         #endregion
         // Xử lý thêm bản ghi 
-        #region [NH]
-        public bool NH(string v_query, SqlParameter[] sqlparameter, CommandType Type)
+        #region [AddRecord]
+        public bool AddRecord(string v_nameprc, SqlParameter[] sqlparameter)
         {
             SqlCommand cmd = new SqlCommand();
             try
             {
                 cmd.Connection = OpenConnection();
-                cmd.CommandText = v_query;
-                cmd.CommandType = Type;
+                cmd.CommandText = v_nameprc;
+                cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddRange(sqlparameter);
                 da.InsertCommand = cmd;
                 cmd.ExecuteNonQuery();
@@ -107,20 +138,45 @@ namespace BSHHRMCNTTT.SO
         }
         #endregion
         //Xử lý sửa cập nhật bản ghi 
-        #region[SUA]
-        public bool SUA(string v_query, SqlParameter[] sqlparameter, CommandType Type)
+        #region[UpdateRecord]
+        public bool UpdateRecord(string v_nameprc, SqlParameter[] sqlparameter)
         {
             SqlCommand cmd = new SqlCommand();
             try
             {
                 cmd.Connection = OpenConnection();
-                cmd.CommandType = Type;
-                cmd.CommandText = v_query;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = v_nameprc;
                 cmd.Parameters.AddRange(sqlparameter);
                 da.UpdateCommand = cmd;
                 cmd.ExecuteNonQuery();
             }
             catch (SqlException )
+            {
+                return false;
+            }
+            finally
+            {
+            }
+            return true;
+        }
+
+        #endregion
+        // xủ lý xóa bản ghi 
+        #region[DeleteRecord]
+        public bool DeleteRecord (string v_nameproc, SqlParameter[] sqlparameter)
+        {
+            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                cmd.Connection = OpenConnection();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = v_nameproc;
+                cmd.Parameters.AddRange(sqlparameter);
+                da.DeleteCommand = cmd;
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException)
             {
                 return false;
             }

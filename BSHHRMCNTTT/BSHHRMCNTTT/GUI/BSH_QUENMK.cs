@@ -12,8 +12,7 @@ using System.Data.SqlClient;
 using BSHHRMCNTTT.SO;
 using System.Net.Mail;
 using System.Net;
-using BSHHRMCNTTT.BUS;
-using BSHHRMCNTTT.VO;
+
 
 namespace BSHHRMCNTTT.SysForm
 {
@@ -49,15 +48,7 @@ namespace BSHHRMCNTTT.SysForm
              
         }
         private void UpdateAccount()
-        {   string keycode = NSDBUS.NSD_LKE_ID(t_madv.Text, t_nsd.Text);
-            NSDInfo obj = new NSDInfo();
-            obj.b_madv = t_madv.Text;
-            obj.b_nsd = t_nsd.Text;
-            obj.b_matkhau = t_passnew.Text;
-            
-            int i = Int32.Parse(keycode) + 0001;
-            obj.KeyCode = i.ToString();
-            BUS.NSDBUS.NSD_DMK(obj);
+        {   
             
         }
 
@@ -102,42 +93,42 @@ namespace BSHHRMCNTTT.SysForm
         {
            
             
-            try
-            {
-                string KeyCode;
-                KeyCode = NSDBUS.NSD_LKE_ID(t_madv.Text, t_nsd.Text);
+            //try
+            //{
+            //    string KeyCode;
+            //    KeyCode = NSDBUS.NSD_LKE_ID(t_madv.Text, t_nsd.Text);
 
-                var fromAddress = new MailAddress("nguyenhuytoan113@gmail.com");
-                var fromPassword = "toankim1995";
-                var toAddress = new MailAddress(t_email.Text);
+            //    var fromAddress = new MailAddress("nguyenhuytoan113@gmail.com");
+            //    var fromPassword = "toankim1995";
+            //    var toAddress = new MailAddress(t_email.Text);
 
-                string subject = "Key lấy lại mật khẩu chỉ được cấp 1 lần ";
-                string body = KeyCode;
+            //    string subject = "Key lấy lại mật khẩu chỉ được cấp 1 lần ";
+            //    string body = KeyCode;
 
-                System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient
-                {
-                    Host = "smtp.gmail.com",
-                    Port = 587,
-                    EnableSsl = true,
-                    DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network,
-                    UseDefaultCredentials = false,
-                    Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+            //    System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient
+            //    {
+            //        Host = "smtp.gmail.com",
+            //        Port = 587,
+            //        EnableSsl = true,
+            //        DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network,
+            //        UseDefaultCredentials = false,
+            //        Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
 
-                };
+            //    };
 
-                using (var message = new MailMessage(fromAddress, toAddress)
-                {
-                    Subject = subject,
-                    Body = body
-                })
+            //    using (var message = new MailMessage(fromAddress, toAddress)
+            //    {
+            //        Subject = subject,
+            //        Body = body
+            //    })
 
 
-                    smtp.Send(message);
-            }
-            catch(Exception ex)
-            {
-                XtraMessageBox.Show("Error" + ex);
-            }
+            //        smtp.Send(message);
+            //}
+            //catch(Exception ex)
+            //{
+            //    XtraMessageBox.Show("Error" + ex);
+            //}
         }
         #endregion
     }

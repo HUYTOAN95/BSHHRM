@@ -64,17 +64,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BUS\NSDBUS.cs" />
-    <Compile Include="DAO\NSDDAO.cs" />
+    <Compile Include="GUI\BSH_ChucVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BSH_ChucVu.Designer.cs">
+      <DependentUpon>BSH_ChucVu.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\BSH_DMK.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\BSH_DMK.Designer.cs">
       <DependentUpon>BSH_DMK.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\BSH_PBAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BSH_PBAN.Designer.cs">
+      <DependentUpon>BSH_PBAN.cs</DependentUpon>
+    </Compile>
     <Compile Include="SO\MD5Encrypt.cs" />
-    <Compile Include="VO\ChucVuInfor.cs" />
-    <Compile Include="VO\NSDInfo.cs" />
     <Compile Include="SO\DBConnection.cs" />
     <Compile Include="BSH.cs">
       <SubType>Form</SubType>
@@ -114,9 +122,14 @@
     <Compile Include="GUI\BSH_NSD.Designer.cs">
       <DependentUpon>BSH_NSD.cs</DependentUpon>
     </Compile>
-    <Compile Include="VO\PhongBanInfo.cs" />
     <EmbeddedResource Include="BSH.resx">
       <DependentUpon>BSH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BSH_ChucVu.resx">
+      <DependentUpon>BSH_ChucVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BSH_PBAN.resx">
+      <DependentUpon>BSH_PBAN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -127,6 +140,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="GUI\BSH_DMK.resx">
       <DependentUpon>BSH_DMK.cs</DependentUpon>
@@ -160,7 +174,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Icon\Ampeross-Qetto-2-Settings.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Oxygen-Icons.org-Oxygen-Apps-preferences-desktop-user-password.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

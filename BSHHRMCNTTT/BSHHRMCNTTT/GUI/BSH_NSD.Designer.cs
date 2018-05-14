@@ -77,7 +77,7 @@
             this.grbcontrol.Location = new System.Drawing.Point(12, 426);
             this.grbcontrol.Name = "grbcontrol";
             this.grbcontrol.ShowCaption = false;
-            this.grbcontrol.Size = new System.Drawing.Size(1042, 53);
+            this.grbcontrol.Size = new System.Drawing.Size(1027, 53);
             this.grbcontrol.TabIndex = 1;
             this.grbcontrol.Text = "groupControl1";
             this.grbcontrol.Paint += new System.Windows.Forms.PaintEventHandler(this.grbcontrol_Paint);
@@ -130,6 +130,8 @@
             // 
             this.gridview.AllowUserToAddRows = false;
             this.gridview.AllowUserToDeleteRows = false;
+            this.gridview.AllowUserToResizeColumns = false;
+            this.gridview.AllowUserToResizeRows = false;
             this.gridview.BackgroundColor = System.Drawing.SystemColors.Control;
             this.gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridview.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -142,11 +144,12 @@
             this.thoigiandn,
             this.quyendn,
             this.email});
+            this.gridview.EnableHeadersVisualStyles = false;
             this.gridview.Location = new System.Drawing.Point(12, 5);
             this.gridview.Name = "gridview";
             this.gridview.ReadOnly = true;
             this.gridview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.gridview.Size = new System.Drawing.Size(1042, 305);
+            this.gridview.Size = new System.Drawing.Size(1027, 305);
             this.gridview.TabIndex = 0;
             this.gridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridview_CellContentClick);
             this.gridview.Click += new System.EventHandler(this.gridview_Click);
@@ -240,7 +243,7 @@
             this.grbinfor.Controls.Add(this.t_madv);
             this.grbinfor.Location = new System.Drawing.Point(12, 316);
             this.grbinfor.Name = "grbinfor";
-            this.grbinfor.Size = new System.Drawing.Size(1042, 92);
+            this.grbinfor.Size = new System.Drawing.Size(1027, 92);
             this.grbinfor.TabIndex = 2;
             this.grbinfor.TabStop = false;
             this.grbinfor.Text = "Thông tin";
@@ -248,7 +251,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(556, 51);
+            this.label8.Location = new System.Drawing.Point(540, 54);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(31, 13);
             this.label8.TabIndex = 17;
@@ -256,7 +259,7 @@
             // 
             // t_email
             // 
-            this.t_email.Location = new System.Drawing.Point(632, 46);
+            this.t_email.Location = new System.Drawing.Point(616, 49);
             this.t_email.Name = "t_email";
             this.t_email.Size = new System.Drawing.Size(193, 21);
             this.t_email.TabIndex = 16;
@@ -264,7 +267,7 @@
             // c_quyen
             // 
             this.c_quyen.FormattingEnabled = true;
-            this.c_quyen.Location = new System.Drawing.Point(632, 19);
+            this.c_quyen.Location = new System.Drawing.Point(616, 22);
             this.c_quyen.Name = "c_quyen";
             this.c_quyen.Size = new System.Drawing.Size(121, 21);
             this.c_quyen.TabIndex = 15;
@@ -272,7 +275,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(533, 26);
+            this.label7.Location = new System.Drawing.Point(517, 29);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 13);
             this.label7.TabIndex = 14;
@@ -281,7 +284,7 @@
             // d_ngayhh
             // 
             this.d_ngayhh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.d_ngayhh.Location = new System.Drawing.Point(922, 46);
+            this.d_ngayhh.Location = new System.Drawing.Point(906, 49);
             this.d_ngayhh.Name = "d_ngayhh";
             this.d_ngayhh.Size = new System.Drawing.Size(105, 21);
             this.d_ngayhh.TabIndex = 13;
@@ -289,7 +292,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(845, 51);
+            this.label6.Location = new System.Drawing.Point(829, 54);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 13);
             this.label6.TabIndex = 12;
@@ -298,7 +301,7 @@
             // d_ngaydk
             // 
             this.d_ngaydk.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.d_ngaydk.Location = new System.Drawing.Point(922, 19);
+            this.d_ngaydk.Location = new System.Drawing.Point(906, 22);
             this.d_ngaydk.Name = "d_ngaydk";
             this.d_ngaydk.Size = new System.Drawing.Size(105, 21);
             this.d_ngaydk.TabIndex = 11;
@@ -306,7 +309,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(845, 24);
+            this.label5.Location = new System.Drawing.Point(829, 27);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 13);
             this.label5.TabIndex = 10;
@@ -381,7 +384,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 491);
+            this.ClientSize = new System.Drawing.Size(1042, 491);
             this.Controls.Add(this.grbinfor);
             this.Controls.Add(this.grbcontrol);
             this.Controls.Add(this.gridview);

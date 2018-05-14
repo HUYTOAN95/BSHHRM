@@ -44,16 +44,17 @@ namespace BSHHRMCNTTT.SysForm
         }
         #endregion
         // Xử lý thêm bản ghi vào bảng 
-        #region
+        #region[AddRecord]
        private void AddRecord()
         {
+            string pass = MD5Encrypt.Encrypt(t_matkhau.Text);
             try
             {
                 string query = string.Format("SPBSH_NSD_NH");
                 SqlParameter[] para = {
                 new SqlParameter("@madv",t_madv.Text),
                 new SqlParameter("@nsd", t_nsd.Text),
-                new SqlParameter("@matkhau", t_matkhau.Text),
+                new SqlParameter("@matkhau", pass),
                 new SqlParameter("@manv", t_manv.Text),
                 new SqlParameter("@ngaydk", d_ngaydk.Text),
                 new SqlParameter("@ngayhh", d_ngayhh.Text),
@@ -112,6 +113,7 @@ namespace BSHHRMCNTTT.SysForm
         #region[UpdateRecord]
         private void UpdateRecord()
         {
+            string pass = MD5Encrypt.Encrypt(t_matkhau.Text);
             string madv = gridview.CurrentRow.Cells[0].Value.ToString().Trim();
             string nsd = gridview.CurrentRow.Cells[1].Value.ToString().Trim();
             try
@@ -120,7 +122,7 @@ namespace BSHHRMCNTTT.SysForm
                 SqlParameter[] para = {
                 new SqlParameter("@madv",madv),
                 new SqlParameter("@nsd", nsd),
-                new SqlParameter("@matkhau", t_matkhau.Text),
+                new SqlParameter("@matkhau",pass),
                 new SqlParameter("@manv", t_manv.Text),
                 new SqlParameter("@ngaydk", d_ngaydk.Text),
                 new SqlParameter("@ngayhh", d_ngayhh.Text),

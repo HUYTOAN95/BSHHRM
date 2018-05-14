@@ -36,6 +36,10 @@
     <StartupObject>BSHHRMCNTTT.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.BonusSkins.v16.1" />
     <Reference Include="DevExpress.Data.v16.1" />
     <Reference Include="DevExpress.Printing.v16.1.Core" />
@@ -47,6 +51,7 @@
     <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraNavBar.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Portable.DataAnnotations, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Portable.DataAnnotations.1.0.0\lib\net45\Portable.DataAnnotations.dll</HintPath>
       <Private>True</Private>
@@ -54,6 +59,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -70,17 +77,72 @@
     <Compile Include="GUI\BSH_ChucVu.Designer.cs">
       <DependentUpon>BSH_ChucVu.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\BSH_DanToc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BSH_DanToc.Designer.cs">
+      <DependentUpon>BSH_DanToc.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\BSH_DMK.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\BSH_DMK.Designer.cs">
       <DependentUpon>BSH_DMK.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\BSH_CheDo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BSH_CheDo.Designer.cs">
+      <DependentUpon>BSH_CheDo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BSH_KhenThuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BSH_KhenThuong.Designer.cs">
+      <DependentUpon>BSH_KhenThuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BSH_KyLuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BSH_KyLuat.Designer.cs">
+      <DependentUpon>BSH_KyLuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BSH_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BSH_NhanVien.Designer.cs">
+      <DependentUpon>BSH_NhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\BSH_PBAN.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\BSH_PBAN.Designer.cs">
       <DependentUpon>BSH_PBAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BSH_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BSH_Report.Designer.cs">
+      <DependentUpon>BSH_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BSH_TonGiao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BSH_TonGiao.Designer.cs">
+      <DependentUpon>BSH_TonGiao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BSH_TrinhDo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BSH_TrinhDo.Designer.cs">
+      <DependentUpon>BSH_TrinhDo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PhongBan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhongBan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="SO\MD5Encrypt.cs" />
     <Compile Include="SO\DBConnection.cs" />
@@ -128,8 +190,32 @@
     <EmbeddedResource Include="GUI\BSH_ChucVu.resx">
       <DependentUpon>BSH_ChucVu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BSH_CheDo.resx">
+      <DependentUpon>BSH_CheDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BSH_DanToc.resx">
+      <DependentUpon>BSH_DanToc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BSH_KhenThuong.resx">
+      <DependentUpon>BSH_KhenThuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BSH_KyLuat.resx">
+      <DependentUpon>BSH_KyLuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BSH_NhanVien.resx">
+      <DependentUpon>BSH_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\BSH_PBAN.resx">
       <DependentUpon>BSH_PBAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BSH_Report.resx">
+      <DependentUpon>BSH_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BSH_TonGiao.resx">
+      <DependentUpon>BSH_TonGiao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BSH_TrinhDo.resx">
+      <DependentUpon>BSH_TrinhDo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -160,6 +246,11 @@
     <EmbeddedResource Include="GUI\BSH_NSD.resx">
       <DependentUpon>BSH_NSD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PhongBan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PhongBan.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
@@ -179,6 +270,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icon\Oxygen-Icons.org-Oxygen-Apps-preferences-desktop-user-password.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -41,6 +41,9 @@ namespace BSHHRMCNTTT.GUI
                 string query = string.Format("SPBSH_CVU_LKE");
                 SqlParameter[] para = new SqlParameter[0];
                 GridView.DataSource = db.LKE(query);
+                //cbbdata.DataSource = db.LKE(query);
+                //cbbdata.DisplayMember = "macv";
+                //cbbdata.ValueMember = "macv";
             }
             catch (Exception ex)
             {
@@ -65,7 +68,7 @@ namespace BSHHRMCNTTT.GUI
                 SqlParameter[] para = {
                 new SqlParameter("@macv",txtma.Text),
                 new SqlParameter("@tencv", txtten.Text),
-                
+
                 new SqlParameter("@StatementType", "ADD")
 
             };
@@ -150,6 +153,9 @@ namespace BSHHRMCNTTT.GUI
         }
 
         #endregion
+        // lựa chon dư liệu theo dòng 
+        public string Selected { get { return GridView.CurrentRow.Cells[0].Value.ToString(); } }
+        public string Selected2 { get { return GridView.CurrentRow.Cells[1].Value.ToString(); } }
 
         private void BSH_ChucVu_Load(object sender, EventArgs e)
         {
@@ -187,6 +193,30 @@ namespace BSHHRMCNTTT.GUI
         {
             txtma.Text = GridView.CurrentRow.Cells[0].Value.ToString().Trim();
             txtten.Text = GridView.CurrentRow.Cells[1].Value.ToString().Trim();
+        }
+
+        private void txtma_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.F2:
+                    ClearData();
+                    break;
+            }
+        }
+
+        private void BSH_ChucVu_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.F2:
+                    ClearData();
+                    break;
+                case Keys.Escape:
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                    break;
+            }
         }
     }
 }

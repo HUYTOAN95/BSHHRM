@@ -49,14 +49,14 @@
             this.grbnsd.Controls.Add(this.b_choose);
             this.grbnsd.Location = new System.Drawing.Point(12, 12);
             this.grbnsd.Name = "grbnsd";
-            this.grbnsd.Size = new System.Drawing.Size(463, 304);
+            this.grbnsd.Size = new System.Drawing.Size(454, 292);
             this.grbnsd.TabIndex = 0;
             this.grbnsd.TabStop = false;
             this.grbnsd.Text = "NSD";
             // 
             // t_fillter
             // 
-            this.t_fillter.Location = new System.Drawing.Point(296, 21);
+            this.t_fillter.Location = new System.Drawing.Point(294, 21);
             this.t_fillter.Name = "t_fillter";
             this.t_fillter.Size = new System.Drawing.Size(150, 21);
             this.t_fillter.TabIndex = 4;
@@ -80,10 +80,11 @@
             // 
             // gridview
             // 
+            this.gridview.BackgroundColor = System.Drawing.SystemColors.Control;
             this.gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridview.Location = new System.Drawing.Point(6, 54);
             this.gridview.Name = "gridview";
-            this.gridview.Size = new System.Drawing.Size(451, 244);
+            this.gridview.Size = new System.Drawing.Size(440, 222);
             this.gridview.TabIndex = 0;
             // 
             // b_choose
@@ -98,7 +99,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(202, 323);
+            this.label1.Location = new System.Drawing.Point(202, 312);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 13);
             this.label1.TabIndex = 1;
@@ -109,7 +110,7 @@
             this.AcceptButton = this.b_choose;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 342);
+            this.ClientSize = new System.Drawing.Size(479, 335);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grbnsd);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

@@ -174,5 +174,27 @@ namespace BSHHRMCNTTT.GUI
         {
             DeleteRecord();
         }
+
+        private void btnin_Click(object sender, EventArgs e)
+        {
+            BSH_Report frm = new BSH_Report("PhongBan.rpt", "SELECT * FROM PhongBan");
+            frm.ShowDialog();
+        }
+        // lựa chon dư liệu theo dòng 
+        public string Selected { get { return GridView.CurrentRow.Cells[0].Value.ToString(); } }
+        public string Selected2 { get { return GridView.CurrentRow.Cells[1].Value.ToString(); } }
+        private void BSH_PBAN_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.F2:
+                    ClearData();
+                    break;
+                case Keys.Escape:
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                    break;
+            }
+        }
     }
 }

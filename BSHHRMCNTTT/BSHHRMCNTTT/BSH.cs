@@ -86,7 +86,8 @@ namespace BSHHRMCNTTT
         {
             BSH_NSD frm = new BSH_NSD();
 
-            ViewForm(frm);
+            //ViewForm(frm);
+            frm.ShowDialog();
         }
 
         private void ItemDMK_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -104,7 +105,55 @@ namespace BSHHRMCNTTT
         {
 
             BSH_PBAN frm = new BSH_PBAN();
-            ViewForm(frm);
+            //ViewForm(frm);
+            frm.ShowDialog();
+        }
+
+        private void ItemCV_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            BSH_ChucVu frm = new BSH_ChucVu();
+            //ViewForm(frm);
+            frm.ShowDialog();
+        }
+
+        private void ItemHSNV_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            BSH_NhanVien frm = new BSH_NhanVien();
+            frm.ShowDialog();
+        }
+
+        
+
+        private void barButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            BSH_CheDo frm = new BSH_CheDo();
+            frm.ShowDialog();
+        }
+
+        private void ItemTrinhDo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            BSH_TrinhDo frm = new BSH_TrinhDo();
+            frm.ShowDialog();
+        }
+
+        private void ItemKhenThuong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            BSH_KhenThuong frm = new BSH_KhenThuong();
+            frm.ShowDialog();
+        }
+
+        private void ItemKyLuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            BSH_KyLuat frm = new BSH_KyLuat();
+            frm.ShowDialog();
+        }
+
+        private void ItemDangXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Close();
+            frmlogin frm = new frmlogin();
+            frm.ShowDialog();
+            
         }
     }
 }

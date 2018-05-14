@@ -44,11 +44,12 @@ namespace BSHHRMCNTTT.SysForm
                 t_nsd.Focus();
                 return;
             }
-            SqlCommand cmd = new SqlCommand("spbshlogin", DBConnection.cnn);
+            string pass = MD5Encrypt.Encrypt(t_pass.Text);
+            SqlCommand cmd = new SqlCommand("SPBSH_NSD_DN", DBConnection.cnn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@ma_dv", t_madv.Text);
             cmd.Parameters.AddWithValue("@nsd", t_nsd.Text);
-            cmd.Parameters.AddWithValue("@matkhau", t_pass.Text);
+            cmd.Parameters.AddWithValue("@matkhau",pass);
             SqlDataReader dr = cmd.ExecuteReader();
             while(dr.Read())
             {
@@ -102,9 +103,9 @@ namespace BSHHRMCNTTT.SysForm
                     {
                         frmlselect frm = new frmlselect();
                         frm.caption = "Danh sách NSD";
-                        frm.query = "SELECT * FROM View_bsh_nsd";
-                        frm.cbbitem.Items.Add("Người Sử Dụng");
-                        frm.cbbitem.Items.Add("Mã Đơn Vị");
+                        frm.query = "SELECT ma_dv as'Mã đơn vị',nsd as'NSD',quyendn as'Quyền',thoigiandn as'Thời gian ĐN gần nhất' FROM NSD";
+                        frm.cbbitem.Items.Add("nsd");
+                        frm.cbbitem.Items.Add("ma_dv");
 
                         using (frm)
                         {

@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BSH));
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             this.xtraTabbedMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.itemstart = new DevExpress.XtraBars.BarHeaderItem();
@@ -134,6 +134,7 @@
             this.ItemDangXuat.Id = 2;
             this.ItemDangXuat.ImageUri.Uri = "Forward";
             this.ItemDangXuat.Name = "ItemDangXuat";
+            this.ItemDangXuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ItemDangXuat_ItemClick);
             // 
             // ItemDMK
             // 
@@ -157,9 +158,9 @@
             // 
             // 
             // 
-            galleryItemGroup1.Caption = "Windows";
+            galleryItemGroup2.Caption = "Windows";
             this.skinRibbonGalleryBarItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup1});
+            galleryItemGroup2});
             this.skinRibbonGalleryBarItem1.Id = 5;
             this.skinRibbonGalleryBarItem1.Name = "skinRibbonGalleryBarItem1";
             // 
@@ -188,6 +189,7 @@
             this.ItemCV.Id = 10;
             this.ItemCV.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("ItemCV.LargeGlyph")));
             this.ItemCV.Name = "ItemCV";
+            this.ItemCV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ItemCV_ItemClick);
             // 
             // ItemTrinhDo
             // 
@@ -196,6 +198,7 @@
             this.ItemTrinhDo.Id = 11;
             this.ItemTrinhDo.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("ItemTrinhDo.LargeGlyph")));
             this.ItemTrinhDo.Name = "ItemTrinhDo";
+            this.ItemTrinhDo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ItemTrinhDo_ItemClick);
             // 
             // ItemHopdong
             // 
@@ -213,6 +216,7 @@
             this.ItemKhenThuong.Id = 13;
             this.ItemKhenThuong.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("ItemKhenThuong.LargeGlyph")));
             this.ItemKhenThuong.Name = "ItemKhenThuong";
+            this.ItemKhenThuong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ItemKhenThuong_ItemClick);
             // 
             // ItemKyLuat
             // 
@@ -221,6 +225,7 @@
             this.ItemKyLuat.Id = 14;
             this.ItemKyLuat.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("ItemKyLuat.LargeGlyph")));
             this.ItemKyLuat.Name = "ItemKyLuat";
+            this.ItemKyLuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ItemKyLuat_ItemClick);
             // 
             // ItemHSNV
             // 
@@ -229,6 +234,7 @@
             this.ItemHSNV.Id = 15;
             this.ItemHSNV.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("ItemHSNV.LargeGlyph")));
             this.ItemHSNV.Name = "ItemHSNV";
+            this.ItemHSNV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ItemHSNV_ItemClick);
             // 
             // ItemCapNhat
             // 
@@ -240,11 +246,12 @@
             // 
             // barButtonItem1
             // 
-            this.barButtonItem1.Caption = "Bảo Hiểm";
+            this.barButtonItem1.Caption = "Chế Độ";
             this.barButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.Glyph")));
             this.barButtonItem1.Id = 18;
             this.barButtonItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.LargeGlyph")));
             this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick_1);
             // 
             // ItemHSL
             // 

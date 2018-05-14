@@ -62,9 +62,9 @@
             this.groupControl1.Controls.Add(this.b_login);
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Location = new System.Drawing.Point(21, 22);
+            this.groupControl1.Location = new System.Drawing.Point(13, 9);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(436, 277);
+            this.groupControl1.Size = new System.Drawing.Size(399, 277);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "BSH - Đăng Nhập ";
             // 
@@ -175,7 +175,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.b_cancel;
-            this.ClientSize = new System.Drawing.Size(477, 311);
+            this.ClientSize = new System.Drawing.Size(431, 297);
             this.Controls.Add(this.groupControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;

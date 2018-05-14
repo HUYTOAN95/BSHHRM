@@ -29,8 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConnectDB));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.t_server = new System.Windows.Forms.TextBox();
+            this.t_dbname = new System.Windows.Forms.TextBox();
+            this.t_userlogin = new System.Windows.Forms.TextBox();
             this.t_password = new System.Windows.Forms.TextBox();
             this.checkrememberpass = new DevExpress.XtraEditors.CheckEdit();
             this.b_disconnect = new DevExpress.XtraEditors.SimpleButton();
@@ -42,9 +46,6 @@
             this.ltime = new DevExpress.XtraEditors.LabelControl();
             this.timerstart = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.t_userlogin = new System.Windows.Forms.TextBox();
-            this.t_dbname = new System.Windows.Forms.TextBox();
-            this.t_server = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkrememberpass.Properties)).BeginInit();
@@ -52,7 +53,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(81, 57);
+            this.labelControl1.Location = new System.Drawing.Point(22, 35);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(62, 13);
             this.labelControl1.TabIndex = 0;
@@ -73,15 +74,36 @@
             this.groupControl1.Controls.Add(this.labelControl3);
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Location = new System.Drawing.Point(28, 36);
+            this.groupControl1.Location = new System.Drawing.Point(12, 31);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(500, 279);
+            this.groupControl1.Size = new System.Drawing.Size(411, 250);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Thông tin";
             // 
+            // t_server
+            // 
+            this.t_server.Location = new System.Drawing.Point(124, 32);
+            this.t_server.Name = "t_server";
+            this.t_server.Size = new System.Drawing.Size(218, 21);
+            this.t_server.TabIndex = 14;
+            // 
+            // t_dbname
+            // 
+            this.t_dbname.Location = new System.Drawing.Point(124, 72);
+            this.t_dbname.Name = "t_dbname";
+            this.t_dbname.Size = new System.Drawing.Size(218, 21);
+            this.t_dbname.TabIndex = 13;
+            // 
+            // t_userlogin
+            // 
+            this.t_userlogin.Location = new System.Drawing.Point(124, 105);
+            this.t_userlogin.Name = "t_userlogin";
+            this.t_userlogin.Size = new System.Drawing.Size(218, 21);
+            this.t_userlogin.TabIndex = 12;
+            // 
             // t_password
             // 
-            this.t_password.Location = new System.Drawing.Point(183, 162);
+            this.t_password.Location = new System.Drawing.Point(124, 140);
             this.t_password.Name = "t_password";
             this.t_password.Size = new System.Drawing.Size(218, 21);
             this.t_password.TabIndex = 11;
@@ -89,7 +111,7 @@
             // 
             // checkrememberpass
             // 
-            this.checkrememberpass.Location = new System.Drawing.Point(181, 199);
+            this.checkrememberpass.Location = new System.Drawing.Point(122, 177);
             this.checkrememberpass.Name = "checkrememberpass";
             this.checkrememberpass.Properties.Caption = "Nhớ thông tin tài khoản đăng nhập";
             this.checkrememberpass.Size = new System.Drawing.Size(220, 19);
@@ -99,7 +121,7 @@
             // b_disconnect
             // 
             this.b_disconnect.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.b_disconnect.Location = new System.Drawing.Point(265, 236);
+            this.b_disconnect.Location = new System.Drawing.Point(206, 214);
             this.b_disconnect.Name = "b_disconnect";
             this.b_disconnect.Size = new System.Drawing.Size(75, 23);
             this.b_disconnect.TabIndex = 9;
@@ -108,7 +130,7 @@
             // 
             // b_connect
             // 
-            this.b_connect.Location = new System.Drawing.Point(171, 236);
+            this.b_connect.Location = new System.Drawing.Point(112, 214);
             this.b_connect.Name = "b_connect";
             this.b_connect.Size = new System.Drawing.Size(75, 23);
             this.b_connect.TabIndex = 8;
@@ -117,7 +139,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(80, 170);
+            this.labelControl4.Location = new System.Drawing.Point(21, 148);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(46, 13);
             this.labelControl4.TabIndex = 6;
@@ -125,7 +147,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(80, 130);
+            this.labelControl3.Location = new System.Drawing.Point(21, 108);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(50, 13);
             this.labelControl3.TabIndex = 4;
@@ -133,7 +155,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(81, 94);
+            this.labelControl2.Location = new System.Drawing.Point(22, 72);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(43, 13);
             this.labelControl2.TabIndex = 2;
@@ -141,7 +163,7 @@
             // 
             // ldate
             // 
-            this.ldate.Location = new System.Drawing.Point(460, 17);
+            this.ldate.Location = new System.Drawing.Point(347, 12);
             this.ldate.Name = "ldate";
             this.ldate.Size = new System.Drawing.Size(23, 13);
             this.ldate.TabIndex = 2;
@@ -149,7 +171,7 @@
             // 
             // ltime
             // 
-            this.ltime.Location = new System.Drawing.Point(407, 17);
+            this.ltime.Location = new System.Drawing.Point(282, 12);
             this.ltime.Name = "ltime";
             this.ltime.Size = new System.Drawing.Size(22, 13);
             this.ltime.TabIndex = 3;
@@ -162,48 +184,28 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(225, 330);
+            this.label1.Location = new System.Drawing.Point(169, 295);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "BSHHRM-2018";
             // 
-            // t_userlogin
-            // 
-            this.t_userlogin.Location = new System.Drawing.Point(183, 127);
-            this.t_userlogin.Name = "t_userlogin";
-            this.t_userlogin.Size = new System.Drawing.Size(218, 21);
-            this.t_userlogin.TabIndex = 12;
-            // 
-            // t_dbname
-            // 
-            this.t_dbname.Location = new System.Drawing.Point(183, 94);
-            this.t_dbname.Name = "t_dbname";
-            this.t_dbname.Size = new System.Drawing.Size(218, 21);
-            this.t_dbname.TabIndex = 13;
-            // 
-            // t_server
-            // 
-            this.t_server.Location = new System.Drawing.Point(183, 54);
-            this.t_server.Name = "t_server";
-            this.t_server.Size = new System.Drawing.Size(218, 21);
-            this.t_server.TabIndex = 14;
-            // 
             // frmConnectDB
             // 
             this.AcceptButton = this.b_connect;
-            this.Appearance.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.Appearance.BackColor = System.Drawing.SystemColors.Control;
             this.Appearance.ForeColor = System.Drawing.Color.Transparent;
             this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseForeColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.b_disconnect;
-            this.ClientSize = new System.Drawing.Size(552, 355);
+            this.ClientSize = new System.Drawing.Size(435, 320);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ltime);
             this.Controls.Add(this.ldate);
             this.Controls.Add(this.groupControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.InactiveGlowColor = System.Drawing.Color.Transparent;
             this.KeyPreview = true;
             this.Name = "frmConnectDB";

@@ -155,5 +155,18 @@ namespace BSHHRMCNTTT
             frm.ShowDialog();
             
         }
+
+        private void ItemDantoc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            BSH_DanToc frm = new BSH_DanToc();
+            frm.ShowDialog();
+     
+        }
+
+        private void itemtongiao_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            BSH_TonGiao frm = new BSH_TonGiao();
+            frm.ShowDialog();
+        }
     }
 }

@@ -71,6 +71,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\BSH_BacLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BSH_BacLuong.Designer.cs">
+      <DependentUpon>BSH_BacLuong.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\BSH_ChucVu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +192,9 @@
     </Compile>
     <EmbeddedResource Include="BSH.resx">
       <DependentUpon>BSH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BSH_BacLuong.resx">
+      <DependentUpon>BSH_BacLuong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\BSH_ChucVu.resx">
       <DependentUpon>BSH_ChucVu.cs</DependentUpon>

@@ -41,10 +41,10 @@ namespace BSHHRMCNTTT
             UserLookAndFeel.Default.SkinName = "Caramel";
             DevExpress.XtraEditors.WindowsFormsSettings.DefaultFont = new System.Drawing.Font("Tahoma", 9);
 
-            //Application.Run(new SysForm.frmConnectDB());
-            SO.DBConnection.InforConnect("127.0.0.1,1433", "BSHHRM", "admin", "admin");
-            SO.DBConnection.OpenConnection();
-            Application.Run(new GUI.BSH_NhanVien());
+            Application.Run(new SysForm.frmConnectDB());
+            //SO.DBConnection.InforConnect("127.0.0.1,1433", "BSHHRM", "admin", "admin");
+            //SO.DBConnection.OpenConnection();
+            //Application.Run(new SysForm.BSH_NSD());
 
         }
     }

@@ -8,15 +8,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using System.Data.SqlClient;
 using BSHHRMCNTTT.SO;
+using System.Data.SqlClient;
 
 namespace BSHHRMCNTTT.GUI
 {
-    public partial class BSH_CheDo : DevExpress.XtraEditors.XtraForm
+    public partial class BSH_BacLuong : DevExpress.XtraEditors.XtraForm
     {
         private DBConnection db;
-        public BSH_CheDo()
+        public BSH_BacLuong()
         {
             db = new DBConnection();
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace BSHHRMCNTTT.GUI
         {
             try
             {
-                string query = string.Format("SPBSH_CDO_LKE");
+                string query = string.Format("SPBSH_BLU_LKE");
                 SqlParameter[] para = new SqlParameter[0];
                 GridView.DataSource = db.LKE(query);
             }
@@ -42,26 +42,26 @@ namespace BSHHRMCNTTT.GUI
         // Xử lý thêm bản ghi vào bảng 
         #region[AddRecord]
         private void AddRecord()
-        {
+        {  
             try
             {
-                string query = string.Format("SPBSH_CDO_NH");
+                string query = string.Format("SPBSH_BLU_NH");
                 SqlParameter[] para = {
-                new SqlParameter("@macd",DBNull.Value),
-                new SqlParameter("@tencd", txtten.Text),
-                new SqlParameter("@sotienpc", txtsotien.Text),
+                new SqlParameter("@ma",txtma.Text),
+                new SqlParameter("@bac",txtbac.Text),
+                new SqlParameter("@hsl", txthsl.Text),
                 new SqlParameter("@StatementType", "ADD")
 
             };
-                bool i = db.AddRecord(query, para);
-                if (i == true)
-                {
-                    XtraMessageBox.Show("Thêm mới bản ghi thành công !");
-                    LoadData();
-                    ClearData();
-                }
-                else
-                    XtraMessageBox.Show("Thêm mới bản ghi lỗi !");
+            bool i = db.AddRecord(query, para);
+            if (i == true)
+            {
+                XtraMessageBox.Show("Thêm mới bản ghi thành công !");
+                LoadData();
+                ClearData();
+            }
+            else
+                XtraMessageBox.Show("Thêm mới bản ghi lỗi !");
             }
             catch (Exception ex)
             {
@@ -74,14 +74,15 @@ namespace BSHHRMCNTTT.GUI
         private void DeleteRecord()
         {
             string ma = GridView.CurrentRow.Cells[0].Value.ToString().Trim();
+            string bac = GridView.CurrentRow.Cells[1].Value.ToString().Trim();
             if (XtraMessageBox.Show("Bạn muốn xóa bản ghi  !", "Thông Báo !", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
-                    string query = string.Format("SPBSH_CDO_XOA");
+                    string query = string.Format("SPBSH_BLU_XOA");
                     SqlParameter[] para = {
-                     new SqlParameter("@macd",ma),
-                      new SqlParameter("@StatementType", "EDIT")
+                     new SqlParameter("@ma",ma),
+                     new SqlParameter("@bac",bac)
 
                 };
 
@@ -105,14 +106,14 @@ namespace BSHHRMCNTTT.GUI
         private void UpdateRecord()
         {
             string ma = GridView.CurrentRow.Cells[0].Value.ToString().Trim();
-
+            string bac = GridView.CurrentRow.Cells[1].Value.ToString().Trim();
             try
             {
-                string query = string.Format("SPBSH_CDO_NH");
+                string query = string.Format("SPBSH_BLU_NH");
                 SqlParameter[] para = {
-                new SqlParameter("@macd",ma),
-                new SqlParameter("@tencd", txtten.Text),
-                new SqlParameter("@sotienpc", txtsotien.Text),
+                new SqlParameter("@ma",ma),
+                new SqlParameter("@bac",bac),
+                new SqlParameter("@hsl", txthsl.Text),
                 new SqlParameter("@StatementType", "EDIT")
 
             };
@@ -137,18 +138,32 @@ namespace BSHHRMCNTTT.GUI
         #endregion
         private void ClearData()
         {
-            txtsotien.Text = "";
-            txtten.Text = "";
-        }
+            txtbac.Text = "";
+            txtma.Text = "";
+            txthsl.Text = "";
 
-        private void BSH_CheDo_Load(object sender, EventArgs e)
-        {
-            LoadData();
-           
         }
 
         private void btnadd_Click(object sender, EventArgs e)
         {
+            if (txtma.Text.Trim().Equals(""))
+            {
+                MessageBox.Show("Mã không được để trống!");
+                txtma.Focus();
+                return;
+            }
+            if (txtbac.Text.Trim().Equals(""))
+            {
+                MessageBox.Show("Bậc không được để trống!");
+                txtbac.Focus();
+                return;
+            }
+            if (txthsl.Text.Trim().Equals(""))
+            {
+                MessageBox.Show("Hệ số lương không được để trống!");
+                txthsl.Focus();
+                return;
+            }
             AddRecord();
         }
 
@@ -162,15 +177,7 @@ namespace BSHHRMCNTTT.GUI
             DeleteRecord();
         }
 
-        private void GridView_Click(object sender, EventArgs e)
-        {
-            txtten.Text = GridView.CurrentRow.Cells[1].Value.ToString().Trim();
-            txtsotien.Text = GridView.CurrentRow.Cells[2].Value.ToString().Trim();
-        }
-        public string Selected { get { return GridView.CurrentRow.Cells[0].Value.ToString(); } }
-        public string Selected1 { get { return GridView.CurrentRow.Cells[1].Value.ToString(); } }
-
-        private void BSH_CheDo_KeyDown(object sender, KeyEventArgs e)
+        private void BSH_BacLuong_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
             {
@@ -182,7 +189,21 @@ namespace BSHHRMCNTTT.GUI
                     this.Close();
                     break;
             }
-
         }
+
+        private void BSH_BacLuong_Load(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void GridView_Click(object sender, EventArgs e)
+        {
+            txtma.Text = GridView.CurrentRow.Cells[0].Value.ToString().Trim();
+            txtbac.Text = GridView.CurrentRow.Cells[1].Value.ToString().Trim();
+            txthsl.Text = GridView.CurrentRow.Cells[2].Value.ToString().Trim();
+        }
+        public string Selected2 { get { return GridView.CurrentRow.Cells[2].Value.ToString(); } }
+        //public string Selected1 { get { return GridView.CurrentRow.Cells[1].Value.ToString(); } }
+
     }
 }

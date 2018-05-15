@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.GridView = new System.Windows.Forms.DataGridView();
+            this.MaKT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HinhThucKT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LyDoKT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoTienKT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txthtkt = new DevExpress.XtraEditors.TextEdit();
             this.txtlydokr = new DevExpress.XtraEditors.TextEdit();
@@ -39,10 +43,6 @@
             this.btnadd = new DevExpress.XtraEditors.SimpleButton();
             this.btnedit = new DevExpress.XtraEditors.SimpleButton();
             this.btndelete = new DevExpress.XtraEditors.SimpleButton();
-            this.MaKT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HinhThucKT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LyDoKT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoTienKT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txthtkt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtlydokr.Properties)).BeginInit();
@@ -69,6 +69,38 @@
             this.GridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.GridView.Size = new System.Drawing.Size(406, 390);
             this.GridView.TabIndex = 0;
+            this.GridView.Click += new System.EventHandler(this.GridView_Click);
+            // 
+            // MaKT
+            // 
+            this.MaKT.DataPropertyName = "MaKT";
+            this.MaKT.HeaderText = "Mã";
+            this.MaKT.Name = "MaKT";
+            this.MaKT.ReadOnly = true;
+            this.MaKT.Width = 50;
+            // 
+            // HinhThucKT
+            // 
+            this.HinhThucKT.DataPropertyName = "HinhThucKT";
+            this.HinhThucKT.HeaderText = "Hình thức";
+            this.HinhThucKT.Name = "HinhThucKT";
+            this.HinhThucKT.ReadOnly = true;
+            this.HinhThucKT.Width = 130;
+            // 
+            // LyDoKT
+            // 
+            this.LyDoKT.DataPropertyName = "LyDoKT";
+            this.LyDoKT.HeaderText = "Lý do";
+            this.LyDoKT.Name = "LyDoKT";
+            this.LyDoKT.ReadOnly = true;
+            this.LyDoKT.Width = 150;
+            // 
+            // SoTienKT
+            // 
+            this.SoTienKT.DataPropertyName = "SoTienKT";
+            this.SoTienKT.HeaderText = "Số tiền ";
+            this.SoTienKT.Name = "SoTienKT";
+            this.SoTienKT.ReadOnly = true;
             // 
             // labelControl1
             // 
@@ -157,33 +189,6 @@
             this.btndelete.Text = "&Xóa";
             this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
-            // MaKT
-            // 
-            this.MaKT.DataPropertyName = "MaKT";
-            this.MaKT.HeaderText = "Mã";
-            this.MaKT.Name = "MaKT";
-            this.MaKT.Width = 50;
-            // 
-            // HinhThucKT
-            // 
-            this.HinhThucKT.DataPropertyName = "HinhThucKT";
-            this.HinhThucKT.HeaderText = "Hình thức";
-            this.HinhThucKT.Name = "HinhThucKT";
-            this.HinhThucKT.Width = 130;
-            // 
-            // LyDoKT
-            // 
-            this.LyDoKT.DataPropertyName = "LyDoKT";
-            this.LyDoKT.HeaderText = "Lý do";
-            this.LyDoKT.Name = "LyDoKT";
-            this.LyDoKT.Width = 150;
-            // 
-            // SoTienKT
-            // 
-            this.SoTienKT.DataPropertyName = "SoTienKT";
-            this.SoTienKT.HeaderText = "Số tiền ";
-            this.SoTienKT.Name = "SoTienKT";
-            // 
             // BSH_KhenThuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,10 +199,12 @@
             this.Controls.Add(this.btnadd);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.GridView);
+            this.KeyPreview = true;
             this.Name = "BSH_KhenThuong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Khen Thưởng ";
             this.Load += new System.EventHandler(this.BSH_KhenThuong_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BSH_KhenThuong_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txthtkt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtlydokr.Properties)).EndInit();

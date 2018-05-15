@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BSH_NhanVien));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.txtdantoc = new DevExpress.XtraEditors.TextEdit();
+            this.txttongiao = new DevExpress.XtraEditors.TextEdit();
             this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
             this.separatorControl3 = new DevExpress.XtraEditors.SeparatorControl();
             this.separatorControl2 = new DevExpress.XtraEditors.SeparatorControl();
@@ -58,6 +60,10 @@
             this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label3 = new System.Windows.Forms.Label();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.txtchuyenmon = new DevExpress.XtraEditors.TextEdit();
+            this.txtmapb = new DevExpress.XtraEditors.TextEdit();
+            this.txtmacv = new DevExpress.XtraEditors.TextEdit();
+            this.txtngoaingu = new DevExpress.XtraEditors.TextEdit();
             this.label19 = new System.Windows.Forms.Label();
             this.txttentd = new DevExpress.XtraEditors.TextEdit();
             this.txtmatd = new DevExpress.XtraEditors.TextEdit();
@@ -71,33 +77,42 @@
             this.txtmanv = new DevExpress.XtraEditors.TextEdit();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnbase = new DevExpress.XtraEditors.SimpleButton();
-            this.btnprevious = new DevExpress.XtraEditors.SimpleButton();
-            this.btnnext = new DevExpress.XtraEditors.SimpleButton();
-            this.btnend = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.cbbloaihd = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.label23 = new System.Windows.Forms.Label();
+            this.ngaykt = new System.Windows.Forms.DateTimePicker();
             this.label22 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.ngaybd = new System.Windows.Forms.DateTimePicker();
             this.label21 = new System.Windows.Forms.Label();
-            this.textEdit13 = new DevExpress.XtraEditors.TextEdit();
             this.label20 = new System.Windows.Forms.Label();
             this.separatorControl4 = new DevExpress.XtraEditors.SeparatorControl();
             this.btnadd = new DevExpress.XtraEditors.SimpleButton();
             this.btnedit = new DevExpress.XtraEditors.SimpleButton();
             this.btndelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnprint = new DevExpress.XtraEditors.SimpleButton();
-            this.txttongiao = new DevExpress.XtraEditors.TextEdit();
-            this.txtdantoc = new DevExpress.XtraEditors.TextEdit();
-            this.txtngoaingu = new DevExpress.XtraEditors.TextEdit();
-            this.txtmacv = new DevExpress.XtraEditors.TextEdit();
-            this.txtmapb = new DevExpress.XtraEditors.TextEdit();
-            this.txtchuyenmon = new DevExpress.XtraEditors.TextEdit();
-            this.label23 = new System.Windows.Forms.Label();
-            this.cbbloaihd = new DevExpress.XtraEditors.ComboBoxEdit();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.txtkyluat = new DevExpress.XtraEditors.TextEdit();
+            this.txtkhen = new DevExpress.XtraEditors.TextEdit();
+            this.txttenkl = new DevExpress.XtraEditors.TextEdit();
+            this.txttenkhen = new DevExpress.XtraEditors.TextEdit();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txtmacd = new DevExpress.XtraEditors.TextEdit();
+            this.txttencd = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit15 = new DevExpress.XtraEditors.TextEdit();
+            this.label25 = new System.Windows.Forms.Label();
+            this.btnend = new DevExpress.XtraEditors.SimpleButton();
+            this.btnnext = new DevExpress.XtraEditors.SimpleButton();
+            this.btnprevious = new DevExpress.XtraEditors.SimpleButton();
+            this.btnbase = new DevExpress.XtraEditors.SimpleButton();
+            this.separatorControl5 = new DevExpress.XtraEditors.SeparatorControl();
+            this.separatorControl6 = new DevExpress.XtraEditors.SeparatorControl();
+            this.txtsohd = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtdantoc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txttongiao.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl2)).BeginInit();
@@ -113,6 +128,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtchuyenmon.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtmapb.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtmacv.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtngoaingu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttentd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmatd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttenpb.Properties)).BeginInit();
@@ -123,16 +142,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtmanv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.separatorControl4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txttongiao.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtdantoc.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtngoaingu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtmacv.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtmapb.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtchuyenmon.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbloaihd.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
+            this.groupControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtkyluat.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtkhen.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txttenkl.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txttenkhen.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtmacd.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txttencd.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit15.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsohd.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -171,6 +194,22 @@
             this.groupControl1.Size = new System.Drawing.Size(512, 343);
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "Thông tin nhân viên";
+            // 
+            // txtdantoc
+            // 
+            this.txtdantoc.Location = new System.Drawing.Point(241, 181);
+            this.txtdantoc.Name = "txtdantoc";
+            this.txtdantoc.Size = new System.Drawing.Size(88, 20);
+            this.txtdantoc.TabIndex = 32;
+            this.txtdantoc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtdantoc_KeyDown);
+            // 
+            // txttongiao
+            // 
+            this.txttongiao.Location = new System.Drawing.Point(80, 181);
+            this.txttongiao.Name = "txttongiao";
+            this.txttongiao.Size = new System.Drawing.Size(88, 20);
+            this.txttongiao.TabIndex = 31;
+            this.txttongiao.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txttongiao_KeyDown);
             // 
             // textEdit8
             // 
@@ -411,6 +450,13 @@
             // 
             // groupControl2
             // 
+            this.groupControl2.Controls.Add(this.separatorControl6);
+            this.groupControl2.Controls.Add(this.separatorControl5);
+            this.groupControl2.Controls.Add(this.textEdit15);
+            this.groupControl2.Controls.Add(this.label25);
+            this.groupControl2.Controls.Add(this.txttencd);
+            this.groupControl2.Controls.Add(this.txtmacd);
+            this.groupControl2.Controls.Add(this.label24);
             this.groupControl2.Controls.Add(this.txtchuyenmon);
             this.groupControl2.Controls.Add(this.txtmapb);
             this.groupControl2.Controls.Add(this.txtmacv);
@@ -425,14 +471,49 @@
             this.groupControl2.Controls.Add(this.label16);
             this.groupControl2.Location = new System.Drawing.Point(530, 96);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(380, 187);
+            this.groupControl2.Size = new System.Drawing.Size(380, 313);
             this.groupControl2.TabIndex = 3;
             this.groupControl2.Text = "Trình độ chuyên môn";
+            // 
+            // txtchuyenmon
+            // 
+            this.txtchuyenmon.Enabled = false;
+            this.txtchuyenmon.Location = new System.Drawing.Point(217, 134);
+            this.txtchuyenmon.Name = "txtchuyenmon";
+            this.txtchuyenmon.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtchuyenmon.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtchuyenmon.Properties.Appearance.Options.UseBackColor = true;
+            this.txtchuyenmon.Properties.Appearance.Options.UseFont = true;
+            this.txtchuyenmon.Size = new System.Drawing.Size(155, 20);
+            this.txtchuyenmon.TabIndex = 42;
+            // 
+            // txtmapb
+            // 
+            this.txtmapb.Location = new System.Drawing.Point(89, 81);
+            this.txtmapb.Name = "txtmapb";
+            this.txtmapb.Size = new System.Drawing.Size(88, 20);
+            this.txtmapb.TabIndex = 41;
+            this.txtmapb.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtmapb_KeyDown);
+            // 
+            // txtmacv
+            // 
+            this.txtmacv.Location = new System.Drawing.Point(88, 36);
+            this.txtmacv.Name = "txtmacv";
+            this.txtmacv.Size = new System.Drawing.Size(89, 20);
+            this.txtmacv.TabIndex = 40;
+            this.txtmacv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtmacv_KeyDown);
+            // 
+            // txtngoaingu
+            // 
+            this.txtngoaingu.Location = new System.Drawing.Point(88, 172);
+            this.txtngoaingu.Name = "txtngoaingu";
+            this.txtngoaingu.Size = new System.Drawing.Size(147, 20);
+            this.txtngoaingu.TabIndex = 39;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(24, 161);
+            this.label19.Location = new System.Drawing.Point(24, 175);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(57, 13);
             this.label19.TabIndex = 38;
@@ -441,17 +522,19 @@
             // txttentd
             // 
             this.txttentd.Enabled = false;
-            this.txttentd.Location = new System.Drawing.Point(143, 118);
+            this.txttentd.Location = new System.Drawing.Point(143, 135);
             this.txttentd.Name = "txttentd";
-            this.txttentd.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txttentd.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txttentd.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.txttentd.Properties.Appearance.Options.UseBackColor = true;
+            this.txttentd.Properties.Appearance.Options.UseFont = true;
             this.txttentd.Size = new System.Drawing.Size(68, 20);
             this.txttentd.TabIndex = 37;
             this.txttentd.EditValueChanged += new System.EventHandler(this.txttentd_EditValueChanged);
             // 
             // txtmatd
             // 
-            this.txtmatd.Location = new System.Drawing.Point(88, 118);
+            this.txtmatd.Location = new System.Drawing.Point(88, 135);
             this.txtmatd.Name = "txtmatd";
             this.txtmatd.Size = new System.Drawing.Size(52, 20);
             this.txtmatd.TabIndex = 36;
@@ -461,7 +544,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(24, 121);
+            this.label18.Location = new System.Drawing.Point(24, 136);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(51, 13);
             this.label18.TabIndex = 35;
@@ -470,10 +553,12 @@
             // txttenpb
             // 
             this.txttenpb.Enabled = false;
-            this.txttenpb.Location = new System.Drawing.Point(184, 77);
+            this.txttenpb.Location = new System.Drawing.Point(184, 81);
             this.txttenpb.Name = "txttenpb";
-            this.txttenpb.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txttenpb.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txttenpb.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.txttenpb.Properties.Appearance.Options.UseBackColor = true;
+            this.txttenpb.Properties.Appearance.Options.UseFont = true;
             this.txttenpb.Size = new System.Drawing.Size(188, 20);
             this.txttenpb.TabIndex = 34;
             // 
@@ -482,15 +567,17 @@
             this.txttencv.Enabled = false;
             this.txttencv.Location = new System.Drawing.Point(184, 35);
             this.txttencv.Name = "txttencv";
-            this.txttencv.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txttencv.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txttencv.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.txttencv.Properties.Appearance.Options.UseBackColor = true;
+            this.txttencv.Properties.Appearance.Options.UseFont = true;
             this.txttencv.Size = new System.Drawing.Size(188, 20);
             this.txttencv.TabIndex = 33;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(24, 80);
+            this.label17.Location = new System.Drawing.Point(24, 84);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(58, 13);
             this.label17.TabIndex = 31;
@@ -529,6 +616,7 @@
             this.txtmanv.Name = "txtmanv";
             this.txtmanv.Size = new System.Drawing.Size(124, 20);
             this.txtmanv.TabIndex = 2;
+            this.txtmanv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtmanv_KeyDown);
             // 
             // label2
             // 
@@ -548,63 +636,53 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "&Mã Nhân Viên ";
             // 
-            // btnbase
-            // 
-            this.btnbase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnbase.Image = ((System.Drawing.Image)(resources.GetObject("btnbase.Image")));
-            this.btnbase.Location = new System.Drawing.Point(15, 598);
-            this.btnbase.Name = "btnbase";
-            this.btnbase.Size = new System.Drawing.Size(30, 30);
-            this.btnbase.TabIndex = 5;
-            // 
-            // btnprevious
-            // 
-            this.btnprevious.Image = ((System.Drawing.Image)(resources.GetObject("btnprevious.Image")));
-            this.btnprevious.Location = new System.Drawing.Point(53, 598);
-            this.btnprevious.Name = "btnprevious";
-            this.btnprevious.Size = new System.Drawing.Size(30, 30);
-            this.btnprevious.TabIndex = 6;
-            // 
-            // btnnext
-            // 
-            this.btnnext.Image = ((System.Drawing.Image)(resources.GetObject("btnnext.Image")));
-            this.btnnext.Location = new System.Drawing.Point(92, 598);
-            this.btnnext.Name = "btnnext";
-            this.btnnext.Size = new System.Drawing.Size(30, 30);
-            this.btnnext.TabIndex = 7;
-            // 
-            // btnend
-            // 
-            this.btnend.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnend.Image = ((System.Drawing.Image)(resources.GetObject("btnend.Image")));
-            this.btnend.Location = new System.Drawing.Point(131, 598);
-            this.btnend.Name = "btnend";
-            this.btnend.Size = new System.Drawing.Size(30, 30);
-            this.btnend.TabIndex = 8;
-            // 
             // groupControl4
             // 
+            this.groupControl4.Controls.Add(this.txtsohd);
             this.groupControl4.Controls.Add(this.cbbloaihd);
             this.groupControl4.Controls.Add(this.label23);
-            this.groupControl4.Controls.Add(this.dateTimePicker3);
+            this.groupControl4.Controls.Add(this.ngaykt);
             this.groupControl4.Controls.Add(this.label22);
-            this.groupControl4.Controls.Add(this.dateTimePicker2);
+            this.groupControl4.Controls.Add(this.ngaybd);
             this.groupControl4.Controls.Add(this.label21);
-            this.groupControl4.Controls.Add(this.textEdit13);
             this.groupControl4.Controls.Add(this.label20);
             this.groupControl4.Location = new System.Drawing.Point(12, 445);
             this.groupControl4.Name = "groupControl4";
             this.groupControl4.Size = new System.Drawing.Size(512, 147);
             this.groupControl4.TabIndex = 9;
             // 
-            // dateTimePicker3
+            // cbbloaihd
             // 
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(348, 103);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.ShowUpDown = true;
-            this.dateTimePicker3.Size = new System.Drawing.Size(109, 21);
-            this.dateTimePicker3.TabIndex = 35;
+            this.cbbloaihd.Location = new System.Drawing.Point(112, 65);
+            this.cbbloaihd.Name = "cbbloaihd";
+            this.cbbloaihd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbbloaihd.Properties.Items.AddRange(new object[] {
+            "1 Năm",
+            "2 Năm",
+            "3 Năm",
+            "Không thời hạn"});
+            this.cbbloaihd.Size = new System.Drawing.Size(100, 20);
+            this.cbbloaihd.TabIndex = 37;
+            this.cbbloaihd.SelectedIndexChanged += new System.EventHandler(this.cbbloaihd_SelectedIndexChanged);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(24, 72);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(70, 13);
+            this.label23.TabIndex = 36;
+            this.label23.Text = "&Số Hợp Đồng";
+            // 
+            // ngaykt
+            // 
+            this.ngaykt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.ngaykt.Location = new System.Drawing.Point(348, 103);
+            this.ngaykt.Name = "ngaykt";
+            this.ngaykt.ShowUpDown = true;
+            this.ngaykt.Size = new System.Drawing.Size(109, 21);
+            this.ngaykt.TabIndex = 35;
             // 
             // label22
             // 
@@ -615,14 +693,14 @@
             this.label22.TabIndex = 34;
             this.label22.Text = "&Ngày Kết Thúc";
             // 
-            // dateTimePicker2
+            // ngaybd
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(112, 102);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.ShowUpDown = true;
-            this.dateTimePicker2.Size = new System.Drawing.Size(109, 21);
-            this.dateTimePicker2.TabIndex = 33;
+            this.ngaybd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.ngaybd.Location = new System.Drawing.Point(112, 102);
+            this.ngaybd.Name = "ngaybd";
+            this.ngaybd.ShowUpDown = true;
+            this.ngaybd.Size = new System.Drawing.Size(109, 21);
+            this.ngaybd.TabIndex = 33;
             // 
             // label21
             // 
@@ -632,13 +710,6 @@
             this.label21.Size = new System.Drawing.Size(77, 13);
             this.label21.TabIndex = 32;
             this.label21.Text = "&Ngày Bắt Đầu ";
-            // 
-            // textEdit13
-            // 
-            this.textEdit13.Location = new System.Drawing.Point(114, 29);
-            this.textEdit13.Name = "textEdit13";
-            this.textEdit13.Size = new System.Drawing.Size(234, 20);
-            this.textEdit13.TabIndex = 31;
             // 
             // label20
             // 
@@ -651,7 +722,7 @@
             // 
             // separatorControl4
             // 
-            this.separatorControl4.Location = new System.Drawing.Point(530, 292);
+            this.separatorControl4.Location = new System.Drawing.Point(530, 415);
             this.separatorControl4.Name = "separatorControl4";
             this.separatorControl4.Size = new System.Drawing.Size(401, 23);
             this.separatorControl4.TabIndex = 31;
@@ -662,7 +733,7 @@
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(57, 23);
             this.btnadd.TabIndex = 32;
-            this.btnadd.Text = "&Thêm Mới";
+            this.btnadd.Text = "&Mới";
             // 
             // btnedit
             // 
@@ -670,7 +741,7 @@
             this.btnedit.Name = "btnedit";
             this.btnedit.Size = new System.Drawing.Size(60, 23);
             this.btnedit.TabIndex = 33;
-            this.btnedit.Text = "&Sửa Đổi";
+            this.btnedit.Text = "&Lưu";
             // 
             // btndelete
             // 
@@ -688,91 +759,188 @@
             this.btnprint.TabIndex = 35;
             this.btnprint.Text = "&IN";
             // 
-            // txttongiao
-            // 
-            this.txttongiao.Location = new System.Drawing.Point(80, 181);
-            this.txttongiao.Name = "txttongiao";
-            this.txttongiao.Size = new System.Drawing.Size(88, 20);
-            this.txttongiao.TabIndex = 31;
-            this.txttongiao.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txttongiao_KeyDown);
-            // 
-            // txtdantoc
-            // 
-            this.txtdantoc.Location = new System.Drawing.Point(241, 181);
-            this.txtdantoc.Name = "txtdantoc";
-            this.txtdantoc.Size = new System.Drawing.Size(88, 20);
-            this.txtdantoc.TabIndex = 32;
-            this.txtdantoc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtdantoc_KeyDown);
-            // 
-            // txtngoaingu
-            // 
-            this.txtngoaingu.Location = new System.Drawing.Point(88, 158);
-            this.txtngoaingu.Name = "txtngoaingu";
-            this.txtngoaingu.Size = new System.Drawing.Size(147, 20);
-            this.txtngoaingu.TabIndex = 39;
-            // 
-            // txtmacv
-            // 
-            this.txtmacv.Location = new System.Drawing.Point(88, 36);
-            this.txtmacv.Name = "txtmacv";
-            this.txtmacv.Size = new System.Drawing.Size(89, 20);
-            this.txtmacv.TabIndex = 40;
-            this.txtmacv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtmacv_KeyDown);
-            // 
-            // txtmapb
-            // 
-            this.txtmapb.Location = new System.Drawing.Point(89, 77);
-            this.txtmapb.Name = "txtmapb";
-            this.txtmapb.Size = new System.Drawing.Size(88, 20);
-            this.txtmapb.TabIndex = 41;
-            this.txtmapb.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtmapb_KeyDown);
-            // 
-            // txtchuyenmon
-            // 
-            this.txtchuyenmon.Enabled = false;
-            this.txtchuyenmon.Location = new System.Drawing.Point(217, 118);
-            this.txtchuyenmon.Name = "txtchuyenmon";
-            this.txtchuyenmon.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtchuyenmon.Properties.Appearance.Options.UseBackColor = true;
-            this.txtchuyenmon.Size = new System.Drawing.Size(155, 20);
-            this.txtchuyenmon.TabIndex = 42;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(24, 72);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(70, 13);
-            this.label23.TabIndex = 36;
-            this.label23.Text = "&Số Hợp Đồng";
-            // 
-            // cbbloaihd
-            // 
-            this.cbbloaihd.Location = new System.Drawing.Point(112, 65);
-            this.cbbloaihd.Name = "cbbloaihd";
-            this.cbbloaihd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbbloaihd.Properties.Items.AddRange(new object[] {
-            "1 Năm",
-            "2 Năm",
-            "3 Năm",
-            "Không thời hạn"});
-            this.cbbloaihd.Size = new System.Drawing.Size(100, 20);
-            this.cbbloaihd.TabIndex = 37;
-            // 
             // groupControl5
             // 
-            this.groupControl5.Location = new System.Drawing.Point(531, 322);
+            this.groupControl5.Controls.Add(this.txttenkhen);
+            this.groupControl5.Controls.Add(this.txttenkl);
+            this.groupControl5.Controls.Add(this.txtkhen);
+            this.groupControl5.Controls.Add(this.txtkyluat);
+            this.groupControl5.Controls.Add(this.labelControl2);
+            this.groupControl5.Controls.Add(this.labelControl1);
+            this.groupControl5.Location = new System.Drawing.Point(531, 445);
             this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(379, 270);
+            this.groupControl5.Size = new System.Drawing.Size(379, 145);
             this.groupControl5.TabIndex = 36;
             this.groupControl5.Text = "Quá trình công tác";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(16, 102);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(62, 13);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "&Khen thưởng";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(17, 58);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(33, 13);
+            this.labelControl2.TabIndex = 1;
+            this.labelControl2.Text = "&Kỷ luật";
+            // 
+            // txtkyluat
+            // 
+            this.txtkyluat.Location = new System.Drawing.Point(87, 55);
+            this.txtkyluat.Name = "txtkyluat";
+            this.txtkyluat.Size = new System.Drawing.Size(73, 20);
+            this.txtkyluat.TabIndex = 2;
+            this.txtkyluat.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtkyluat_KeyDown);
+            // 
+            // txtkhen
+            // 
+            this.txtkhen.Location = new System.Drawing.Point(87, 99);
+            this.txtkhen.Name = "txtkhen";
+            this.txtkhen.Size = new System.Drawing.Size(73, 20);
+            this.txtkhen.TabIndex = 3;
+            this.txtkhen.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtkhen_KeyDown);
+            // 
+            // txttenkl
+            // 
+            this.txttenkl.Enabled = false;
+            this.txttenkl.Location = new System.Drawing.Point(166, 55);
+            this.txttenkl.Name = "txttenkl";
+            this.txttenkl.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txttenkl.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txttenkl.Properties.Appearance.Options.UseBackColor = true;
+            this.txttenkl.Properties.Appearance.Options.UseFont = true;
+            this.txttenkl.Size = new System.Drawing.Size(163, 20);
+            this.txttenkl.TabIndex = 4;
+            // 
+            // txttenkhen
+            // 
+            this.txttenkhen.Enabled = false;
+            this.txttenkhen.Location = new System.Drawing.Point(166, 99);
+            this.txttenkhen.Name = "txttenkhen";
+            this.txttenkhen.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txttenkhen.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txttenkhen.Properties.Appearance.Options.UseBackColor = true;
+            this.txttenkhen.Properties.Appearance.Options.UseFont = true;
+            this.txttenkhen.Size = new System.Drawing.Size(163, 20);
+            this.txttenkhen.TabIndex = 5;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(21, 239);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(41, 13);
+            this.label24.TabIndex = 43;
+            this.label24.Text = "&Chế độ";
+            // 
+            // txtmacd
+            // 
+            this.txtmacd.Location = new System.Drawing.Point(89, 236);
+            this.txtmacd.Name = "txtmacd";
+            this.txtmacd.Size = new System.Drawing.Size(72, 20);
+            this.txtmacd.TabIndex = 44;
+            this.txtmacd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtmacd_KeyDown);
+            // 
+            // txttencd
+            // 
+            this.txttencd.Enabled = false;
+            this.txttencd.Location = new System.Drawing.Point(167, 236);
+            this.txttencd.Name = "txttencd";
+            this.txttencd.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txttencd.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txttencd.Properties.Appearance.Options.UseBackColor = true;
+            this.txttencd.Properties.Appearance.Options.UseFont = true;
+            this.txttencd.Size = new System.Drawing.Size(155, 20);
+            this.txttencd.TabIndex = 45;
+            // 
+            // textEdit15
+            // 
+            this.textEdit15.Location = new System.Drawing.Point(89, 272);
+            this.textEdit15.Name = "textEdit15";
+            this.textEdit15.Size = new System.Drawing.Size(89, 20);
+            this.textEdit15.TabIndex = 47;
+            this.textEdit15.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textEdit15_KeyDown);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(23, 275);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(64, 13);
+            this.label25.TabIndex = 46;
+            this.label25.Text = "&Hệ số lương";
+            // 
+            // btnend
+            // 
+            this.btnend.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnend.Image = ((System.Drawing.Image)(resources.GetObject("btnend.Image")));
+            this.btnend.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnend.Location = new System.Drawing.Point(131, 598);
+            this.btnend.Name = "btnend";
+            this.btnend.Size = new System.Drawing.Size(30, 30);
+            this.btnend.TabIndex = 8;
+            // 
+            // btnnext
+            // 
+            this.btnnext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnnext.Image = ((System.Drawing.Image)(resources.GetObject("btnnext.Image")));
+            this.btnnext.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnnext.Location = new System.Drawing.Point(92, 598);
+            this.btnnext.Name = "btnnext";
+            this.btnnext.Size = new System.Drawing.Size(30, 30);
+            this.btnnext.TabIndex = 7;
+            // 
+            // btnprevious
+            // 
+            this.btnprevious.Image = ((System.Drawing.Image)(resources.GetObject("btnprevious.Image")));
+            this.btnprevious.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnprevious.Location = new System.Drawing.Point(53, 598);
+            this.btnprevious.Name = "btnprevious";
+            this.btnprevious.Size = new System.Drawing.Size(30, 30);
+            this.btnprevious.TabIndex = 6;
+            // 
+            // btnbase
+            // 
+            this.btnbase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnbase.Image = ((System.Drawing.Image)(resources.GetObject("btnbase.Image")));
+            this.btnbase.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnbase.Location = new System.Drawing.Point(15, 598);
+            this.btnbase.Name = "btnbase";
+            this.btnbase.Size = new System.Drawing.Size(30, 30);
+            this.btnbase.TabIndex = 5;
+            // 
+            // separatorControl5
+            // 
+            this.separatorControl5.Location = new System.Drawing.Point(5, 107);
+            this.separatorControl5.Name = "separatorControl5";
+            this.separatorControl5.Size = new System.Drawing.Size(370, 23);
+            this.separatorControl5.TabIndex = 37;
+            // 
+            // separatorControl6
+            // 
+            this.separatorControl6.Location = new System.Drawing.Point(2, 199);
+            this.separatorControl6.Name = "separatorControl6";
+            this.separatorControl6.Size = new System.Drawing.Size(370, 23);
+            this.separatorControl6.TabIndex = 48;
+            // 
+            // txtsohd
+            // 
+            this.txtsohd.Location = new System.Drawing.Point(112, 30);
+            this.txtsohd.Name = "txtsohd";
+            this.txtsohd.Size = new System.Drawing.Size(207, 20);
+            this.txtsohd.TabIndex = 33;
+            this.txtsohd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtsohd_KeyDown);
             // 
             // BSH_NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1013, 644);
+            this.ClientSize = new System.Drawing.Size(924, 644);
             this.Controls.Add(this.groupControl5);
             this.Controls.Add(this.btnprint);
             this.Controls.Add(this.btndelete);
@@ -788,11 +956,14 @@
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
             this.Name = "BSH_NhanVien";
-            this.Text = "BSH_NhanVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Nhân Viên";
             this.Load += new System.EventHandler(this.BSH_NhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtdantoc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txttongiao.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl2)).EndInit();
@@ -809,6 +980,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtchuyenmon.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtmapb.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtmacv.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtngoaingu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttentd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmatd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttenpb.Properties)).EndInit();
@@ -821,16 +996,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             this.groupControl4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.separatorControl4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txttongiao.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtdantoc.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtngoaingu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtmacv.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtmapb.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtchuyenmon.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbloaihd.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
+            this.groupControl5.ResumeLayout(false);
+            this.groupControl5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtkyluat.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtkhen.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txttenkl.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txttenkhen.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtmacd.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txttencd.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit15.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsohd.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -883,11 +1063,10 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private DevExpress.XtraEditors.GroupControl groupControl4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker ngaykt;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker ngaybd;
         private System.Windows.Forms.Label label21;
-        private DevExpress.XtraEditors.TextEdit textEdit13;
         private System.Windows.Forms.Label label20;
         private DevExpress.XtraEditors.SeparatorControl separatorControl4;
         private DevExpress.XtraEditors.SimpleButton btnadd;
@@ -903,5 +1082,19 @@
         private DevExpress.XtraEditors.ComboBoxEdit cbbloaihd;
         private System.Windows.Forms.Label label23;
         private DevExpress.XtraEditors.GroupControl groupControl5;
+        private DevExpress.XtraEditors.TextEdit textEdit15;
+        private System.Windows.Forms.Label label25;
+        private DevExpress.XtraEditors.TextEdit txttencd;
+        private DevExpress.XtraEditors.TextEdit txtmacd;
+        private System.Windows.Forms.Label label24;
+        private DevExpress.XtraEditors.TextEdit txttenkhen;
+        private DevExpress.XtraEditors.TextEdit txttenkl;
+        private DevExpress.XtraEditors.TextEdit txtkhen;
+        private DevExpress.XtraEditors.TextEdit txtkyluat;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.SeparatorControl separatorControl6;
+        private DevExpress.XtraEditors.SeparatorControl separatorControl5;
+        private DevExpress.XtraEditors.TextEdit txtsohd;
     }
 }

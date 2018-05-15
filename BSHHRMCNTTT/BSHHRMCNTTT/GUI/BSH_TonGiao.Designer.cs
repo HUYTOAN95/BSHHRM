@@ -32,11 +32,11 @@
             this.txttongiao = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.GridView = new System.Windows.Forms.DataGridView();
+            this.MaTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btndelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnedit = new DevExpress.XtraEditors.SimpleButton();
             this.btnadd = new DevExpress.XtraEditors.SimpleButton();
-            this.MaTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txttongiao.Properties)).BeginInit();
@@ -86,33 +86,6 @@
             this.GridView.Size = new System.Drawing.Size(294, 353);
             this.GridView.TabIndex = 5;
             // 
-            // btndelete
-            // 
-            this.btndelete.Location = new System.Drawing.Point(474, 318);
-            this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(55, 23);
-            this.btndelete.TabIndex = 9;
-            this.btndelete.Text = "&Xóa";
-            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
-            // 
-            // btnedit
-            // 
-            this.btnedit.Location = new System.Drawing.Point(392, 318);
-            this.btnedit.Name = "btnedit";
-            this.btnedit.Size = new System.Drawing.Size(60, 23);
-            this.btnedit.TabIndex = 8;
-            this.btnedit.Text = "&Sửa";
-            this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
-            // 
-            // btnadd
-            // 
-            this.btnadd.Location = new System.Drawing.Point(315, 318);
-            this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(61, 23);
-            this.btnadd.TabIndex = 7;
-            this.btnadd.Text = "&Thêm";
-            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
-            // 
             // MaTG
             // 
             this.MaTG.DataPropertyName = "MaTG";
@@ -127,6 +100,33 @@
             this.TenTG.Name = "TenTG";
             this.TenTG.ReadOnly = true;
             this.TenTG.Width = 300;
+            // 
+            // btndelete
+            // 
+            this.btndelete.Location = new System.Drawing.Point(474, 318);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.Size = new System.Drawing.Size(55, 23);
+            this.btndelete.TabIndex = 9;
+            this.btndelete.Text = "&Xóa";
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
+            // 
+            // btnedit
+            // 
+            this.btnedit.Location = new System.Drawing.Point(394, 318);
+            this.btnedit.Name = "btnedit";
+            this.btnedit.Size = new System.Drawing.Size(60, 23);
+            this.btnedit.TabIndex = 8;
+            this.btnedit.Text = "&Sửa";
+            this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
+            // 
+            // btnadd
+            // 
+            this.btnadd.Location = new System.Drawing.Point(315, 318);
+            this.btnadd.Name = "btnadd";
+            this.btnadd.Size = new System.Drawing.Size(61, 23);
+            this.btnadd.TabIndex = 7;
+            this.btnadd.Text = "&Thêm";
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // BSH_TonGiao
             // 

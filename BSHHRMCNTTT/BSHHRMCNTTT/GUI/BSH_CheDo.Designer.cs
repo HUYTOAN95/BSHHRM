@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.GridView = new System.Windows.Forms.DataGridView();
+            this.macd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tencd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sotienpc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.txtsotien = new DevExpress.XtraEditors.TextEdit();
             this.txtten = new DevExpress.XtraEditors.TextEdit();
@@ -37,9 +40,6 @@
             this.btnadd = new DevExpress.XtraEditors.SimpleButton();
             this.btnedit = new DevExpress.XtraEditors.SimpleButton();
             this.btndelete = new DevExpress.XtraEditors.SimpleButton();
-            this.macd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tencd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sotienpc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -62,9 +62,33 @@
             this.GridView.Name = "GridView";
             this.GridView.ReadOnly = true;
             this.GridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.GridView.Size = new System.Drawing.Size(402, 390);
+            this.GridView.Size = new System.Drawing.Size(388, 390);
             this.GridView.TabIndex = 0;
             this.GridView.Click += new System.EventHandler(this.GridView_Click);
+            // 
+            // macd
+            // 
+            this.macd.DataPropertyName = "MaCD";
+            this.macd.HeaderText = "Mã";
+            this.macd.Name = "macd";
+            this.macd.ReadOnly = true;
+            this.macd.Width = 50;
+            // 
+            // tencd
+            // 
+            this.tencd.DataPropertyName = "TenLoaiCD";
+            this.tencd.HeaderText = "Loại Chế Độ";
+            this.tencd.Name = "tencd";
+            this.tencd.ReadOnly = true;
+            this.tencd.Width = 200;
+            // 
+            // sotienpc
+            // 
+            this.sotienpc.DataPropertyName = "SoTienPC";
+            this.sotienpc.HeaderText = "Số Tiền Phụ Cấp";
+            this.sotienpc.Name = "sotienpc";
+            this.sotienpc.ReadOnly = true;
+            this.sotienpc.Width = 150;
             // 
             // groupControl1
             // 
@@ -72,7 +96,7 @@
             this.groupControl1.Controls.Add(this.txtten);
             this.groupControl1.Controls.Add(this.label2);
             this.groupControl1.Controls.Add(this.label1);
-            this.groupControl1.Location = new System.Drawing.Point(415, 12);
+            this.groupControl1.Location = new System.Drawing.Point(402, 13);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(290, 157);
             this.groupControl1.TabIndex = 1;
@@ -112,7 +136,7 @@
             // 
             // btnadd
             // 
-            this.btnadd.Location = new System.Drawing.Point(424, 356);
+            this.btnadd.Location = new System.Drawing.Point(403, 356);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(75, 23);
             this.btnadd.TabIndex = 2;
@@ -121,7 +145,7 @@
             // 
             // btnedit
             // 
-            this.btnedit.Location = new System.Drawing.Point(522, 356);
+            this.btnedit.Location = new System.Drawing.Point(501, 356);
             this.btnedit.Name = "btnedit";
             this.btnedit.Size = new System.Drawing.Size(75, 23);
             this.btnedit.TabIndex = 3;
@@ -130,51 +154,29 @@
             // 
             // btndelete
             // 
-            this.btndelete.Location = new System.Drawing.Point(625, 356);
+            this.btndelete.Location = new System.Drawing.Point(604, 356);
             this.btndelete.Name = "btndelete";
             this.btndelete.Size = new System.Drawing.Size(75, 23);
             this.btndelete.TabIndex = 4;
             this.btndelete.Text = "&Xóa";
             this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
-            // macd
-            // 
-            this.macd.DataPropertyName = "MaCD";
-            this.macd.HeaderText = "Mã";
-            this.macd.Name = "macd";
-            this.macd.ReadOnly = true;
-            this.macd.Width = 50;
-            // 
-            // tencd
-            // 
-            this.tencd.DataPropertyName = "TenLoaiCD";
-            this.tencd.HeaderText = "Loại Chế Độ";
-            this.tencd.Name = "tencd";
-            this.tencd.ReadOnly = true;
-            this.tencd.Width = 200;
-            // 
-            // sotienpc
-            // 
-            this.sotienpc.DataPropertyName = "SoTienPC";
-            this.sotienpc.HeaderText = "Số Tiền Phụ Cấp";
-            this.sotienpc.Name = "sotienpc";
-            this.sotienpc.ReadOnly = true;
-            this.sotienpc.Width = 150;
-            // 
             // BSH_CheDo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 404);
+            this.ClientSize = new System.Drawing.Size(695, 404);
             this.Controls.Add(this.btndelete);
             this.Controls.Add(this.btnedit);
             this.Controls.Add(this.btnadd);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.GridView);
+            this.KeyPreview = true;
             this.Name = "BSH_CheDo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chế Độ";
             this.Load += new System.EventHandler(this.BSH_CheDo_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BSH_CheDo_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);

@@ -168,5 +168,28 @@ namespace BSHHRMCNTTT.GUI
         {
             LoadData();
         }
+        public string Selected { get { return GridView.CurrentRow.Cells[0].Value.ToString(); } }
+        public string Selected1 { get { return GridView.CurrentRow.Cells[1].Value.ToString(); } }
+
+        private void BSH_KhenThuong_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                    break;
+                case Keys.F2:
+                    ClearData();
+                    break;
+            }
+        }
+
+        private void GridView_Click(object sender, EventArgs e)
+        {
+            txthtkt.Text = GridView.CurrentRow.Cells[1].Value.ToString().Trim();
+            txtlydokr.Text = GridView.CurrentRow.Cells[2].Value.ToString().Trim();
+            txtsotien.Text = GridView.CurrentRow.Cells[3].Value.ToString().Trim();
+        }
     }
 }

@@ -8,13 +8,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.Data.SqlClient;
+using BSHHRMCNTTT.SO;
 
 namespace BSHHRMCNTTT.GUI
 {
     public partial class BSH_NhanVien : DevExpress.XtraEditors.XtraForm
     {
+        private DBConnection db;
         public BSH_NhanVien()
         {
+            db = new DBConnection();
             InitializeComponent();
         }
 
@@ -30,12 +34,12 @@ namespace BSHHRMCNTTT.GUI
 
         private void BSH_NhanVien_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void txtmacv_KeyDown(object sender, KeyEventArgs e)
         {
-            switch(e.KeyCode)
+            switch (e.KeyCode)
             {
                 case Keys.F1:
                     using (BSH_ChucVu frm = new BSH_ChucVu())
@@ -49,7 +53,7 @@ namespace BSHHRMCNTTT.GUI
 
                         }
                     }
-                        break;
+                    break;
             }
         }
 
@@ -85,7 +89,7 @@ namespace BSHHRMCNTTT.GUI
                         {
                             txttongiao.Text = frm.Selected;
                             txttongiao.SelectionStart = txttongiao.Text.Length;
-                           
+
                         }
                     }
                     break;
@@ -137,6 +141,133 @@ namespace BSHHRMCNTTT.GUI
                             txtchuyenmon.SelectionStart = txtchuyenmon.Text.Length;
 
                         }
+                    }
+                    break;
+            }
+        }
+
+        private void txtmacd_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.F1:
+                    using (BSH_CheDo frm = new BSH_CheDo())
+                    {
+                        if (frm.ShowDialog() == DialogResult.OK)
+                        {
+                            txtmacd.Text = frm.Selected;
+                            txtmacd.SelectionStart = txtmacd.Text.Length;
+                            txttencd.Text = frm.Selected1;
+                            txttencd.SelectionStart = txttencd.Text.Length;
+
+
+                        }
+                    }
+                    break;
+            }
+        }
+
+        private void textEdit15_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.F1:
+                    using (BSH_BacLuong frm = new BSH_BacLuong())
+                    {
+                        if (frm.ShowDialog() == DialogResult.OK)
+                        {
+                            textEdit15.Text = frm.Selected2;
+                            textEdit15.SelectionStart = textEdit15.Text.Length;
+
+                        }
+                    }
+                    break;
+            }
+        }
+
+        private void txtkyluat_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.F1:
+                    using (BSH_KyLuat frm = new BSH_KyLuat())
+                    {
+                        if (frm.ShowDialog() == DialogResult.OK)
+                        {
+                            txtkyluat.Text = frm.Selected;
+                            txtkyluat.SelectionStart = txtkyluat.Text.Length;
+                            txttenkl.Text = frm.Selected1;
+                            txttenkl.SelectionStart = txttenkl.Text.Length;
+
+                        }
+                    }
+                    break;
+            }
+        }
+
+        private void txtkhen_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.F1:
+                    using (BSH_KhenThuong frm = new BSH_KhenThuong())
+                    {
+                        if (frm.ShowDialog() == DialogResult.OK)
+                        {
+                            txtkhen.Text = frm.Selected;
+                            txtkhen.SelectionStart = txtkhen.Text.Length;
+                            txttenkhen.Text = frm.Selected1;
+                            txttenkhen.SelectionStart = txttenkhen.Text.Length;
+
+                        }
+                    }
+                    break;
+            }
+        }
+
+        private void txtsohd_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.F1:
+                    try
+                    {
+                        string query = string.Format("SPBSH_AUTO_IDHD");
+                        SqlParameter[] para = new SqlParameter[0];
+                        txtsohd.Text = db.STR_LKE(query);
+                    }
+                    catch (Exception ex)
+                    {
+                        throw ex;
+                    }
+                    break;
+            }
+        }
+
+        private void cbbloaihd_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbbloaihd.SelectedItem.ToString().Trim() == "1 Năm")
+                ngaykt.Text = DateTime.Now.AddYears(1).ToString();
+            else if (cbbloaihd.SelectedItem.ToString().Trim() == "2 Năm")
+                ngaykt.Text = DateTime.Now.AddYears(2).ToString();
+            else if (cbbloaihd.SelectedItem.ToString().Trim() == "3 Năm")
+                ngaykt.Text = DateTime.Now.AddYears(3).ToString();
+        }
+
+        private void txtmanv_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.F1:
+                    try
+                    {
+                        string query = string.Format("SPBSH_AUTO_IDNV");
+                        SqlParameter[] para = new SqlParameter[0];
+                        txtmanv.Text = db.STR_LKE(query);
+                    }
+                    catch (Exception ex)
+                    {
+                        throw ex;
                     }
                     break;
             }

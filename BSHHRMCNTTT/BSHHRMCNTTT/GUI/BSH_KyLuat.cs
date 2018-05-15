@@ -169,15 +169,11 @@ namespace BSHHRMCNTTT.GUI
             txtlydo.Text = GridView.CurrentRow.Cells[2].Value.ToString().Trim();
             txtsotien.Text = GridView.CurrentRow.Cells[3].Value.ToString().Trim();
         }
-
+        public string Selected { get { return GridView.CurrentRow.Cells[0].Value.ToString(); } }
+        public string Selected1 { get { return GridView.CurrentRow.Cells[1].Value.ToString(); } }
         private void txtten_KeyDown(object sender, KeyEventArgs e)
         {
-            switch (e.KeyCode)
-            {
-                case Keys.F2:
-                    ClearData();
-                    break;
-            }
+           
         }
 
         private void BSH_KyLuat_KeyDown(object sender, KeyEventArgs e)
@@ -185,6 +181,7 @@ namespace BSHHRMCNTTT.GUI
             switch (e.KeyCode)
             {
                 case Keys.Escape:
+                    this.DialogResult = DialogResult.OK;
                     this.Close();
                     break;
                 case Keys.F2:

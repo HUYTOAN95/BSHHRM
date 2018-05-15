@@ -12,6 +12,7 @@ namespace BSHHRMCNTTT.SO
     {
         public static SqlConnection cnn;
         private SqlDataAdapter da;
+        private SqlDataReader dr;
         public  static void  InforConnect(string ser, string db, string user, string pass)
         {
             string cnnstring = "Data Source=" + ser + ";Initial Catalog=" + db + ";User ID=" + user + ";Password=" + pass + ";Integrated Security=True";
@@ -81,6 +82,33 @@ namespace BSHHRMCNTTT.SO
 
             }
             return dt;
+        }
+        #endregion
+        // xử lý lke dữ liệu dạng chuỗi 
+        #region [STR_LKE]
+        public string STR_LKE(string v_nameproc)
+        {
+            string msg = "";
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = OpenConnection();
+                cmd.CommandText = v_nameproc;
+                cmd.CommandType = CommandType.StoredProcedure;
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    msg = dr[0].ToString();
+
+                }
+                dr.Close();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            return msg;
         }
         #endregion
         // xử lý tìm kiếm bản ghi 

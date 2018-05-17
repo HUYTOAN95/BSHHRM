@@ -15,6 +15,7 @@ namespace BSHHRMCNTTT.GUI
 {
     public partial class BSH_KhenThuong : DevExpress.XtraEditors.XtraForm
     {
+        private bool AddNew = false;
         private DBConnection db;
         public BSH_KhenThuong()
         {
@@ -95,6 +96,7 @@ namespace BSHHRMCNTTT.GUI
                     {
                         XtraMessageBox.Show("Xóa bản ghi thành công !");
                         LoadData();
+                        ClearData();
                     }
                     else
                         XtraMessageBox.Show("Xóa bản ghi lỗi !");
@@ -150,12 +152,28 @@ namespace BSHHRMCNTTT.GUI
 
         private void btnadd_Click(object sender, EventArgs e)
         {
-            AddRecord();
+            AddNew = true;
+            ClearData();
+            btnadd.Enabled = false;
         }
 
         private void btnedit_Click(object sender, EventArgs e)
         {
-            UpdateRecord();
+            if (AddNew == true)
+            {
+                if (txthtkt.Text.Trim().Equals(""))
+                {
+                    MessageBox.Show("Hình thức không được để trống!");
+                    txthtkt.Focus();
+                    return;
+                }
+
+                AddRecord();
+                btnadd.Enabled = true;
+                AddNew = false;
+            }
+            else
+                UpdateRecord();
 
         }
 
@@ -190,6 +208,8 @@ namespace BSHHRMCNTTT.GUI
             txthtkt.Text = GridView.CurrentRow.Cells[1].Value.ToString().Trim();
             txtlydokr.Text = GridView.CurrentRow.Cells[2].Value.ToString().Trim();
             txtsotien.Text = GridView.CurrentRow.Cells[3].Value.ToString().Trim();
+            btnadd.Enabled = true;
+            AddNew = false;
         }
     }
 }

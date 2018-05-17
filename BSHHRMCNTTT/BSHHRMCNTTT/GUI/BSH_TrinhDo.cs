@@ -13,9 +13,10 @@ using BSHHRMCNTTT.SO;
 using System.Data.SqlClient;
 
 namespace BSHHRMCNTTT.GUI
-{
+{ 
     public partial class BSH_TrinhDo : DevExpress.XtraEditors.XtraForm
     {
+        private bool AddNew = false;
         private DBConnection db;
         public BSH_TrinhDo()
         {
@@ -86,7 +87,7 @@ namespace BSHHRMCNTTT.GUI
                 {
                     string query = string.Format("SPBSH_TDO_XOA");
                     SqlParameter[] para = {
-                    new SqlParameter("@matd",ma),
+                    new SqlParameter("@matd",ma)
 
                 };
 
@@ -144,23 +145,31 @@ namespace BSHHRMCNTTT.GUI
 
         private void btnadd_Click(object sender, EventArgs e)
         {
-            if (txttrinhdo.Text.Trim().Equals(""))
-            {
-                MessageBox.Show("Trình Độ không được để trống!");
-                txttrinhdo.Focus();
-                return;
-            }
-            if (txtchuyennganh.Text.Trim().Equals(""))
-            {
-                MessageBox.Show("Chuyên Ngành không được để trống!");
-                txtchuyennganh.Focus();
-                return;
-            }
-            AddRecord();
+            AddNew = true;
+            ClearData();
+            btnadd.Enabled = false;
         }
 
         private void btnedit_Click(object sender, EventArgs e)
-        {
+        {  if (AddNew == true)
+            {
+                if (txttrinhdo.Text.Trim().Equals(""))
+                {
+                    MessageBox.Show("Trình Độ không được để trống!");
+                    txttrinhdo.Focus();
+                    return;
+                }
+                if (txtchuyennganh.Text.Trim().Equals(""))
+                {
+                    MessageBox.Show("Chuyên Ngành không được để trống!");
+                    txtchuyennganh.Focus();
+                    return;
+                }
+                AddRecord();
+                AddNew = false;
+                btnadd.Enabled = true;
+            }
+        else
             UpdateRecord();
         }
 
@@ -173,6 +182,7 @@ namespace BSHHRMCNTTT.GUI
         {
             txttrinhdo.Text = GridView.CurrentRow.Cells[1].Value.ToString().Trim();
             txtchuyennganh.Text = GridView.CurrentRow.Cells[2].Value.ToString().Trim();
+            btnadd.Enabled = true;
         }
 
         private void BSH_TrinhDo_Load(object sender, EventArgs e)

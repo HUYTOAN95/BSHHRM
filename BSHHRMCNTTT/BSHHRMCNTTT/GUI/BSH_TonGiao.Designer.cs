@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BSH_TonGiao));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.txttongiao = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -85,6 +86,7 @@
             this.GridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.GridView.Size = new System.Drawing.Size(294, 353);
             this.GridView.TabIndex = 5;
+            this.GridView.Click += new System.EventHandler(this.GridView_Click);
             // 
             // MaTG
             // 
@@ -103,29 +105,32 @@
             // 
             // btndelete
             // 
-            this.btndelete.Location = new System.Drawing.Point(474, 318);
+            this.btndelete.Image = ((System.Drawing.Image)(resources.GetObject("btndelete.Image")));
+            this.btndelete.Location = new System.Drawing.Point(470, 318);
             this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(55, 23);
+            this.btndelete.Size = new System.Drawing.Size(62, 28);
             this.btndelete.TabIndex = 9;
             this.btndelete.Text = "&Xóa";
             this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
             // btnedit
             // 
-            this.btnedit.Location = new System.Drawing.Point(394, 318);
+            this.btnedit.Image = ((System.Drawing.Image)(resources.GetObject("btnedit.Image")));
+            this.btnedit.Location = new System.Drawing.Point(390, 318);
             this.btnedit.Name = "btnedit";
-            this.btnedit.Size = new System.Drawing.Size(60, 23);
+            this.btnedit.Size = new System.Drawing.Size(62, 28);
             this.btnedit.TabIndex = 8;
-            this.btnedit.Text = "&Sửa";
+            this.btnedit.Text = "&Lưu";
             this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
             // 
             // btnadd
             // 
-            this.btnadd.Location = new System.Drawing.Point(315, 318);
+            this.btnadd.Image = ((System.Drawing.Image)(resources.GetObject("btnadd.Image")));
+            this.btnadd.Location = new System.Drawing.Point(311, 318);
             this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(61, 23);
+            this.btnadd.Size = new System.Drawing.Size(62, 28);
             this.btnadd.TabIndex = 7;
-            this.btnadd.Text = "&Thêm";
+            this.btnadd.Text = "&Mới";
             this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // BSH_TonGiao

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BSH_PBAN));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grbthongtin = new DevExpress.XtraEditors.GroupControl();
             this.txtghichu = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -56,9 +56,9 @@
             this.grbthongtin.Controls.Add(this.labelControl3);
             this.grbthongtin.Controls.Add(this.txtten);
             this.grbthongtin.Controls.Add(this.labelControl2);
-            this.grbthongtin.Location = new System.Drawing.Point(386, 14);
+            this.grbthongtin.Location = new System.Drawing.Point(372, 16);
             this.grbthongtin.Name = "grbthongtin";
-            this.grbthongtin.Size = new System.Drawing.Size(318, 161);
+            this.grbthongtin.Size = new System.Drawing.Size(309, 161);
             this.grbthongtin.TabIndex = 1;
             this.grbthongtin.Text = "Thông tin";
             // 
@@ -94,36 +94,40 @@
             // 
             // btnthem
             // 
-            this.btnthem.Location = new System.Drawing.Point(401, 346);
+            this.btnthem.Image = ((System.Drawing.Image)(resources.GetObject("btnthem.Image")));
+            this.btnthem.Location = new System.Drawing.Point(384, 348);
             this.btnthem.Name = "btnthem";
-            this.btnthem.Size = new System.Drawing.Size(61, 23);
+            this.btnthem.Size = new System.Drawing.Size(62, 28);
             this.btnthem.TabIndex = 6;
-            this.btnthem.Text = "&Thêm";
+            this.btnthem.Text = "&Mới";
             this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
             // 
             // btnsua
             // 
-            this.btnsua.Location = new System.Drawing.Point(471, 346);
+            this.btnsua.Image = ((System.Drawing.Image)(resources.GetObject("btnsua.Image")));
+            this.btnsua.Location = new System.Drawing.Point(454, 348);
             this.btnsua.Name = "btnsua";
-            this.btnsua.Size = new System.Drawing.Size(63, 23);
+            this.btnsua.Size = new System.Drawing.Size(62, 28);
             this.btnsua.TabIndex = 7;
-            this.btnsua.Text = "&Sửa";
+            this.btnsua.Text = "&Lưu";
             this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
             // 
             // btnxoa
             // 
-            this.btnxoa.Location = new System.Drawing.Point(548, 346);
+            this.btnxoa.Image = ((System.Drawing.Image)(resources.GetObject("btnxoa.Image")));
+            this.btnxoa.Location = new System.Drawing.Point(531, 348);
             this.btnxoa.Name = "btnxoa";
-            this.btnxoa.Size = new System.Drawing.Size(63, 23);
+            this.btnxoa.Size = new System.Drawing.Size(62, 28);
             this.btnxoa.TabIndex = 8;
             this.btnxoa.Text = "&Xóa";
             this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
             // 
             // btnin
             // 
-            this.btnin.Location = new System.Drawing.Point(622, 346);
+            this.btnin.Image = ((System.Drawing.Image)(resources.GetObject("btnin.Image")));
+            this.btnin.Location = new System.Drawing.Point(605, 348);
             this.btnin.Name = "btnin";
-            this.btnin.Size = new System.Drawing.Size(66, 23);
+            this.btnin.Size = new System.Drawing.Size(62, 28);
             this.btnin.TabIndex = 9;
             this.btnin.Text = "&IN";
             this.btnin.Click += new System.EventHandler(this.btnin_Click);
@@ -151,7 +155,7 @@
             this.GridView.Name = "GridView";
             this.GridView.ReadOnly = true;
             this.GridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.GridView.Size = new System.Drawing.Size(378, 386);
+            this.GridView.Size = new System.Drawing.Size(363, 386);
             this.GridView.TabIndex = 11;
             this.GridView.Click += new System.EventHandler(this.GridView_Click);
             // 
@@ -184,7 +188,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 404);
+            this.ClientSize = new System.Drawing.Size(686, 404);
             this.Controls.Add(this.btnin);
             this.Controls.Add(this.GridView);
             this.Controls.Add(this.btnthem);

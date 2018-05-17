@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BSH_DanToc));
             this.GridView = new System.Windows.Forms.DataGridView();
+            this.MaDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtdantoc = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnadd = new DevExpress.XtraEditors.SimpleButton();
             this.btnedit = new DevExpress.XtraEditors.SimpleButton();
             this.btndelete = new DevExpress.XtraEditors.SimpleButton();
-            this.MaDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -62,58 +63,6 @@
             this.GridView.TabIndex = 0;
             this.GridView.Click += new System.EventHandler(this.GridView_Click);
             // 
-            // groupControl1
-            // 
-            this.groupControl1.Controls.Add(this.txtdantoc);
-            this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Location = new System.Drawing.Point(303, 14);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(240, 111);
-            this.groupControl1.TabIndex = 1;
-            this.groupControl1.Text = "Thông tin";
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(16, 48);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(37, 13);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Dân tộc";
-            // 
-            // txtdantoc
-            // 
-            this.txtdantoc.Location = new System.Drawing.Point(60, 45);
-            this.txtdantoc.Name = "txtdantoc";
-            this.txtdantoc.Size = new System.Drawing.Size(171, 20);
-            this.txtdantoc.TabIndex = 1;
-            // 
-            // btnadd
-            // 
-            this.btnadd.Location = new System.Drawing.Point(320, 312);
-            this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(61, 23);
-            this.btnadd.TabIndex = 2;
-            this.btnadd.Text = "&Thêm";
-            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
-            // 
-            // btnedit
-            // 
-            this.btnedit.Location = new System.Drawing.Point(396, 312);
-            this.btnedit.Name = "btnedit";
-            this.btnedit.Size = new System.Drawing.Size(60, 23);
-            this.btnedit.TabIndex = 3;
-            this.btnedit.Text = "&Sửa";
-            this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
-            // 
-            // btndelete
-            // 
-            this.btndelete.Location = new System.Drawing.Point(479, 312);
-            this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(55, 23);
-            this.btndelete.TabIndex = 4;
-            this.btndelete.Text = "&Xóa";
-            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
-            // 
             // MaDT
             // 
             this.MaDT.DataPropertyName = "MaDT";
@@ -128,6 +77,61 @@
             this.TenDT.Name = "TenDT";
             this.TenDT.ReadOnly = true;
             this.TenDT.Width = 300;
+            // 
+            // groupControl1
+            // 
+            this.groupControl1.Controls.Add(this.txtdantoc);
+            this.groupControl1.Controls.Add(this.labelControl1);
+            this.groupControl1.Location = new System.Drawing.Point(303, 12);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(240, 111);
+            this.groupControl1.TabIndex = 1;
+            this.groupControl1.Text = "Thông tin";
+            // 
+            // txtdantoc
+            // 
+            this.txtdantoc.Location = new System.Drawing.Point(60, 45);
+            this.txtdantoc.Name = "txtdantoc";
+            this.txtdantoc.Size = new System.Drawing.Size(171, 20);
+            this.txtdantoc.TabIndex = 1;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(16, 48);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(37, 13);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "Dân tộc";
+            // 
+            // btnadd
+            // 
+            this.btnadd.Image = ((System.Drawing.Image)(resources.GetObject("btnadd.Image")));
+            this.btnadd.Location = new System.Drawing.Point(320, 312);
+            this.btnadd.Name = "btnadd";
+            this.btnadd.Size = new System.Drawing.Size(62, 28);
+            this.btnadd.TabIndex = 2;
+            this.btnadd.Text = "&Mới ";
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
+            // 
+            // btnedit
+            // 
+            this.btnedit.Image = ((System.Drawing.Image)(resources.GetObject("btnedit.Image")));
+            this.btnedit.Location = new System.Drawing.Point(395, 312);
+            this.btnedit.Name = "btnedit";
+            this.btnedit.Size = new System.Drawing.Size(62, 28);
+            this.btnedit.TabIndex = 3;
+            this.btnedit.Text = "&Lưu";
+            this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
+            // 
+            // btndelete
+            // 
+            this.btndelete.Image = ((System.Drawing.Image)(resources.GetObject("btndelete.Image")));
+            this.btndelete.Location = new System.Drawing.Point(470, 312);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.Size = new System.Drawing.Size(62, 28);
+            this.btndelete.TabIndex = 4;
+            this.btndelete.Text = "&Xóa";
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
             // BSH_DanToc
             // 

@@ -15,6 +15,7 @@ namespace BSHHRMCNTTT.GUI
 {
     public partial class BSH_KyLuat : DevExpress.XtraEditors.XtraForm
     {
+        private bool AddNew = false;
         private DBConnection db;
         public BSH_KyLuat()
         {
@@ -90,6 +91,7 @@ namespace BSHHRMCNTTT.GUI
                     {
                         XtraMessageBox.Show("Xóa bản ghi thành công !");
                         LoadData();
+                        ClearData();
                     }
                     else
                         XtraMessageBox.Show("Xóa bản ghi lỗi !");
@@ -145,12 +147,28 @@ namespace BSHHRMCNTTT.GUI
 
         private void btnadd_Click(object sender, EventArgs e)
         {
-            AddRecord();
+            AddNew = true;
+            ClearData();
+            btnadd.Enabled = false;
         }
 
         private void btnedit_Click(object sender, EventArgs e)
         {
-            UpdateRecord();
+            if (AddNew == true)
+            {
+                if (txtten.Text.Trim().Equals(""))
+                {
+                    MessageBox.Show("Hình thức không được để trống!");
+                    txtten.Focus();
+                    return;
+                }
+
+                AddRecord();
+                btnadd.Enabled = true;
+                AddNew = false;
+            }
+            else
+                UpdateRecord();
         }
 
         private void btndelete_Click(object sender, EventArgs e)
@@ -168,6 +186,8 @@ namespace BSHHRMCNTTT.GUI
             txtten.Text = GridView.CurrentRow.Cells[1].Value.ToString().Trim();
             txtlydo.Text = GridView.CurrentRow.Cells[2].Value.ToString().Trim();
             txtsotien.Text = GridView.CurrentRow.Cells[3].Value.ToString().Trim();
+            btnadd.Enabled = true;
+            AddNew = false;
         }
         public string Selected { get { return GridView.CurrentRow.Cells[0].Value.ToString(); } }
         public string Selected1 { get { return GridView.CurrentRow.Cells[1].Value.ToString(); } }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BSH_KhenThuong));
             this.GridView = new System.Windows.Forms.DataGridView();
             this.MaKT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HinhThucKT = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -116,6 +117,7 @@
             this.txthtkt.Name = "txthtkt";
             this.txthtkt.Size = new System.Drawing.Size(206, 20);
             this.txthtkt.TabIndex = 2;
+            this.txthtkt.ToolTip = "Nhập hình thưc kỷ luật ";
             // 
             // txtlydokr
             // 
@@ -164,27 +166,30 @@
             // 
             // btnadd
             // 
+            this.btnadd.Image = ((System.Drawing.Image)(resources.GetObject("btnadd.Image")));
             this.btnadd.Location = new System.Drawing.Point(426, 359);
             this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(75, 23);
+            this.btnadd.Size = new System.Drawing.Size(62, 28);
             this.btnadd.TabIndex = 8;
-            this.btnadd.Text = "&Thêm";
+            this.btnadd.Text = "&Mới";
             this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // btnedit
             // 
+            this.btnedit.Image = ((System.Drawing.Image)(resources.GetObject("btnedit.Image")));
             this.btnedit.Location = new System.Drawing.Point(521, 359);
             this.btnedit.Name = "btnedit";
-            this.btnedit.Size = new System.Drawing.Size(75, 23);
+            this.btnedit.Size = new System.Drawing.Size(62, 28);
             this.btnedit.TabIndex = 9;
-            this.btnedit.Text = "&Sửa";
+            this.btnedit.Text = "&Lưu";
             this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
             // 
             // btndelete
             // 
+            this.btndelete.Image = ((System.Drawing.Image)(resources.GetObject("btndelete.Image")));
             this.btndelete.Location = new System.Drawing.Point(619, 359);
             this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(75, 23);
+            this.btndelete.Size = new System.Drawing.Size(62, 28);
             this.btndelete.TabIndex = 10;
             this.btndelete.Text = "&Xóa";
             this.btndelete.Click += new System.EventHandler(this.btndelete_Click);

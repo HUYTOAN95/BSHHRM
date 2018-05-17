@@ -15,6 +15,7 @@ namespace BSHHRMCNTTT.GUI
 {
     public partial class BSH_TonGiao : DevExpress.XtraEditors.XtraForm
     {
+        private bool AddNew = false;
         private DBConnection db;
         public BSH_TonGiao()
         {
@@ -88,6 +89,7 @@ namespace BSHHRMCNTTT.GUI
                     {
                         XtraMessageBox.Show("Xóa bản ghi thành công !");
                         LoadData();
+                        ClearData();
                     }
                     else
                         XtraMessageBox.Show("Xóa bản ghi lỗi !");
@@ -141,18 +143,28 @@ namespace BSHHRMCNTTT.GUI
 
         private void btnadd_Click(object sender, EventArgs e)
         {
-            if (txttongiao.Text.Trim().Equals(""))
-            {
-                MessageBox.Show("Tên tôn giáo không được để trống!");
-                txttongiao.Focus();
-                return;
-            }
-            AddRecord();
+            AddNew = true;
+            ClearData();
+            btnadd.Enabled = false;
         }
 
         private void btnedit_Click(object sender, EventArgs e)
         {
-            UpdateRecord();
+            if (AddNew == true)
+            {
+                if (txttongiao.Text.Trim().Equals(""))
+                {
+                    MessageBox.Show("Tên không được để trống!");
+                    txttongiao.Focus();
+                    return;
+                }
+
+                AddRecord();
+                btnadd.Enabled = true;
+                AddNew = false;
+            }
+            else
+                UpdateRecord();
         }
 
         private void btndelete_Click(object sender, EventArgs e)
@@ -179,6 +191,13 @@ namespace BSHHRMCNTTT.GUI
                     this.Close();
                     break;
             }
+        }
+
+        private void GridView_Click(object sender, EventArgs e)
+        {
+            txttongiao.Text = GridView.CurrentRow.Cells[1].Value.ToString();
+            btnadd.Enabled = true;
+            AddNew = false;
         }
     }
 }

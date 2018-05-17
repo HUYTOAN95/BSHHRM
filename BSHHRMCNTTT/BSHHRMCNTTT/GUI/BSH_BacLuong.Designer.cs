@@ -28,26 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BSH_BacLuong));
             this.GridView = new System.Windows.Forms.DataGridView();
             this.Ma = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HSL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.txtma = new DevExpress.XtraEditors.TextEdit();
-            this.txtbac = new DevExpress.XtraEditors.TextEdit();
             this.txthsl = new DevExpress.XtraEditors.TextEdit();
+            this.txtbac = new DevExpress.XtraEditors.TextEdit();
+            this.txtma = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnadd = new DevExpress.XtraEditors.SimpleButton();
             this.btnedit = new DevExpress.XtraEditors.SimpleButton();
             this.btndelete = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtma.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtbac.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txthsl.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtbac.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtma.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // GridView
@@ -74,18 +75,21 @@
             this.Ma.DataPropertyName = "Ma";
             this.Ma.HeaderText = "Mã";
             this.Ma.Name = "Ma";
+            this.Ma.ReadOnly = true;
             // 
             // Bac
             // 
             this.Bac.DataPropertyName = "Bac";
             this.Bac.HeaderText = "Bậc";
             this.Bac.Name = "Bac";
+            this.Bac.ReadOnly = true;
             // 
             // HSL
             // 
             this.HSL.DataPropertyName = "HSL";
             this.HSL.HeaderText = "Hệ số lương";
             this.HSL.Name = "HSL";
+            this.HSL.ReadOnly = true;
             // 
             // groupControl1
             // 
@@ -101,21 +105,26 @@
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Thông tin";
             // 
-            // labelControl1
+            // txthsl
             // 
-            this.labelControl1.Location = new System.Drawing.Point(15, 35);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(14, 13);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Mã";
+            this.txthsl.Location = new System.Drawing.Point(62, 96);
+            this.txthsl.Name = "txthsl";
+            this.txthsl.Size = new System.Drawing.Size(154, 20);
+            this.txthsl.TabIndex = 5;
             // 
-            // labelControl2
+            // txtbac
             // 
-            this.labelControl2.Location = new System.Drawing.Point(15, 63);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(17, 13);
-            this.labelControl2.TabIndex = 1;
-            this.labelControl2.Text = "Bậc";
+            this.txtbac.Location = new System.Drawing.Point(62, 62);
+            this.txtbac.Name = "txtbac";
+            this.txtbac.Size = new System.Drawing.Size(100, 20);
+            this.txtbac.TabIndex = 4;
+            // 
+            // txtma
+            // 
+            this.txtma.Location = new System.Drawing.Point(62, 32);
+            this.txtma.Name = "txtma";
+            this.txtma.Size = new System.Drawing.Size(100, 20);
+            this.txtma.TabIndex = 3;
             // 
             // labelControl3
             // 
@@ -125,50 +134,48 @@
             this.labelControl3.TabIndex = 2;
             this.labelControl3.Text = "Hệ số ";
             // 
-            // txtma
+            // labelControl2
             // 
-            this.txtma.Location = new System.Drawing.Point(62, 32);
-            this.txtma.Name = "txtma";
-            this.txtma.Size = new System.Drawing.Size(100, 20);
-            this.txtma.TabIndex = 3;
+            this.labelControl2.Location = new System.Drawing.Point(15, 63);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(17, 13);
+            this.labelControl2.TabIndex = 1;
+            this.labelControl2.Text = "Bậc";
             // 
-            // txtbac
+            // labelControl1
             // 
-            this.txtbac.Location = new System.Drawing.Point(62, 62);
-            this.txtbac.Name = "txtbac";
-            this.txtbac.Size = new System.Drawing.Size(100, 20);
-            this.txtbac.TabIndex = 4;
-            // 
-            // txthsl
-            // 
-            this.txthsl.Location = new System.Drawing.Point(62, 96);
-            this.txthsl.Name = "txthsl";
-            this.txthsl.Size = new System.Drawing.Size(154, 20);
-            this.txthsl.TabIndex = 5;
+            this.labelControl1.Location = new System.Drawing.Point(15, 35);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(14, 13);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "Mã";
             // 
             // btnadd
             // 
-            this.btnadd.Location = new System.Drawing.Point(338, 334);
+            this.btnadd.Image = ((System.Drawing.Image)(resources.GetObject("btnadd.Image")));
+            this.btnadd.Location = new System.Drawing.Point(327, 326);
             this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(53, 23);
+            this.btnadd.Size = new System.Drawing.Size(66, 28);
             this.btnadd.TabIndex = 2;
-            this.btnadd.Text = "&Thêm";
+            this.btnadd.Text = "&Mới";
             this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // btnedit
             // 
-            this.btnedit.Location = new System.Drawing.Point(409, 334);
+            this.btnedit.Image = ((System.Drawing.Image)(resources.GetObject("btnedit.Image")));
+            this.btnedit.Location = new System.Drawing.Point(400, 326);
             this.btnedit.Name = "btnedit";
-            this.btnedit.Size = new System.Drawing.Size(53, 23);
+            this.btnedit.Size = new System.Drawing.Size(66, 28);
             this.btnedit.TabIndex = 3;
-            this.btnedit.Text = "&Sửa";
+            this.btnedit.Text = "&Lưu";
             this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
             // 
             // btndelete
             // 
-            this.btndelete.Location = new System.Drawing.Point(481, 334);
+            this.btndelete.Image = ((System.Drawing.Image)(resources.GetObject("btndelete.Image")));
+            this.btndelete.Location = new System.Drawing.Point(473, 326);
             this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(53, 23);
+            this.btndelete.Size = new System.Drawing.Size(66, 28);
             this.btndelete.TabIndex = 4;
             this.btndelete.Text = "&Xóa";
             this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
@@ -193,9 +200,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtma.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtbac.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txthsl.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtbac.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtma.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

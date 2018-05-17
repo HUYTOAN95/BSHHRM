@@ -18,6 +18,23 @@ namespace BSHHRMCNTTT.SysForm
         public frmlogin()
         {
             InitializeComponent();
+            //t_madv.ForeColor = SystemColors.GrayText;
+            //t_madv.Text = "Please Enter Ma Don Vi";
+            //this.t_madv.Leave += new System.EventHandler(this.t_madv_Leave);
+            //this.t_madv.Enter += new System.EventHandler(this.t_madv_Enter);
+            //t_nsd.ForeColor = SystemColors.GrayText;
+            //t_nsd.Text = "Please Enter User Name";
+            //this.t_nsd.Leave += new System.EventHandler(this.t_nsd_Leave);
+            //this.t_nsd.Enter += new System.EventHandler(this.t_nsd_Enter);
+            //t_pass.ForeColor = SystemColors.GrayText;
+            //t_pass.Text = "Please Enter Password";
+            //this.t_pass.Leave += new System.EventHandler(this.t_pass_Leave);
+            //this.t_pass.Enter += new System.EventHandler(this.t_pass_Enter);
+            //t_pass.Properties.UseSystemPasswordChar = false;
+
+
+
+
         }
 
         private void t_pass_EditValueChanged(object sender, EventArgs e)
@@ -121,6 +138,82 @@ namespace BSHHRMCNTTT.SysForm
                     }
                     break;
             }
+        }
+
+        private void t_madv_Leave(object sender, EventArgs e)
+        {
+            if (t_madv.Text.Length == 0)
+            {
+                t_madv.Text = "Please Enter Ma Don Vi";
+                t_madv.ForeColor = SystemColors.GrayText;
+            }
+        }
+
+        private void t_madv_Enter(object sender, EventArgs e)
+        {
+            if (t_madv.Text.Length == 0)
+            {
+                t_madv.Text = "Please Enter Ma Don Vi";
+                t_madv.ForeColor = SystemColors.WindowText;
+            }
+        }
+
+        private void t_nsd_Enter(object sender, EventArgs e)
+        {
+            if (t_nsd.Text.Length == 0)
+            {
+                t_nsd.Text = "Please Enter User Name";
+                t_nsd.ForeColor = SystemColors.WindowText;
+            }
+        }
+
+        private void t_nsd_Leave(object sender, EventArgs e)
+        {
+            if (t_nsd.Text.Length == 0)
+            {
+                t_nsd.Text = "Please Enter User Name";
+                t_nsd.ForeColor = SystemColors.GrayText;
+            }
+        }
+
+        private void t_pass_Enter(object sender, EventArgs e)
+        {
+            if (t_pass.Text.Length == 0)
+            {
+                t_pass.Text = "Please Enter Password";
+                t_pass.ForeColor = SystemColors.WindowText;
+            }
+            //t_pass.SelectionStart = 0;
+            //t_pass.SelectionLength = t_pass.Text.Length;
+        }
+
+        private void t_pass_Leave(object sender, EventArgs e)
+        {
+            if (t_pass.Text.Length == 0)
+            {
+                t_pass.Text = "Please Enter Password";
+                t_pass.ForeColor = SystemColors.GrayText;
+            }
+        }
+
+        private void frmlogin_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void frmlogin_Shown(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void frmlogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void t_pass_EditValueChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

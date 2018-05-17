@@ -15,6 +15,7 @@ namespace BSHHRMCNTTT.GUI
 {
     public partial class BSH_PBAN : DevExpress.XtraEditors.XtraForm
     {
+        private bool AddNew = false;
         private DBConnection db;
         public BSH_PBAN()
         {
@@ -85,8 +86,8 @@ namespace BSHHRMCNTTT.GUI
                 {
                     string query = string.Format("SPBSH_PBAN_XOA");
                     SqlParameter[] para = {
-                     new SqlParameter("@mapb",ma),
-                      new SqlParameter("@StatementType", "EDIT")
+                     new SqlParameter("@mapb",ma)
+                  
 
                 };
 
@@ -95,6 +96,7 @@ namespace BSHHRMCNTTT.GUI
                     {
                         XtraMessageBox.Show("Xóa bản ghi thành công !");
                         LoadData();
+                        ClearData();
                     }
                     else
                         XtraMessageBox.Show("Xóa bản ghi lỗi !");
@@ -149,25 +151,37 @@ namespace BSHHRMCNTTT.GUI
         
         private void btnthem_Click(object sender, EventArgs e)
         {
-            if (txtten.Text.Trim().Equals(""))
-            {
-                MessageBox.Show("Tên phòng ban không được để trống!");
-                txtten.Focus();
-                return;
-            }
-            AddRecord();
+            AddNew = true;
+            ClearData();
+            btnthem.Enabled = false;
 
         }
 
         private void btnsua_Click(object sender, EventArgs e)
         {
-            UpdateRecord();
+            if (AddNew == true)
+            {
+               
+                if (txtten.Text.Trim().Equals(""))
+                {
+                    MessageBox.Show("Tên không được để trống!");
+                    txtten.Focus();
+                    return;
+                }
+                AddRecord();
+                btnthem.Enabled = true;
+                AddNew = false;
+            }
+            else
+                UpdateRecord();
         }
 
         private void GridView_Click(object sender, EventArgs e)
         {
             txtten.Text = GridView.CurrentRow.Cells[1].Value.ToString().Trim();
             txtghichu.Text = GridView.CurrentRow.Cells[2].Value.ToString().Trim();
+            btnthem.Enabled = true;
+            AddNew = false;
         }
 
         private void btnxoa_Click(object sender, EventArgs e)

@@ -14,7 +14,7 @@ using BSHHRMCNTTT.SO;
 namespace BSHHRMCNTTT.GUI
 {
     public partial class BSH_ChucVu : DevExpress.XtraEditors.XtraForm
-    {
+    {  private bool AddNew = false;
         private DBConnection db;
         public BSH_ChucVu()
         {
@@ -164,24 +164,34 @@ namespace BSHHRMCNTTT.GUI
 
         private void btnadd_Click(object sender, EventArgs e)
         {
-            if (txtma.Text.Trim().Equals(""))
-            {
-                MessageBox.Show("Mã không được để trống!");
-                txtten.Focus();
-                return;
-            }
-            if (txtten.Text.Trim().Equals(""))
-            {
-                MessageBox.Show("Tên không được để trống!");
-                txtten.Focus();
-                return;
-            }
-            AddRecord();
+            AddNew = true;
+            ClearData();
+            btnadd.Enabled = false;
+           
         }
 
         private void btnedit_Click(object sender, EventArgs e)
         {
-            UpdateRecord();
+            if (AddNew == true)
+            {
+                if (txtma.Text.Trim().Equals(""))
+                {
+                    MessageBox.Show("Mã không được để trống!");
+                    txtten.Focus();
+                    return;
+                }
+                if (txtten.Text.Trim().Equals(""))
+                {
+                    MessageBox.Show("Tên không được để trống!");
+                    txtten.Focus();
+                    return;
+                }
+                AddRecord();
+                btnadd.Enabled = true;
+                AddNew = false;
+            }
+            else
+                UpdateRecord();
         }
 
         private void btndelete_Click(object sender, EventArgs e)
@@ -193,6 +203,8 @@ namespace BSHHRMCNTTT.GUI
         {
             txtma.Text = GridView.CurrentRow.Cells[0].Value.ToString().Trim();
             txtten.Text = GridView.CurrentRow.Cells[1].Value.ToString().Trim();
+            btnadd.Enabled = true;
+            AddNew = false;
         }
 
         private void txtma_KeyDown(object sender, KeyEventArgs e)

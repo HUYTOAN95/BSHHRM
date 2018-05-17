@@ -28,7 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BSH_KyLuat));
             this.GridView = new System.Windows.Forms.DataGridView();
+            this.MaKL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HinhThucKL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LyDoKL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoTienKL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.txtsotien = new DevExpress.XtraEditors.TextEdit();
             this.txtlydo = new DevExpress.XtraEditors.TextEdit();
@@ -39,10 +44,6 @@
             this.btnadd = new DevExpress.XtraEditors.SimpleButton();
             this.btnedit = new DevExpress.XtraEditors.SimpleButton();
             this.btndelete = new DevExpress.XtraEditors.SimpleButton();
-            this.MaKL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HinhThucKL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LyDoKL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoTienKL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -72,6 +73,38 @@
             this.GridView.Size = new System.Drawing.Size(412, 389);
             this.GridView.TabIndex = 0;
             this.GridView.Click += new System.EventHandler(this.GridView_Click);
+            // 
+            // MaKL
+            // 
+            this.MaKL.DataPropertyName = "MaKL";
+            this.MaKL.HeaderText = "Mã";
+            this.MaKL.Name = "MaKL";
+            this.MaKL.ReadOnly = true;
+            this.MaKL.Width = 50;
+            // 
+            // HinhThucKL
+            // 
+            this.HinhThucKL.DataPropertyName = "HinhThucKL";
+            this.HinhThucKL.HeaderText = "Hình thức";
+            this.HinhThucKL.Name = "HinhThucKL";
+            this.HinhThucKL.ReadOnly = true;
+            this.HinhThucKL.Width = 150;
+            // 
+            // LyDoKL
+            // 
+            this.LyDoKL.DataPropertyName = "LyDoKL";
+            this.LyDoKL.HeaderText = "Lý do ";
+            this.LyDoKL.Name = "LyDoKL";
+            this.LyDoKL.ReadOnly = true;
+            this.LyDoKL.Width = 180;
+            // 
+            // SoTienKL
+            // 
+            this.SoTienKL.DataPropertyName = "SoTienKL";
+            this.SoTienKL.HeaderText = "Số tiền";
+            this.SoTienKL.Name = "SoTienKL";
+            this.SoTienKL.ReadOnly = true;
+            this.SoTienKL.Width = 120;
             // 
             // groupControl1
             // 
@@ -136,62 +169,33 @@
             // 
             // btnadd
             // 
+            this.btnadd.Image = ((System.Drawing.Image)(resources.GetObject("btnadd.Image")));
             this.btnadd.Location = new System.Drawing.Point(434, 356);
             this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(75, 23);
+            this.btnadd.Size = new System.Drawing.Size(62, 28);
             this.btnadd.TabIndex = 4;
-            this.btnadd.Text = "&Thêm";
+            this.btnadd.Text = "&Mới";
             this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // btnedit
             // 
+            this.btnedit.Image = ((System.Drawing.Image)(resources.GetObject("btnedit.Image")));
             this.btnedit.Location = new System.Drawing.Point(519, 356);
             this.btnedit.Name = "btnedit";
-            this.btnedit.Size = new System.Drawing.Size(75, 23);
+            this.btnedit.Size = new System.Drawing.Size(62, 28);
             this.btnedit.TabIndex = 5;
-            this.btnedit.Text = "&Sửa";
+            this.btnedit.Text = "&Lưu";
             this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
             // 
             // btndelete
             // 
-            this.btndelete.Location = new System.Drawing.Point(608, 356);
+            this.btndelete.Image = ((System.Drawing.Image)(resources.GetObject("btndelete.Image")));
+            this.btndelete.Location = new System.Drawing.Point(603, 356);
             this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(75, 23);
+            this.btndelete.Size = new System.Drawing.Size(62, 28);
             this.btndelete.TabIndex = 6;
             this.btndelete.Text = "&Xóa";
             this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
-            // 
-            // MaKL
-            // 
-            this.MaKL.DataPropertyName = "MaKL";
-            this.MaKL.HeaderText = "Mã";
-            this.MaKL.Name = "MaKL";
-            this.MaKL.ReadOnly = true;
-            this.MaKL.Width = 50;
-            // 
-            // HinhThucKL
-            // 
-            this.HinhThucKL.DataPropertyName = "HinhThucKL";
-            this.HinhThucKL.HeaderText = "Hình thức";
-            this.HinhThucKL.Name = "HinhThucKL";
-            this.HinhThucKL.ReadOnly = true;
-            this.HinhThucKL.Width = 150;
-            // 
-            // LyDoKL
-            // 
-            this.LyDoKL.DataPropertyName = "LyDoKL";
-            this.LyDoKL.HeaderText = "Lý do ";
-            this.LyDoKL.Name = "LyDoKL";
-            this.LyDoKL.ReadOnly = true;
-            this.LyDoKL.Width = 180;
-            // 
-            // SoTienKL
-            // 
-            this.SoTienKL.DataPropertyName = "SoTienKL";
-            this.SoTienKL.HeaderText = "Số tiền";
-            this.SoTienKL.Name = "SoTienKL";
-            this.SoTienKL.ReadOnly = true;
-            this.SoTienKL.Width = 120;
             // 
             // BSH_KyLuat
             // 

@@ -71,23 +71,29 @@
             // t_madv
             // 
             this.t_madv.EditValue = "000";
+            this.t_madv.EnterMoveNextControl = true;
             this.t_madv.Location = new System.Drawing.Point(149, 38);
             this.t_madv.Name = "t_madv";
             this.t_madv.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.t_madv.Properties.Appearance.Options.UseBackColor = true;
             this.t_madv.Size = new System.Drawing.Size(187, 20);
-            this.t_madv.TabIndex = 13;
+            this.t_madv.TabIndex = 1;
+            this.t_madv.Enter += new System.EventHandler(this.t_madv_Enter);
             this.t_madv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.t_madv_KeyDown_2);
+            this.t_madv.Leave += new System.EventHandler(this.t_madv_Leave);
             // 
             // t_nsd
             // 
             this.t_nsd.EditValue = "ITTEST";
+            this.t_nsd.EnterMoveNextControl = true;
             this.t_nsd.Location = new System.Drawing.Point(149, 73);
             this.t_nsd.Name = "t_nsd";
             this.t_nsd.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.t_nsd.Properties.Appearance.Options.UseBackColor = true;
             this.t_nsd.Size = new System.Drawing.Size(187, 20);
-            this.t_nsd.TabIndex = 12;
+            this.t_nsd.TabIndex = 2;
+            this.t_nsd.Enter += new System.EventHandler(this.t_nsd_Enter);
+            this.t_nsd.Leave += new System.EventHandler(this.t_nsd_Leave);
             // 
             // t_pass
             // 
@@ -98,7 +104,10 @@
             this.t_pass.Properties.Appearance.Options.UseBackColor = true;
             this.t_pass.Properties.UseSystemPasswordChar = true;
             this.t_pass.Size = new System.Drawing.Size(187, 20);
-            this.t_pass.TabIndex = 11;
+            this.t_pass.TabIndex = 3;
+            this.t_pass.EditValueChanged += new System.EventHandler(this.t_pass_EditValueChanged_1);
+            this.t_pass.Enter += new System.EventHandler(this.t_pass_Enter);
+            this.t_pass.Leave += new System.EventHandler(this.t_pass_Leave);
             // 
             // checksave
             // 
@@ -182,6 +191,9 @@
             this.Name = "frmlogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BSH- Đăng Nhập";
+            this.Load += new System.EventHandler(this.frmlogin_Load);
+            this.Shown += new System.EventHandler(this.frmlogin_Shown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmlogin_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();

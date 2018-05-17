@@ -15,6 +15,7 @@ namespace BSHHRMCNTTT.GUI
 {
     public partial class BSH_CheDo : DevExpress.XtraEditors.XtraForm
     {
+        private bool AddNew = false;
         private DBConnection db;
         public BSH_CheDo()
         {
@@ -49,7 +50,7 @@ namespace BSHHRMCNTTT.GUI
                 SqlParameter[] para = {
                 new SqlParameter("@macd",DBNull.Value),
                 new SqlParameter("@tencd", txtten.Text),
-                new SqlParameter("@sotienpc", txtsotien.Text),
+              
                 new SqlParameter("@StatementType", "ADD")
 
             };
@@ -80,9 +81,7 @@ namespace BSHHRMCNTTT.GUI
                 {
                     string query = string.Format("SPBSH_CDO_XOA");
                     SqlParameter[] para = {
-                     new SqlParameter("@macd",ma),
-                      new SqlParameter("@StatementType", "EDIT")
-
+                     new SqlParameter("@macd",ma)                      
                 };
 
                     bool i = db.DeleteRecord(query, para);
@@ -112,7 +111,7 @@ namespace BSHHRMCNTTT.GUI
                 SqlParameter[] para = {
                 new SqlParameter("@macd",ma),
                 new SqlParameter("@tencd", txtten.Text),
-                new SqlParameter("@sotienpc", txtsotien.Text),
+             
                 new SqlParameter("@StatementType", "EDIT")
 
             };
@@ -137,7 +136,6 @@ namespace BSHHRMCNTTT.GUI
         #endregion
         private void ClearData()
         {
-            txtsotien.Text = "";
             txtten.Text = "";
         }
 
@@ -149,12 +147,28 @@ namespace BSHHRMCNTTT.GUI
 
         private void btnadd_Click(object sender, EventArgs e)
         {
-            AddRecord();
+            AddNew = true;
+            ClearData();
+            btnadd.Enabled = false;
         }
 
         private void btnedit_Click(object sender, EventArgs e)
         {
-            UpdateRecord();
+            if (AddNew == true)
+            {
+                if (txtten.Text.Trim().Equals(""))
+                {
+                    MessageBox.Show("Tên không được để trống!");
+                    txtten.Focus();
+                    return;
+                }
+              
+                AddRecord();
+                btnadd.Enabled = true;
+                AddNew = false;
+            }
+            else
+                UpdateRecord();
         }
 
         private void btndelete_Click(object sender, EventArgs e)
@@ -165,7 +179,8 @@ namespace BSHHRMCNTTT.GUI
         private void GridView_Click(object sender, EventArgs e)
         {
             txtten.Text = GridView.CurrentRow.Cells[1].Value.ToString().Trim();
-            txtsotien.Text = GridView.CurrentRow.Cells[2].Value.ToString().Trim();
+            AddNew = false;
+            btnadd.Enabled = true;
         }
         public string Selected { get { return GridView.CurrentRow.Cells[0].Value.ToString(); } }
         public string Selected1 { get { return GridView.CurrentRow.Cells[1].Value.ToString(); } }

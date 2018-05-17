@@ -15,6 +15,7 @@ namespace BSHHRMCNTTT.GUI
 {
     public partial class BSH_DanToc : DevExpress.XtraEditors.XtraForm
     {
+        private bool AddNew = false;
         private DBConnection db;
         public BSH_DanToc()
         {
@@ -43,29 +44,29 @@ namespace BSHHRMCNTTT.GUI
         #region[AddRecord]
         private void AddRecord()
         {
-            //try
-            //{
-            string query = string.Format("SPBSH_DTOC_NH");
-            SqlParameter[] para = {
+            try
+            {
+                string query = string.Format("SPBSH_DTOC_NH");
+                SqlParameter[] para = {
                 new SqlParameter("@ma",DBNull.Value),
                 new SqlParameter("@ten", txtdantoc.Text),
                 new SqlParameter("@StatementType", "ADD")
 
             };
-            bool i = db.AddRecord(query, para);
-            if (i == true)
-            {
-                XtraMessageBox.Show("Thêm mới bản ghi thành công !");
-                LoadData();
-                ClearData();
+                bool i = db.AddRecord(query, para);
+                if (i == true)
+                {
+                    XtraMessageBox.Show("Thêm mới bản ghi thành công !");
+                    LoadData();
+                    ClearData();
+                }
+                else
+                    XtraMessageBox.Show("Thêm mới bản ghi lỗi !");
             }
-            else
-                XtraMessageBox.Show("Thêm mới bản ghi lỗi !");
-            //}
-            //catch (Exception ex)
-            //{
-            //    throw ex;
-            //}
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
         #endregion
         // xóa bản ghi 
@@ -88,6 +89,7 @@ namespace BSHHRMCNTTT.GUI
                     {
                         XtraMessageBox.Show("Xóa bản ghi thành công !");
                         LoadData();
+                        ClearData();
                     }
                     else
                         XtraMessageBox.Show("Xóa bản ghi lỗi !");
@@ -110,7 +112,7 @@ namespace BSHHRMCNTTT.GUI
                 SqlParameter[] para = {
                 new SqlParameter("@ma",ma),
                 new SqlParameter("@ten", txtdantoc.Text),
-                
+
                 new SqlParameter("@StatementType", "EDIT")
 
             };
@@ -136,23 +138,33 @@ namespace BSHHRMCNTTT.GUI
         private void ClearData()
         {
             txtdantoc.Text = "";
-           
+
         }
 
         private void btnadd_Click(object sender, EventArgs e)
         {
-            if (txtdantoc.Text.Trim().Equals(""))
-            {
-                MessageBox.Show("Tên dân tộc không được để trống!");
-                txtdantoc.Focus();
-                return;
-            }
-            AddRecord();
+            AddNew = true;
+            ClearData();
+            btnadd.Enabled = false;
         }
 
         private void btnedit_Click(object sender, EventArgs e)
         {
-            UpdateRecord();
+            if (AddNew == true)
+            {
+                if (txtdantoc.Text.Trim().Equals(""))
+                {
+                    MessageBox.Show("Tên không được để trống!");
+                    txtdantoc.Focus();
+                    return;
+                }
+
+                AddRecord();
+                btnadd.Enabled = true;
+                AddNew = false;
+            }
+            else
+                UpdateRecord();
 
         }
 
@@ -169,6 +181,8 @@ namespace BSHHRMCNTTT.GUI
         private void GridView_Click(object sender, EventArgs e)
         {
             txtdantoc.Text = GridView.CurrentRow.Cells[1].Value.ToString().Trim();
+            btnadd.Enabled = true;
+            AddNew = false;
         }
         public string Selected { get { return GridView.CurrentRow.Cells[0].Value.ToString(); } }
         public string Selected2 { get { return GridView.CurrentRow.Cells[1].Value.ToString(); } }

@@ -140,29 +140,32 @@
             // 
             // btndelete
             // 
+            this.btndelete.Image = ((System.Drawing.Image)(resources.GetObject("btndelete.Image")));
             this.btndelete.Location = new System.Drawing.Point(597, 351);
             this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(75, 23);
+            this.btndelete.Size = new System.Drawing.Size(62, 28);
             this.btndelete.TabIndex = 2;
             this.btndelete.Text = "&Xóa";
             this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
             // btnadd
             // 
+            this.btnadd.Image = ((System.Drawing.Image)(resources.GetObject("btnadd.Image")));
             this.btnadd.Location = new System.Drawing.Point(422, 351);
             this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(75, 23);
+            this.btnadd.Size = new System.Drawing.Size(62, 28);
             this.btnadd.TabIndex = 0;
-            this.btnadd.Text = "&Thêm Mới";
+            this.btnadd.Text = "&Mới";
             this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // btnedit
             // 
+            this.btnedit.Image = ((System.Drawing.Image)(resources.GetObject("btnedit.Image")));
             this.btnedit.Location = new System.Drawing.Point(509, 351);
             this.btnedit.Name = "btnedit";
-            this.btnedit.Size = new System.Drawing.Size(75, 23);
+            this.btnedit.Size = new System.Drawing.Size(62, 28);
             this.btnedit.TabIndex = 1;
-            this.btnedit.Text = "&Sửa Đổi";
+            this.btnedit.Text = "&Lưu";
             this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
             // 
             // BSH_ChucVu

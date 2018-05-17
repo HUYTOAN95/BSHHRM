@@ -15,6 +15,7 @@ namespace BSHHRMCNTTT.GUI
 {
     public partial class BSH_BacLuong : DevExpress.XtraEditors.XtraForm
     {
+        private bool AddNew = false;
         private DBConnection db;
         public BSH_BacLuong()
         {
@@ -42,7 +43,7 @@ namespace BSHHRMCNTTT.GUI
         // Xử lý thêm bản ghi vào bảng 
         #region[AddRecord]
         private void AddRecord()
-        {  
+        {
             try
             {
                 string query = string.Format("SPBSH_BLU_NH");
@@ -53,15 +54,15 @@ namespace BSHHRMCNTTT.GUI
                 new SqlParameter("@StatementType", "ADD")
 
             };
-            bool i = db.AddRecord(query, para);
-            if (i == true)
-            {
-                XtraMessageBox.Show("Thêm mới bản ghi thành công !");
-                LoadData();
-                ClearData();
-            }
-            else
-                XtraMessageBox.Show("Thêm mới bản ghi lỗi !");
+                bool i = db.AddRecord(query, para);
+                if (i == true)
+                {
+                    XtraMessageBox.Show("Thêm mới bản ghi thành công !");
+                    LoadData();
+                    ClearData();
+                }
+                else
+                    XtraMessageBox.Show("Thêm mới bản ghi lỗi !");
             }
             catch (Exception ex)
             {
@@ -91,6 +92,7 @@ namespace BSHHRMCNTTT.GUI
                     {
                         XtraMessageBox.Show("Xóa bản ghi thành công !");
                         LoadData();
+                        ClearData();
                     }
                     else
                         XtraMessageBox.Show("Xóa bản ghi lỗi !");
@@ -146,30 +148,40 @@ namespace BSHHRMCNTTT.GUI
 
         private void btnadd_Click(object sender, EventArgs e)
         {
-            if (txtma.Text.Trim().Equals(""))
-            {
-                MessageBox.Show("Mã không được để trống!");
-                txtma.Focus();
-                return;
-            }
-            if (txtbac.Text.Trim().Equals(""))
-            {
-                MessageBox.Show("Bậc không được để trống!");
-                txtbac.Focus();
-                return;
-            }
-            if (txthsl.Text.Trim().Equals(""))
-            {
-                MessageBox.Show("Hệ số lương không được để trống!");
-                txthsl.Focus();
-                return;
-            }
-            AddRecord();
+            AddNew = true;
+            ClearData();
+            btnadd.Enabled = false;
+
         }
 
         private void btnedit_Click(object sender, EventArgs e)
         {
-            UpdateRecord();
+            if (AddNew == true)
+            {
+                if (txtma.Text.Trim().Equals(""))
+                {
+                    MessageBox.Show("Mã không được để trống!");
+                    txtma.Focus();
+                    return;
+                }
+                if (txtbac.Text.Trim().Equals(""))
+                {
+                    MessageBox.Show("Bậc không được để trống!");
+                    txtbac.Focus();
+                    return;
+                }
+                if (txthsl.Text.Trim().Equals(""))
+                {
+                    MessageBox.Show("Hệ số lương không được để trống!");
+                    txthsl.Focus();
+                    return;
+                }
+                AddRecord();
+                btnadd.Enabled = true;
+                AddNew = false;
+            }
+            else
+                UpdateRecord();
         }
 
         private void btndelete_Click(object sender, EventArgs e)
@@ -201,6 +213,8 @@ namespace BSHHRMCNTTT.GUI
             txtma.Text = GridView.CurrentRow.Cells[0].Value.ToString().Trim();
             txtbac.Text = GridView.CurrentRow.Cells[1].Value.ToString().Trim();
             txthsl.Text = GridView.CurrentRow.Cells[2].Value.ToString().Trim();
+            btnadd.Enabled = true;
+            AddNew = false;
         }
         public string Selected2 { get { return GridView.CurrentRow.Cells[2].Value.ToString(); } }
         //public string Selected1 { get { return GridView.CurrentRow.Cells[1].Value.ToString(); } }

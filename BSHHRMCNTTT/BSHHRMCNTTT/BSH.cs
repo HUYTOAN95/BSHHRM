@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BSHHRMCNTTT.SysForm;
 using BSHHRMCNTTT.GUI;
+using BSHHRMCNTTT.SO;
 
 namespace BSHHRMCNTTT
 {
@@ -54,33 +55,36 @@ namespace BSHHRMCNTTT
                 this.Close();
                 frmlogin frm = new frmlogin();
                 frm.ShowDialog();
-               
+
             }
-            
-              
+
+
 
         }
 
         private void frmmain_Load(object sender, EventArgs e)
         {
+            int hh = DateTime.Now.Hour;
+            int mm = DateTime.Now.Minute;
             itemstart.Caption = "Program is running !";
             itemauthor.Caption = "Nguyễn Huy Toàn THKT56 ";
+            nsd.Caption = "Người dùng: " + InfoNSD.nsd + " - Thời gian truy cập: " + hh + ":" + mm + " ";
         }
 
         private void frmmain_FormClosing(object sender, FormClosingEventArgs e)
         {
-           
+
         }
 
-       
+
 
         private void frmmain_FormClosed(object sender, FormClosedEventArgs e)
         {
-            
+
         }
 
-    
-       
+
+
 
         private void ItemMaNSD_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -93,7 +97,7 @@ namespace BSHHRMCNTTT
         private void ItemDMK_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             BSH_DMK frm = new BSH_DMK();
-            ViewForm(frm);
+            frm.ShowDialog();
         }
 
         private void ItemHopdong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -122,7 +126,7 @@ namespace BSHHRMCNTTT
             frm.ShowDialog();
         }
 
-        
+
 
         private void barButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -153,19 +157,43 @@ namespace BSHHRMCNTTT
             this.Close();
             frmlogin frm = new frmlogin();
             frm.ShowDialog();
-            
+
         }
 
         private void ItemDantoc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             BSH_DanToc frm = new BSH_DanToc();
             frm.ShowDialog();
-     
+
         }
 
         private void itemtongiao_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             BSH_TonGiao frm = new BSH_TonGiao();
+            frm.ShowDialog();
+        }
+
+        private void ItemHSL_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            BSH_BacLuong frm = new BSH_BacLuong();
+            frm.ShowDialog();
+        }
+
+        private void ItemLuong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            BSH_BangLuong frm = new BSH_BangLuong();
+            frm.ShowDialog();
+        }
+
+        private void ItemChamCong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            BSH_ChamCong frm = new BSH_ChamCong();
+            frm.ShowDialog();
+        }
+
+        private void ItemLoc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            BSH_TimKiem frm = new BSH_TimKiem();
             frm.ShowDialog();
         }
     }

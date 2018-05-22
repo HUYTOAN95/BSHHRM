@@ -42,7 +42,7 @@ namespace BSHHRMCNTTT.SysForm
               
                 da.Fill(ds);
                 gridview.DataSource = ds.Tables[0];
-                gridview.Columns[3].Width = 200;
+            
 
 
 

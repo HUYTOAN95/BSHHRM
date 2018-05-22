@@ -57,6 +57,7 @@ namespace BSHHRMCNTTT.GUI
         {
             txtma.Text = "";
             txtten.Text = "";
+            txthscv.Text = "";
         }
         // Xử lý thêm bản ghi vào bảng 
         #region
@@ -64,11 +65,12 @@ namespace BSHHRMCNTTT.GUI
         {
             try
             {
+                Decimal @hscv = Decimal.Parse(txthscv.Text);
                 string query = string.Format("SPBSH_CVU_NH");
                 SqlParameter[] para = {
                 new SqlParameter("@macv",txtma.Text),
                 new SqlParameter("@tencv", txtten.Text),
-
+                new SqlParameter("@hscv",@hscv),
                 new SqlParameter("@StatementType", "ADD")
 
             };
@@ -127,14 +129,16 @@ namespace BSHHRMCNTTT.GUI
 
             try
             {
+                Decimal @hscv = Decimal.Parse(txthscv.Text);
                 string query = string.Format("SPBSH_CVU_NH");
                 SqlParameter[] para = {
                 new SqlParameter("@macv",ma),
                 new SqlParameter("@tencv", txtten.Text),
+                new SqlParameter("@hscv", @hscv),
                 new SqlParameter("@StatementType", "EDIT")
 
             };
-                bool i = db.AddRecord(query, para);
+                bool i = db.UpdateRecord(query, para);
                 if (i == true)
                 {
                     XtraMessageBox.Show("Sửa đổi bản ghi thành công !");
@@ -203,6 +207,7 @@ namespace BSHHRMCNTTT.GUI
         {
             txtma.Text = GridView.CurrentRow.Cells[0].Value.ToString().Trim();
             txtten.Text = GridView.CurrentRow.Cells[1].Value.ToString().Trim();
+            txthscv.Text= GridView.CurrentRow.Cells[2].Value.ToString().Trim();
             btnadd.Enabled = true;
             AddNew = false;
         }

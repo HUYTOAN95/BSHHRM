@@ -78,6 +78,7 @@
             this.t_madv.Properties.Appearance.Options.UseBackColor = true;
             this.t_madv.Size = new System.Drawing.Size(187, 20);
             this.t_madv.TabIndex = 1;
+            this.t_madv.ToolTip = "Nhập mã đơn vị ";
             this.t_madv.Enter += new System.EventHandler(this.t_madv_Enter);
             this.t_madv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.t_madv_KeyDown_2);
             this.t_madv.Leave += new System.EventHandler(this.t_madv_Leave);
@@ -92,6 +93,7 @@
             this.t_nsd.Properties.Appearance.Options.UseBackColor = true;
             this.t_nsd.Size = new System.Drawing.Size(187, 20);
             this.t_nsd.TabIndex = 2;
+            this.t_nsd.ToolTip = "Nhập người sử dụng";
             this.t_nsd.Enter += new System.EventHandler(this.t_nsd_Enter);
             this.t_nsd.Leave += new System.EventHandler(this.t_nsd_Leave);
             // 
@@ -105,6 +107,7 @@
             this.t_pass.Properties.UseSystemPasswordChar = true;
             this.t_pass.Size = new System.Drawing.Size(187, 20);
             this.t_pass.TabIndex = 3;
+            this.t_pass.ToolTip = "Nhập mật khẩu người dùng";
             this.t_pass.EditValueChanged += new System.EventHandler(this.t_pass_EditValueChanged_1);
             this.t_pass.Enter += new System.EventHandler(this.t_pass_Enter);
             this.t_pass.Leave += new System.EventHandler(this.t_pass_Leave);
@@ -120,7 +123,7 @@
             // linkfogetpass
             // 
             this.linkfogetpass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.linkfogetpass.Location = new System.Drawing.Point(57, 155);
+            this.linkfogetpass.Location = new System.Drawing.Point(55, 157);
             this.linkfogetpass.Name = "linkfogetpass";
             this.linkfogetpass.Size = new System.Drawing.Size(77, 13);
             this.linkfogetpass.TabIndex = 9;
@@ -129,7 +132,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(168, 227);
+            this.labelControl4.Location = new System.Drawing.Point(159, 250);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(71, 13);
             this.labelControl4.TabIndex = 8;
@@ -145,26 +148,29 @@
             // 
             // b_cancel
             // 
+            this.b_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.b_cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.b_cancel.Location = new System.Drawing.Point(228, 185);
+            this.b_cancel.Location = new System.Drawing.Point(203, 206);
             this.b_cancel.Name = "b_cancel";
-            this.b_cancel.Size = new System.Drawing.Size(75, 23);
+            this.b_cancel.Size = new System.Drawing.Size(66, 28);
             this.b_cancel.TabIndex = 5;
-            this.b_cancel.Text = "Hủy Bỏ";
+            this.b_cancel.Text = "&Hủy Bỏ";
             this.b_cancel.Click += new System.EventHandler(this.b_cancel_Click);
             // 
             // b_login
             // 
-            this.b_login.Location = new System.Drawing.Point(120, 185);
+            this.b_login.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.b_login.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.b_login.Location = new System.Drawing.Point(113, 206);
             this.b_login.Name = "b_login";
-            this.b_login.Size = new System.Drawing.Size(75, 23);
+            this.b_login.Size = new System.Drawing.Size(66, 28);
             this.b_login.TabIndex = 4;
-            this.b_login.Text = "Đăng Nhập";
+            this.b_login.Text = "&Đăng Nhập";
             this.b_login.Click += new System.EventHandler(this.b_login_Click);
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(57, 111);
+            this.labelControl2.Location = new System.Drawing.Point(59, 114);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(45, 13);
             this.labelControl2.TabIndex = 2;
@@ -172,7 +178,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(57, 76);
+            this.labelControl1.Location = new System.Drawing.Point(56, 78);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(75, 13);
             this.labelControl1.TabIndex = 0;

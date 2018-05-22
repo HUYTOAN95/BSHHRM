@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BSH_ChucVu));
             this.GridView = new System.Windows.Forms.DataGridView();
-            this.macv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tencv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbinfo = new System.Windows.Forms.GroupBox();
             this.txtma = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -42,10 +40,16 @@
             this.btndelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnadd = new DevExpress.XtraEditors.SimpleButton();
             this.btnedit = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.txthscv = new DevExpress.XtraEditors.TextEdit();
+            this.macv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tencv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hscv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
             this.grbinfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtma.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtten.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txthscv.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // GridView
@@ -54,54 +58,42 @@
             this.GridView.AllowUserToResizeRows = false;
             this.GridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.GridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.GridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.GridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.macv,
-            this.tencv});
+            this.tencv,
+            this.hscv});
             this.GridView.EnableHeadersVisualStyles = false;
             this.GridView.GridColor = System.Drawing.SystemColors.Control;
             this.GridView.Location = new System.Drawing.Point(12, 12);
             this.GridView.Name = "GridView";
             this.GridView.ReadOnly = true;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            this.GridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.GridView.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.GridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.GridView.Size = new System.Drawing.Size(382, 387);
             this.GridView.TabIndex = 0;
             this.GridView.Click += new System.EventHandler(this.GridView_Click);
             // 
-            // macv
-            // 
-            this.macv.DataPropertyName = "macv";
-            this.macv.HeaderText = "Mã";
-            this.macv.Name = "macv";
-            this.macv.ReadOnly = true;
-            // 
-            // tencv
-            // 
-            this.tencv.DataPropertyName = "tencv";
-            this.tencv.HeaderText = "Tên";
-            this.tencv.Name = "tencv";
-            this.tencv.ReadOnly = true;
-            this.tencv.Width = 350;
-            // 
             // grbinfo
             // 
+            this.grbinfo.Controls.Add(this.txthscv);
+            this.grbinfo.Controls.Add(this.labelControl3);
             this.grbinfo.Controls.Add(this.txtma);
             this.grbinfo.Controls.Add(this.labelControl2);
             this.grbinfo.Controls.Add(this.txtten);
             this.grbinfo.Controls.Add(this.labelControl1);
             this.grbinfo.Location = new System.Drawing.Point(400, 6);
             this.grbinfo.Name = "grbinfo";
-            this.grbinfo.Size = new System.Drawing.Size(295, 160);
+            this.grbinfo.Size = new System.Drawing.Size(295, 179);
             this.grbinfo.TabIndex = 1;
             this.grbinfo.TabStop = false;
             this.grbinfo.Text = "Thông Tin";
@@ -168,6 +160,44 @@
             this.btnedit.Text = "&Lưu";
             this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
             // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(12, 125);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(30, 13);
+            this.labelControl3.TabIndex = 4;
+            this.labelControl3.Text = "Hệ số ";
+            // 
+            // txthscv
+            // 
+            this.txthscv.Location = new System.Drawing.Point(51, 122);
+            this.txthscv.Name = "txthscv";
+            this.txthscv.Properties.Mask.EditMask = "n";
+            this.txthscv.Size = new System.Drawing.Size(93, 20);
+            this.txthscv.TabIndex = 5;
+            // 
+            // macv
+            // 
+            this.macv.DataPropertyName = "macv";
+            this.macv.HeaderText = "Mã";
+            this.macv.Name = "macv";
+            this.macv.ReadOnly = true;
+            // 
+            // tencv
+            // 
+            this.tencv.DataPropertyName = "tencv";
+            this.tencv.HeaderText = "Tên";
+            this.tencv.Name = "tencv";
+            this.tencv.ReadOnly = true;
+            this.tencv.Width = 250;
+            // 
+            // hscv
+            // 
+            this.hscv.DataPropertyName = "hscv";
+            this.hscv.HeaderText = "Hệ Số";
+            this.hscv.Name = "hscv";
+            this.hscv.ReadOnly = true;
+            // 
             // BSH_ChucVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -190,6 +220,7 @@
             this.grbinfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtma.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtten.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txthscv.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -203,9 +234,12 @@
         private DevExpress.XtraEditors.SimpleButton btndelete;
         private DevExpress.XtraEditors.TextEdit txtma;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn macv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tencv;
         private DevExpress.XtraEditors.SimpleButton btnadd;
         private DevExpress.XtraEditors.SimpleButton btnedit;
+        private DevExpress.XtraEditors.TextEdit txthscv;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn macv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tencv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hscv;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraEditors;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -13,19 +14,19 @@ namespace BSHHRMCNTTT.SO
         public static SqlConnection cnn;
         private SqlDataAdapter da;
         private SqlDataReader dr;
-        public  static void  InforConnect(string ser, string db, string user, string pass)
+        public static void InforConnect(string ser, string db, string user, string pass)
         {
             string cnnstring = "Data Source=" + ser + ";Initial Catalog=" + db + ";User ID=" + user + ";Password=" + pass + ";Integrated Security=True";
             //string cnnstring = "Data Source=127.0.0.1,1433;Initial Catalog=BSHHRM;User ID=admin;Password=admin;Integrated Security=True";
             cnn = new SqlConnection(cnnstring);
-            
+
         }
         public static SqlConnection OpenConnection()
-        {  
+        {
             try
             {
-              
-                if (cnn.State == ConnectionState.Closed || cnn.State==ConnectionState.Broken)
+
+                if (cnn.State == ConnectionState.Closed || cnn.State == ConnectionState.Broken)
                     cnn.Open();
             }
             catch (Exception ex)
@@ -50,13 +51,13 @@ namespace BSHHRMCNTTT.SO
             catch (Exception ex)
             {
 
-                throw ex;
+                XtraMessageBox.Show("Error" + ex);
             }
             return cnn;
         }
         // xử lý liệt kê bản ghi 
         #region[LKE]
-        public DataTable LKE (string v_nameproc)
+        public DataTable LKE(string v_nameproc)
         {
             SqlCommand cmd = new SqlCommand();
             DataTable dt = new DataTable();
@@ -104,12 +105,15 @@ namespace BSHHRMCNTTT.SO
                 }
                 dr.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
             return msg;
         }
+        #endregion
+        #region
+      
         #endregion
         // xử lý tìm kiếm bản ghi 
         #region[TIMKIEM] 
@@ -152,10 +156,10 @@ namespace BSHHRMCNTTT.SO
                 cmd.CommandText = v_nameprc;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddRange(sqlparameter);
-                da.InsertCommand = cmd;
+               // da.InsertCommand = cmd;
                 cmd.ExecuteNonQuery();
             }
-            catch (SqlException )
+            catch (SqlException)
             {
                 return false;
             }
@@ -179,7 +183,7 @@ namespace BSHHRMCNTTT.SO
                 da.UpdateCommand = cmd;
                 cmd.ExecuteNonQuery();
             }
-            catch (SqlException )
+            catch (SqlException)
             {
                 return false;
             }
@@ -192,7 +196,7 @@ namespace BSHHRMCNTTT.SO
         #endregion
         // xủ lý xóa bản ghi 
         #region[DeleteRecord]
-        public bool DeleteRecord (string v_nameproc, SqlParameter[] sqlparameter)
+        public bool DeleteRecord(string v_nameproc, SqlParameter[] sqlparameter)
         {
             SqlCommand cmd = new SqlCommand();
             try

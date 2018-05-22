@@ -40,9 +40,9 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.btnadd = new DevExpress.XtraEditors.SimpleButton();
-            this.btnedit = new DevExpress.XtraEditors.SimpleButton();
             this.btndelete = new DevExpress.XtraEditors.SimpleButton();
+            this.btnedit = new DevExpress.XtraEditors.SimpleButton();
+            this.btnadd = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -150,15 +150,15 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Mã";
             // 
-            // btnadd
+            // btndelete
             // 
-            this.btnadd.Image = ((System.Drawing.Image)(resources.GetObject("btnadd.Image")));
-            this.btnadd.Location = new System.Drawing.Point(327, 326);
-            this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(66, 28);
-            this.btnadd.TabIndex = 2;
-            this.btnadd.Text = "&Mới";
-            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
+            this.btndelete.Image = ((System.Drawing.Image)(resources.GetObject("btndelete.Image")));
+            this.btndelete.Location = new System.Drawing.Point(473, 326);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.Size = new System.Drawing.Size(66, 28);
+            this.btndelete.TabIndex = 4;
+            this.btndelete.Text = "&Xóa";
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
             // btnedit
             // 
@@ -170,15 +170,15 @@
             this.btnedit.Text = "&Lưu";
             this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
             // 
-            // btndelete
+            // btnadd
             // 
-            this.btndelete.Image = ((System.Drawing.Image)(resources.GetObject("btndelete.Image")));
-            this.btndelete.Location = new System.Drawing.Point(473, 326);
-            this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(66, 28);
-            this.btndelete.TabIndex = 4;
-            this.btndelete.Text = "&Xóa";
-            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
+            this.btnadd.Image = ((System.Drawing.Image)(resources.GetObject("btnadd.Image")));
+            this.btnadd.Location = new System.Drawing.Point(327, 326);
+            this.btnadd.Name = "btnadd";
+            this.btnadd.Size = new System.Drawing.Size(66, 28);
+            this.btnadd.TabIndex = 2;
+            this.btnadd.Text = "&Mới";
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // BSH_BacLuong
             // 

@@ -10,12 +10,14 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.SqlClient;
 using BSHHRMCNTTT.SO;
-
+using BSHHRMCNTTT.GUI;
 
 namespace BSHHRMCNTTT.SysForm
 {
     public partial class BSH_NSD : DevExpress.XtraEditors.XtraForm
     { private DBConnection db;
+        private bool AddNew = false;
+        private bool Filter = false;
         public BSH_NSD()
         {   db = new DBConnection();
             InitializeComponent();
@@ -48,16 +50,18 @@ namespace BSHHRMCNTTT.SysForm
        private void AddRecord()
         {
             string pass = MD5Encrypt.Encrypt(t_matkhau.Text);
-            try
+           try
             {
+                DateTime v_ngaydk = DateTime.Parse(d_ngaydk.Text);
+                DateTime v_ngayhh = DateTime.Parse(d_ngayhh.Text);
                 string query = string.Format("SPBSH_NSD_NH");
                 SqlParameter[] para = {
                 new SqlParameter("@madv",t_madv.Text),
                 new SqlParameter("@nsd", t_nsd.Text),
                 new SqlParameter("@matkhau", pass),
                 new SqlParameter("@manv", t_manv.Text),
-                new SqlParameter("@ngaydk", d_ngaydk.Text),
-                new SqlParameter("@ngayhh", d_ngayhh.Text),
+                new SqlParameter("@ngaydk",v_ngaydk),
+                new SqlParameter("@ngayhh",v_ngayhh),
                 new SqlParameter("@quyendn",c_quyen.Text),
                 new SqlParameter("@email", t_email.Text),
                 new SqlParameter("@StatementType", "ADD")
@@ -68,13 +72,14 @@ namespace BSHHRMCNTTT.SysForm
                 {
                     XtraMessageBox.Show("Thêm mới bản ghi thành công !");
                     LoadData();
+                    ClearData();
                 }
                 else
                     XtraMessageBox.Show("Thêm mới bản ghi lỗi !");
             }
             catch(Exception ex)
             {
-                throw ex;
+                XtraMessageBox.Show("Error" + ex);
             }
         }
         #endregion
@@ -99,6 +104,7 @@ namespace BSHHRMCNTTT.SysForm
                     {
                         XtraMessageBox.Show("Xóa bản ghi thành công !");
                         LoadData();
+                        ClearData();
                     }
                     else
                         XtraMessageBox.Show("Xóa bản ghi lỗi !");
@@ -113,6 +119,8 @@ namespace BSHHRMCNTTT.SysForm
         #region[UpdateRecord]
         private void UpdateRecord()
         {
+            DateTime v_ngaydk = DateTime.Parse(d_ngaydk.Text);
+            DateTime v_ngayhh = DateTime.Parse(d_ngayhh.Text);
             string pass = MD5Encrypt.Encrypt(t_matkhau.Text);
             string madv = gridview.CurrentRow.Cells[0].Value.ToString().Trim();
             string nsd = gridview.CurrentRow.Cells[1].Value.ToString().Trim();
@@ -124,8 +132,8 @@ namespace BSHHRMCNTTT.SysForm
                 new SqlParameter("@nsd", nsd),
                 new SqlParameter("@matkhau",pass),
                 new SqlParameter("@manv", t_manv.Text),
-                new SqlParameter("@ngaydk", d_ngaydk.Text),
-                new SqlParameter("@ngayhh", d_ngayhh.Text),
+                new SqlParameter("@ngaydk", v_ngaydk),
+                new SqlParameter("@ngayhh",v_ngayhh),
                 new SqlParameter("@quyendn",c_quyen.Text),
                 new SqlParameter("@email", t_email.Text),
                 new SqlParameter("@StatementType", "EDIT")
@@ -136,13 +144,14 @@ namespace BSHHRMCNTTT.SysForm
                 {
                     XtraMessageBox.Show("Sửa đổi bản ghi thành công !");
                     LoadData();
+                    ClearData();
                 }
                 else
                     XtraMessageBox.Show("Sửa đổi bản ghi lỗi !");
             }
             catch (Exception ex)
             {
-                throw ex;
+                XtraMessageBox.Show("Error" + ex);
             }
         }
 
@@ -151,34 +160,52 @@ namespace BSHHRMCNTTT.SysForm
         {
 
         }
+        private void ClearData()
+        {
+            t_madv.Clear();
+            t_nsd.Clear();
+            t_matkhau.Clear();
+            t_email.Clear();
+            t_manv.Clear();
+            c_quyen.Text = "";
+        }
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            if (t_madv.Text.Trim().Equals(""))
-            {
-                MessageBox.Show(" Mã đơn vị không được để trống!");
-                t_madv.Focus();
-                return;
-            }
-            if (t_nsd.Text.Trim().Equals(""))
-            {
-                MessageBox.Show(" NSD không để trống!");
-                t_nsd.Focus();
-                return;
-            }
-            if (t_manv.Text.Trim().Equals(""))
-            {
-                MessageBox.Show(" Mã nhân viên không để trống!");
-                t_manv.Focus();
-                return;
-            }
-            AddRecord();
-           
+            AddNew = true;
+            ClearData();
+            simpleButton1.Enabled = false;
+                               
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            UpdateRecord();
+            if (AddNew == true)
+            {
+                if (t_madv.Text.Trim().Equals(""))
+                {
+                    MessageBox.Show(" Mã đơn vị không được để trống!");
+                    t_madv.Focus();
+                    return;
+                }
+                if (t_nsd.Text.Trim().Equals(""))
+                {
+                    MessageBox.Show(" NSD không để trống!");
+                    t_nsd.Focus();
+                    return;
+                }
+                if (t_manv.Text.Trim().Equals(""))
+                {
+                    MessageBox.Show(" Mã nhân viên không để trống!");
+                    t_manv.Focus();
+                    return;
+                }
+                AddRecord();
+                simpleButton1.Enabled = true;
+                AddNew = false;
+            }
+            else
+                UpdateRecord();
 
 
         }
@@ -193,6 +220,8 @@ namespace BSHHRMCNTTT.SysForm
             d_ngayhh.Text= gridview.CurrentRow.Cells[5].Value.ToString();
             c_quyen.Text= gridview.CurrentRow.Cells[7].Value.ToString();
             t_email.Text= gridview.CurrentRow.Cells[8].Value.ToString();
+            simpleButton1.Enabled = true;
+            AddNew = false;
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)
@@ -229,12 +258,70 @@ namespace BSHHRMCNTTT.SysForm
 
         private void simpleButton4_Click(object sender, EventArgs e)
         {
-           
+            string query = string.Format("SELECT * FROM NSD WHERE nsd LIKE N'%"+t_nsd.Text +"%'");
+            SqlParameter[] para = new SqlParameter[0];
+            gridview.DataSource = db.LKE_TIM(query);
+            Filter = true;
         }
 
         private void grbcontrol_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void t_manv_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            switch (e.KeyCode)
+            {
+                case Keys.F1:
+                    {
+                        frmlselect frm = new frmlselect();
+                        frm.caption = "Danh sách nhân viên";
+                        frm.query = "SELECT * FROM View_NhanVien_Select";
+                        frm.cbbitem.Items.Add("Mã nhân viên");
+                        frm.cbbitem.Items.Add("Tên nhân viên");
+
+                        using (frm)
+                        {
+                            if (frm.ShowDialog() == DialogResult.OK)
+                            {
+                                t_manv.Text = frm.Selected;
+                                t_manv.SelectionStart = t_manv.Text.Length;
+
+                            }
+                        }
+                    }
+                    break;
+            }
+        }
+
+        private void simpleButton5_Click(object sender, EventArgs e)
+        {   if (Filter == true)
+            {
+                BSH_Report frm = new BSH_Report("NSD.rpt", "SELECT * FROM NSD WHERE nsd LIKE N'%"+t_nsd.Text +"%'");
+                frm.ShowDialog();
+                Filter = false;
+            }
+        else
+            {
+                BSH_Report frm = new BSH_Report("NSD.rpt", "SELECT * FROM NSD");
+                frm.ShowDialog();
+            }
+        }
+
+        private void BSH_NSD_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.F5:
+                    LoadData();
+                    break;
+                case Keys.Escape:
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                    break;
+            }
         }
     }
 }

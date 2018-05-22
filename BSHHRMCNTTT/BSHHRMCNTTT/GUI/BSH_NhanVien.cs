@@ -15,7 +15,9 @@ namespace BSHHRMCNTTT.GUI
 {
     public partial class BSH_NhanVien : DevExpress.XtraEditors.XtraForm
     {
+        private bool AddNew = false;
         private DBConnection db;
+        private SqlDataReader dr;
         public BSH_NhanVien()
         {
             db = new DBConnection();
@@ -34,7 +36,7 @@ namespace BSHHRMCNTTT.GUI
 
         private void BSH_NhanVien_Load(object sender, EventArgs e)
         {
-
+            btnedit.Enabled = false;
         }
 
         private void txtmacv_KeyDown(object sender, KeyEventArgs e)
@@ -176,8 +178,8 @@ namespace BSHHRMCNTTT.GUI
                     {
                         if (frm.ShowDialog() == DialogResult.OK)
                         {
-                            textEdit15.Text = frm.Selected2;
-                            textEdit15.SelectionStart = textEdit15.Text.Length;
+                            txthsl.Text = frm.Selected2;
+                            txthsl.SelectionStart = txthsl.Text.Length;
 
                         }
                     }
@@ -254,8 +256,231 @@ namespace BSHHRMCNTTT.GUI
                 ngaykt.Text = DateTime.Now.AddYears(3).ToString();
         }
 
-        private void txtmanv_KeyDown(object sender, KeyEventArgs e)
+        //private void txtmanv_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    switch (e.KeyCode)
+        //    {
+        //        case Keys.F1:
+        //            try
+        //            {
+        //                string query = string.Format("SPBSH_AUTO_IDNV");
+        //                SqlParameter[] para = new SqlParameter[0];
+        //                cbbmanv.Text = db.STR_LKE(query);
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                throw ex;
+        //            }
+        //            break;
+        //    }
+        //}
+
+        private void btnadd_Click(object sender, EventArgs e)
         {
+            AddNew = true;
+            //ClearData();
+            btnadd.Enabled = false;
+            btnedit.Enabled = true;
+        }
+        #region[AddRecord]
+        private void AddRecord()
+        {
+            //try
+            //{
+            DateTime v_ngaysinh = DateTime.Parse(ngaysinh.Text);
+            DateTime v_ngaybd = DateTime.Parse(ngaybd.Text);
+            DateTime v_ngaykt = DateTime.Parse(ngaykt.Text);
+            DateTime v_ngaycap = DateTime.Parse(ngaycap.Text);
+            DateTime v_ngayvaolam = DateTime.Parse(ngayvaolam.Text);
+            Decimal v_hsl = Decimal.Parse(txthsl.Text);
+            string query = string.Format("SPBSH_NVIEN_NH");
+            SqlParameter[] para = {
+                new SqlParameter("@manv",cbbmanv.Text),
+                new SqlParameter("@tennv",txttennv.Text),
+                new SqlParameter("@gioitinh", cbbgioitinh.Text),
+                new SqlParameter("@ngaysinh",v_ngaysinh) /*{Value=ngaysinh.Text }*/,
+                new SqlParameter("@noisinh",txtnoisinh.Text),
+                new SqlParameter("@diachi",txtdiachi.Text),
+                new SqlParameter("@matg",txttongiao.Text),
+                new SqlParameter("@madt",txtdantoc.Text),
+                new SqlParameter("@tthn",cbbtinhtranghn.Text),
+                new SqlParameter("@socmnd",socmnd.Text),
+                new SqlParameter("@ngaycap",v_ngaycap) /*{ Value=ngaycap.Text}*/,
+                new SqlParameter("@noicap",noicap.Text),
+                new SqlParameter("@sdt",txtsdt.Text),
+                new SqlParameter("@ngayvaolam",v_ngayvaolam),
+                new SqlParameter("@email",txtemail.Text),
+                new SqlParameter("@chucvu",txtmacv.Text),
+                new SqlParameter("@phongban",txtmapb.Text),
+                new SqlParameter("@trinhdo",txtmatd.Text),
+                new SqlParameter("@ngoaingu",txtngoaingu.Text),
+                new SqlParameter("@chedo",txtmacd.Text),
+                new SqlParameter("@hsl",v_hsl),
+                new SqlParameter("@makt",txtkhen.Text),
+                new SqlParameter("@makl",txtkyluat.Text),
+                new SqlParameter("@sohd",txtsohd.Text),
+                new SqlParameter("@loaihd",cbbloaihd.Text),
+                new SqlParameter("@ngaybd",v_ngaybd),
+                new SqlParameter("@ngaykt",v_ngaykt),
+                new SqlParameter("@StatementType", "ADD")
+
+            };
+            bool i = db.AddRecord(query, para);
+            if (i == true)
+            {
+                XtraMessageBox.Show("Thêm mới bản ghi thành công !");
+                //LoadData();
+                //ClearData();
+            }
+            else
+                XtraMessageBox.Show("Thêm mới bản ghi lỗi !");
+            //}
+            //catch (Exception ex)
+            //{
+            //    throw ex;
+            //}
+        }
+        #endregion
+        // xóa bản ghi 
+        //#region[DeleteRecord]
+        //private void DeleteRecord()
+        //{
+        //    string ma = GridView.CurrentRow.Cells[0].Value.ToString().Trim();
+        //    string bac = GridView.CurrentRow.Cells[1].Value.ToString().Trim();
+        //    if (XtraMessageBox.Show("Bạn muốn xóa bản ghi  !", "Thông Báo !", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+        //    {
+        //        try
+        //        {
+        //            string query = string.Format("SPBSH_BLU_XOA");
+        //            SqlParameter[] para = {
+        //             new SqlParameter("@ma",ma),
+        //             new SqlParameter("@bac",bac)
+
+        //        };
+
+        //            bool i = db.DeleteRecord(query, para);
+        //            if (i == true)
+        //            {
+        //                XtraMessageBox.Show("Xóa bản ghi thành công !");
+        //                LoadData();
+        //                ClearData();
+        //            }
+        //            else
+        //                XtraMessageBox.Show("Xóa bản ghi lỗi !");
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            MessageBox.Show("Error" + ex);
+        //        }
+        //    }
+        //}
+        //#endregion
+        //#region[UpdateRecord]
+        //private void UpdateRecord()
+        //{
+        //    string ma = GridView.CurrentRow.Cells[0].Value.ToString().Trim();
+        //    string bac = GridView.CurrentRow.Cells[1].Value.ToString().Trim();
+        //    try
+        //    {
+        //        string query = string.Format("SPBSH_BLU_NH");
+        //        SqlParameter[] para = {
+        //        new SqlParameter("@ma",ma),
+        //        new SqlParameter("@bac",bac),
+        //        new SqlParameter("@hsl", txthsl.Text),
+        //        new SqlParameter("@StatementType", "EDIT")
+
+        //    };
+        //        bool i = db.AddRecord(query, para);
+        //        if (i == true)
+        //        {
+        //            XtraMessageBox.Show("Sửa đổi bản ghi thành công !");
+        //            LoadData();
+        //            ClearData();
+
+        //        }
+        //        else
+        //            XtraMessageBox.Show("Sửa đổi bản ghi lỗi !");
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Error" + ex);
+        //    }
+        //}
+
+        //#endregion
+        private void ClearData()
+        {
+            cbbmanv.Text = ""; txttennv.Text = ""; cbbgioitinh.Text = ""; txtngoaingu.Text = ""; txtsohd.Text = ""; txttenkhen.Text = ""; txttencv.Text = "";
+            txttenkl.Text = ""; txttenpb.Text = ""; txttongiao.Text = ""; txtdantoc.Text = ""; txtchuyenmon.Text = ""; txtkhen.Text = ""; txtkyluat.Text = "";
+            cbbloaihd.Text = ""; socmnd.Text = ""; noicap.Text = ""; ngaycap.Text = ""; cbbtinhtranghn.Text = ""; txtnoisinh.Text = ""; txtdiachi.Text = ""; ngaysinh.Text = ""; txtsdt.Text = "";
+            txtmacv.Text = ""; txtmapb.Text = ""; txtmatd.Text = ""; txtmacd.Text = ""; txthsl.Text = ""; txtemail.Text = ""; txttentd.Text = ""; txttencd.Text = "";
+        }
+
+        private void btnedit_Click(object sender, EventArgs e)
+        {
+            if (AddNew == true)
+            {
+                if (cbbmanv.Text.Trim().Equals(""))
+                {
+                    MessageBox.Show("Mã nhân viên không được để trống!");
+                    cbbmanv.Focus();
+                    return;
+                }
+                if (txttennv.Text.Trim().Equals(""))
+                {
+                    MessageBox.Show("Tên nhân viên không được để trống!");
+                    txttennv.Focus();
+                    return;
+                }
+                if (ngaysinh.Text.Trim().Equals(""))
+                {
+                    MessageBox.Show("Ngày sinh không được để trống!");
+                    ngaysinh.Focus();
+                    return;
+
+                }
+
+                if (txtsohd.Text.Trim().Equals(""))
+                {
+                    MessageBox.Show("Số hợp đồng không được để trống!");
+                    txtsohd.Focus();
+                    return;
+                }
+                if (ngaycap.Text.Trim().Equals(""))
+                {
+                    ngaycap.Text = "01/01/1753";
+
+                }
+                if (ngaysinh.Text.Trim().Equals(""))
+                {
+                    ngaysinh.Text = "01/01/1753";
+
+                }
+                if (txthsl.Text.Trim().Equals(""))
+                {
+                    txthsl.Text = "0.0";
+
+                }
+                AddRecord();
+                btnadd.Enabled = true;
+                AddNew = false;
+                btnedit.Enabled = false;
+            }
+        }
+
+
+
+        private void cbbmanv_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void cbbmanv_KeyDown_1(object sender, KeyEventArgs e)
+        {
+
             switch (e.KeyCode)
             {
                 case Keys.F1:
@@ -263,7 +488,7 @@ namespace BSHHRMCNTTT.GUI
                     {
                         string query = string.Format("SPBSH_AUTO_IDNV");
                         SqlParameter[] para = new SqlParameter[0];
-                        txtmanv.Text = db.STR_LKE(query);
+                        cbbmanv.Text = db.STR_LKE(query);
                     }
                     catch (Exception ex)
                     {
@@ -271,6 +496,46 @@ namespace BSHHRMCNTTT.GUI
                     }
                     break;
             }
+        }
+
+        private void cbbmanv_DropDown(object sender, EventArgs e)
+        {
+            try
+            {
+                string query = string.Format("SPBSH_NVIEN_LKE_ID");
+                SqlParameter[] para = new SqlParameter[0];
+                cbbmanv.DataSource = db.LKE(query);
+                cbbmanv.DisplayMember = "MaNV";
+                cbbmanv.ValueMember = "MaNV";
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        private void LoadData()
+        {
+            try
+            {
+                string query = string.Format("");
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = SO.DBConnection.OpenConnection();
+                cmd.CommandText = query;
+                cmd.CommandType = CommandType.StoredProcedure;
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+
+                    dr.Read();
+                }
+                dr.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
+
         }
     }
 }

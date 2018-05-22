@@ -32,34 +32,41 @@
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.txtdantoc = new DevExpress.XtraEditors.TextEdit();
             this.txttongiao = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
+            this.noicap = new DevExpress.XtraEditors.TextEdit();
             this.separatorControl3 = new DevExpress.XtraEditors.SeparatorControl();
             this.separatorControl2 = new DevExpress.XtraEditors.SeparatorControl();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.ngayvaolam = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
-            this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
+            this.txtemail = new DevExpress.XtraEditors.TextEdit();
             this.label14 = new System.Windows.Forms.Label();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
+            this.txtsdt = new DevExpress.XtraEditors.TextEdit();
             this.label13 = new System.Windows.Forms.Label();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
+            this.ngaycap = new DevExpress.XtraEditors.TextEdit();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
+            this.socmnd = new DevExpress.XtraEditors.TextEdit();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBoxEdit4 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbbtinhtranghn = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtdiachi = new DevExpress.XtraEditors.TextEdit();
             this.label6 = new System.Windows.Forms.Label();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtnoisinh = new DevExpress.XtraEditors.TextEdit();
             this.label5 = new System.Windows.Forms.Label();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.ngaysinh = new DevExpress.XtraEditors.TextEdit();
             this.label4 = new System.Windows.Forms.Label();
             this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbbgioitinh = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label3 = new System.Windows.Forms.Label();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.separatorControl6 = new DevExpress.XtraEditors.SeparatorControl();
+            this.separatorControl5 = new DevExpress.XtraEditors.SeparatorControl();
+            this.txthsl = new DevExpress.XtraEditors.TextEdit();
+            this.label25 = new System.Windows.Forms.Label();
+            this.txttencd = new DevExpress.XtraEditors.TextEdit();
+            this.txtmacd = new DevExpress.XtraEditors.TextEdit();
+            this.label24 = new System.Windows.Forms.Label();
             this.txtchuyenmon = new DevExpress.XtraEditors.TextEdit();
             this.txtmapb = new DevExpress.XtraEditors.TextEdit();
             this.txtmacv = new DevExpress.XtraEditors.TextEdit();
@@ -74,10 +81,10 @@
             this.label16 = new System.Windows.Forms.Label();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.txttennv = new DevExpress.XtraEditors.TextEdit();
-            this.txtmanv = new DevExpress.XtraEditors.TextEdit();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.txtsohd = new DevExpress.XtraEditors.TextEdit();
             this.cbbloaihd = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label23 = new System.Windows.Forms.Label();
             this.ngaykt = new System.Windows.Forms.DateTimePicker();
@@ -91,43 +98,41 @@
             this.btndelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnprint = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.txtkyluat = new DevExpress.XtraEditors.TextEdit();
-            this.txtkhen = new DevExpress.XtraEditors.TextEdit();
-            this.txttenkl = new DevExpress.XtraEditors.TextEdit();
             this.txttenkhen = new DevExpress.XtraEditors.TextEdit();
-            this.label24 = new System.Windows.Forms.Label();
-            this.txtmacd = new DevExpress.XtraEditors.TextEdit();
-            this.txttencd = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit15 = new DevExpress.XtraEditors.TextEdit();
-            this.label25 = new System.Windows.Forms.Label();
+            this.txttenkl = new DevExpress.XtraEditors.TextEdit();
+            this.txtkhen = new DevExpress.XtraEditors.TextEdit();
+            this.txtkyluat = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnend = new DevExpress.XtraEditors.SimpleButton();
             this.btnnext = new DevExpress.XtraEditors.SimpleButton();
             this.btnprevious = new DevExpress.XtraEditors.SimpleButton();
             this.btnbase = new DevExpress.XtraEditors.SimpleButton();
-            this.separatorControl5 = new DevExpress.XtraEditors.SeparatorControl();
-            this.separatorControl6 = new DevExpress.XtraEditors.SeparatorControl();
-            this.txtsohd = new DevExpress.XtraEditors.TextEdit();
+            this.cbbmanv = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtdantoc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttongiao.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.noicap.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtemail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsdt.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ngaycap.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.socmnd.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbtinhtranghn.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtdiachi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnoisinh.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ngaysinh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbgioitinh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txthsl.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txttencd.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtmacd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtchuyenmon.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmapb.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmacv.Properties)).BeginInit();
@@ -139,55 +144,49 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txttennv.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtmanv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsohd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbloaihd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
             this.groupControl5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtkyluat.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtkhen.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txttenkl.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttenkhen.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtmacd.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txttencd.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit15.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.separatorControl5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.separatorControl6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtsohd.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txttenkl.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtkhen.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtkyluat.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.txtdantoc);
             this.groupControl1.Controls.Add(this.txttongiao);
-            this.groupControl1.Controls.Add(this.textEdit8);
+            this.groupControl1.Controls.Add(this.noicap);
             this.groupControl1.Controls.Add(this.separatorControl3);
             this.groupControl1.Controls.Add(this.separatorControl2);
-            this.groupControl1.Controls.Add(this.dateTimePicker1);
+            this.groupControl1.Controls.Add(this.ngayvaolam);
             this.groupControl1.Controls.Add(this.label15);
-            this.groupControl1.Controls.Add(this.textEdit7);
+            this.groupControl1.Controls.Add(this.txtemail);
             this.groupControl1.Controls.Add(this.label14);
-            this.groupControl1.Controls.Add(this.textEdit6);
+            this.groupControl1.Controls.Add(this.txtsdt);
             this.groupControl1.Controls.Add(this.label13);
-            this.groupControl1.Controls.Add(this.textEdit5);
+            this.groupControl1.Controls.Add(this.ngaycap);
             this.groupControl1.Controls.Add(this.label12);
             this.groupControl1.Controls.Add(this.label11);
-            this.groupControl1.Controls.Add(this.textEdit4);
+            this.groupControl1.Controls.Add(this.socmnd);
             this.groupControl1.Controls.Add(this.label10);
-            this.groupControl1.Controls.Add(this.comboBoxEdit4);
+            this.groupControl1.Controls.Add(this.cbbtinhtranghn);
             this.groupControl1.Controls.Add(this.label9);
             this.groupControl1.Controls.Add(this.label8);
             this.groupControl1.Controls.Add(this.label7);
-            this.groupControl1.Controls.Add(this.textEdit3);
+            this.groupControl1.Controls.Add(this.txtdiachi);
             this.groupControl1.Controls.Add(this.label6);
-            this.groupControl1.Controls.Add(this.textEdit2);
+            this.groupControl1.Controls.Add(this.txtnoisinh);
             this.groupControl1.Controls.Add(this.label5);
-            this.groupControl1.Controls.Add(this.textEdit1);
+            this.groupControl1.Controls.Add(this.ngaysinh);
             this.groupControl1.Controls.Add(this.label4);
             this.groupControl1.Controls.Add(this.separatorControl1);
-            this.groupControl1.Controls.Add(this.comboBoxEdit1);
+            this.groupControl1.Controls.Add(this.cbbgioitinh);
             this.groupControl1.Controls.Add(this.label3);
             this.groupControl1.Location = new System.Drawing.Point(12, 96);
             this.groupControl1.Name = "groupControl1";
@@ -211,12 +210,12 @@
             this.txttongiao.TabIndex = 31;
             this.txttongiao.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txttongiao_KeyDown);
             // 
-            // textEdit8
+            // noicap
             // 
-            this.textEdit8.Location = new System.Drawing.Point(260, 222);
-            this.textEdit8.Name = "textEdit8";
-            this.textEdit8.Size = new System.Drawing.Size(96, 20);
-            this.textEdit8.TabIndex = 30;
+            this.noicap.Location = new System.Drawing.Point(260, 222);
+            this.noicap.Name = "noicap";
+            this.noicap.Size = new System.Drawing.Size(96, 20);
+            this.noicap.TabIndex = 30;
             // 
             // separatorControl3
             // 
@@ -232,14 +231,14 @@
             this.separatorControl2.Size = new System.Drawing.Size(485, 23);
             this.separatorControl2.TabIndex = 28;
             // 
-            // dateTimePicker1
+            // ngayvaolam
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(359, 276);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.ShowUpDown = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(109, 21);
-            this.dateTimePicker1.TabIndex = 27;
+            this.ngayvaolam.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.ngayvaolam.Location = new System.Drawing.Point(359, 276);
+            this.ngayvaolam.Name = "ngayvaolam";
+            this.ngayvaolam.ShowUpDown = true;
+            this.ngayvaolam.Size = new System.Drawing.Size(109, 21);
+            this.ngayvaolam.TabIndex = 27;
             // 
             // label15
             // 
@@ -250,12 +249,12 @@
             this.label15.TabIndex = 26;
             this.label15.Text = "&Ngày Vào Làm";
             // 
-            // textEdit7
+            // txtemail
             // 
-            this.textEdit7.Location = new System.Drawing.Point(98, 313);
-            this.textEdit7.Name = "textEdit7";
-            this.textEdit7.Size = new System.Drawing.Size(252, 20);
-            this.textEdit7.TabIndex = 25;
+            this.txtemail.Location = new System.Drawing.Point(98, 313);
+            this.txtemail.Name = "txtemail";
+            this.txtemail.Size = new System.Drawing.Size(252, 20);
+            this.txtemail.TabIndex = 25;
             // 
             // label14
             // 
@@ -266,12 +265,12 @@
             this.label14.TabIndex = 24;
             this.label14.Text = "&Email";
             // 
-            // textEdit6
+            // txtsdt
             // 
-            this.textEdit6.Location = new System.Drawing.Point(98, 277);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Size = new System.Drawing.Size(163, 20);
-            this.textEdit6.TabIndex = 23;
+            this.txtsdt.Location = new System.Drawing.Point(98, 277);
+            this.txtsdt.Name = "txtsdt";
+            this.txtsdt.Size = new System.Drawing.Size(163, 20);
+            this.txtsdt.TabIndex = 23;
             // 
             // label13
             // 
@@ -282,15 +281,15 @@
             this.label13.TabIndex = 22;
             this.label13.Text = "&Số Điện Thoại";
             // 
-            // textEdit5
+            // ngaycap
             // 
-            this.textEdit5.Location = new System.Drawing.Point(413, 222);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Properties.Mask.BeepOnError = true;
-            this.textEdit5.Properties.Mask.EditMask = "99/99/9999";
-            this.textEdit5.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
-            this.textEdit5.Size = new System.Drawing.Size(96, 20);
-            this.textEdit5.TabIndex = 21;
+            this.ngaycap.Location = new System.Drawing.Point(413, 222);
+            this.ngaycap.Name = "ngaycap";
+            this.ngaycap.Properties.Mask.BeepOnError = true;
+            this.ngaycap.Properties.Mask.EditMask = "99/99/9999";
+            this.ngaycap.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
+            this.ngaycap.Size = new System.Drawing.Size(96, 20);
+            this.ngaycap.TabIndex = 21;
             // 
             // label12
             // 
@@ -310,12 +309,12 @@
             this.label11.TabIndex = 18;
             this.label11.Text = "&Nơi Cấp";
             // 
-            // textEdit4
+            // socmnd
             // 
-            this.textEdit4.Location = new System.Drawing.Point(80, 223);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(133, 20);
-            this.textEdit4.TabIndex = 17;
+            this.socmnd.Location = new System.Drawing.Point(80, 223);
+            this.socmnd.Name = "socmnd";
+            this.socmnd.Size = new System.Drawing.Size(133, 20);
+            this.socmnd.TabIndex = 17;
             // 
             // label10
             // 
@@ -326,19 +325,19 @@
             this.label10.TabIndex = 16;
             this.label10.Text = "&Số CMND";
             // 
-            // comboBoxEdit4
+            // cbbtinhtranghn
             // 
-            this.comboBoxEdit4.Location = new System.Drawing.Point(413, 181);
-            this.comboBoxEdit4.Name = "comboBoxEdit4";
-            this.comboBoxEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbbtinhtranghn.Location = new System.Drawing.Point(413, 181);
+            this.cbbtinhtranghn.Name = "cbbtinhtranghn";
+            this.cbbtinhtranghn.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit4.Properties.Items.AddRange(new object[] {
+            this.cbbtinhtranghn.Properties.Items.AddRange(new object[] {
             "Độc Thân",
             "Có Gia Đình",
             "Ly Hôn",
             "Ly Thân"});
-            this.comboBoxEdit4.Size = new System.Drawing.Size(94, 20);
-            this.comboBoxEdit4.TabIndex = 15;
+            this.cbbtinhtranghn.Size = new System.Drawing.Size(94, 20);
+            this.cbbtinhtranghn.TabIndex = 15;
             // 
             // label9
             // 
@@ -367,12 +366,12 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "&Tôn Giáo";
             // 
-            // textEdit3
+            // txtdiachi
             // 
-            this.textEdit3.Location = new System.Drawing.Point(80, 130);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(351, 20);
-            this.textEdit3.TabIndex = 9;
+            this.txtdiachi.Location = new System.Drawing.Point(80, 130);
+            this.txtdiachi.Name = "txtdiachi";
+            this.txtdiachi.Size = new System.Drawing.Size(351, 20);
+            this.txtdiachi.TabIndex = 9;
             // 
             // label6
             // 
@@ -383,12 +382,12 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "&Địa Chỉ";
             // 
-            // textEdit2
+            // txtnoisinh
             // 
-            this.textEdit2.Location = new System.Drawing.Point(80, 93);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(351, 20);
-            this.textEdit2.TabIndex = 7;
+            this.txtnoisinh.Location = new System.Drawing.Point(80, 93);
+            this.txtnoisinh.Name = "txtnoisinh";
+            this.txtnoisinh.Size = new System.Drawing.Size(351, 20);
+            this.txtnoisinh.TabIndex = 7;
             // 
             // label5
             // 
@@ -399,15 +398,15 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "&Nơi Sinh";
             // 
-            // textEdit1
+            // ngaysinh
             // 
-            this.textEdit1.Location = new System.Drawing.Point(309, 48);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Mask.BeepOnError = true;
-            this.textEdit1.Properties.Mask.EditMask = "99/99/9999";
-            this.textEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
-            this.textEdit1.Size = new System.Drawing.Size(122, 20);
-            this.textEdit1.TabIndex = 5;
+            this.ngaysinh.Location = new System.Drawing.Point(309, 48);
+            this.ngaysinh.Name = "ngaysinh";
+            this.ngaysinh.Properties.Mask.BeepOnError = true;
+            this.ngaysinh.Properties.Mask.EditMask = "99/99/0000";
+            this.ngaysinh.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
+            this.ngaysinh.Size = new System.Drawing.Size(122, 20);
+            this.ngaysinh.TabIndex = 5;
             // 
             // label4
             // 
@@ -427,17 +426,17 @@
             this.separatorControl1.Size = new System.Drawing.Size(75, 56);
             this.separatorControl1.TabIndex = 3;
             // 
-            // comboBoxEdit1
+            // cbbgioitinh
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(80, 48);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbbgioitinh.Location = new System.Drawing.Point(80, 48);
+            this.cbbgioitinh.Name = "cbbgioitinh";
+            this.cbbgioitinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
+            this.cbbgioitinh.Properties.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(100, 20);
-            this.comboBoxEdit1.TabIndex = 2;
+            this.cbbgioitinh.Size = new System.Drawing.Size(100, 20);
+            this.cbbgioitinh.TabIndex = 2;
             // 
             // label3
             // 
@@ -452,7 +451,7 @@
             // 
             this.groupControl2.Controls.Add(this.separatorControl6);
             this.groupControl2.Controls.Add(this.separatorControl5);
-            this.groupControl2.Controls.Add(this.textEdit15);
+            this.groupControl2.Controls.Add(this.txthsl);
             this.groupControl2.Controls.Add(this.label25);
             this.groupControl2.Controls.Add(this.txttencd);
             this.groupControl2.Controls.Add(this.txtmacd);
@@ -474,6 +473,66 @@
             this.groupControl2.Size = new System.Drawing.Size(380, 313);
             this.groupControl2.TabIndex = 3;
             this.groupControl2.Text = "Trình độ chuyên môn";
+            // 
+            // separatorControl6
+            // 
+            this.separatorControl6.Location = new System.Drawing.Point(2, 199);
+            this.separatorControl6.Name = "separatorControl6";
+            this.separatorControl6.Size = new System.Drawing.Size(370, 23);
+            this.separatorControl6.TabIndex = 48;
+            // 
+            // separatorControl5
+            // 
+            this.separatorControl5.Location = new System.Drawing.Point(5, 107);
+            this.separatorControl5.Name = "separatorControl5";
+            this.separatorControl5.Size = new System.Drawing.Size(370, 23);
+            this.separatorControl5.TabIndex = 37;
+            // 
+            // txthsl
+            // 
+            this.txthsl.Location = new System.Drawing.Point(89, 272);
+            this.txthsl.Name = "txthsl";
+            this.txthsl.Size = new System.Drawing.Size(89, 20);
+            this.txthsl.TabIndex = 47;
+            this.txthsl.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textEdit15_KeyDown);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(23, 275);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(64, 13);
+            this.label25.TabIndex = 46;
+            this.label25.Text = "&Hệ số lương";
+            // 
+            // txttencd
+            // 
+            this.txttencd.Enabled = false;
+            this.txttencd.Location = new System.Drawing.Point(167, 236);
+            this.txttencd.Name = "txttencd";
+            this.txttencd.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txttencd.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txttencd.Properties.Appearance.Options.UseBackColor = true;
+            this.txttencd.Properties.Appearance.Options.UseFont = true;
+            this.txttencd.Size = new System.Drawing.Size(155, 20);
+            this.txttencd.TabIndex = 45;
+            // 
+            // txtmacd
+            // 
+            this.txtmacd.Location = new System.Drawing.Point(89, 236);
+            this.txtmacd.Name = "txtmacd";
+            this.txtmacd.Size = new System.Drawing.Size(72, 20);
+            this.txtmacd.TabIndex = 44;
+            this.txtmacd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtmacd_KeyDown);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(21, 239);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(41, 13);
+            this.label24.TabIndex = 43;
+            this.label24.Text = "&Chế độ";
             // 
             // txtchuyenmon
             // 
@@ -594,8 +653,8 @@
             // 
             // groupControl3
             // 
+            this.groupControl3.Controls.Add(this.cbbmanv);
             this.groupControl3.Controls.Add(this.txttennv);
-            this.groupControl3.Controls.Add(this.txtmanv);
             this.groupControl3.Controls.Add(this.label2);
             this.groupControl3.Controls.Add(this.label1);
             this.groupControl3.Location = new System.Drawing.Point(12, 22);
@@ -609,14 +668,6 @@
             this.txttennv.Name = "txttennv";
             this.txttennv.Size = new System.Drawing.Size(292, 20);
             this.txttennv.TabIndex = 3;
-            // 
-            // txtmanv
-            // 
-            this.txtmanv.Location = new System.Drawing.Point(112, 22);
-            this.txtmanv.Name = "txtmanv";
-            this.txtmanv.Size = new System.Drawing.Size(124, 20);
-            this.txtmanv.TabIndex = 2;
-            this.txtmanv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtmanv_KeyDown);
             // 
             // label2
             // 
@@ -650,6 +701,14 @@
             this.groupControl4.Name = "groupControl4";
             this.groupControl4.Size = new System.Drawing.Size(512, 147);
             this.groupControl4.TabIndex = 9;
+            // 
+            // txtsohd
+            // 
+            this.txtsohd.Location = new System.Drawing.Point(112, 30);
+            this.txtsohd.Name = "txtsohd";
+            this.txtsohd.Size = new System.Drawing.Size(207, 20);
+            this.txtsohd.TabIndex = 33;
+            this.txtsohd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtsohd_KeyDown);
             // 
             // cbbloaihd
             // 
@@ -729,33 +788,39 @@
             // 
             // btnadd
             // 
+            this.btnadd.Image = ((System.Drawing.Image)(resources.GetObject("btnadd.Image")));
             this.btnadd.Location = new System.Drawing.Point(600, 609);
             this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(57, 23);
+            this.btnadd.Size = new System.Drawing.Size(62, 28);
             this.btnadd.TabIndex = 32;
             this.btnadd.Text = "&Mới";
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // btnedit
             // 
+            this.btnedit.Image = ((System.Drawing.Image)(resources.GetObject("btnedit.Image")));
             this.btnedit.Location = new System.Drawing.Point(682, 609);
             this.btnedit.Name = "btnedit";
-            this.btnedit.Size = new System.Drawing.Size(60, 23);
+            this.btnedit.Size = new System.Drawing.Size(62, 28);
             this.btnedit.TabIndex = 33;
             this.btnedit.Text = "&Lưu";
+            this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
             // 
             // btndelete
             // 
+            this.btndelete.Image = ((System.Drawing.Image)(resources.GetObject("btndelete.Image")));
             this.btndelete.Location = new System.Drawing.Point(765, 609);
             this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(62, 23);
+            this.btndelete.Size = new System.Drawing.Size(62, 28);
             this.btndelete.TabIndex = 34;
             this.btndelete.Text = "&Xóa";
             // 
             // btnprint
             // 
+            this.btnprint.Image = ((System.Drawing.Image)(resources.GetObject("btnprint.Image")));
             this.btnprint.Location = new System.Drawing.Point(843, 609);
             this.btnprint.Name = "btnprint";
-            this.btnprint.Size = new System.Drawing.Size(59, 23);
+            this.btnprint.Size = new System.Drawing.Size(62, 28);
             this.btnprint.TabIndex = 35;
             this.btnprint.Text = "&IN";
             // 
@@ -773,37 +838,17 @@
             this.groupControl5.TabIndex = 36;
             this.groupControl5.Text = "Quá trình công tác";
             // 
-            // labelControl1
+            // txttenkhen
             // 
-            this.labelControl1.Location = new System.Drawing.Point(16, 102);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(62, 13);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "&Khen thưởng";
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Location = new System.Drawing.Point(17, 58);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(33, 13);
-            this.labelControl2.TabIndex = 1;
-            this.labelControl2.Text = "&Kỷ luật";
-            // 
-            // txtkyluat
-            // 
-            this.txtkyluat.Location = new System.Drawing.Point(87, 55);
-            this.txtkyluat.Name = "txtkyluat";
-            this.txtkyluat.Size = new System.Drawing.Size(73, 20);
-            this.txtkyluat.TabIndex = 2;
-            this.txtkyluat.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtkyluat_KeyDown);
-            // 
-            // txtkhen
-            // 
-            this.txtkhen.Location = new System.Drawing.Point(87, 99);
-            this.txtkhen.Name = "txtkhen";
-            this.txtkhen.Size = new System.Drawing.Size(73, 20);
-            this.txtkhen.TabIndex = 3;
-            this.txtkhen.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtkhen_KeyDown);
+            this.txttenkhen.Enabled = false;
+            this.txttenkhen.Location = new System.Drawing.Point(166, 99);
+            this.txttenkhen.Name = "txttenkhen";
+            this.txttenkhen.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txttenkhen.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txttenkhen.Properties.Appearance.Options.UseBackColor = true;
+            this.txttenkhen.Properties.Appearance.Options.UseFont = true;
+            this.txttenkhen.Size = new System.Drawing.Size(163, 20);
+            this.txttenkhen.TabIndex = 5;
             // 
             // txttenkl
             // 
@@ -817,63 +862,37 @@
             this.txttenkl.Size = new System.Drawing.Size(163, 20);
             this.txttenkl.TabIndex = 4;
             // 
-            // txttenkhen
+            // txtkhen
             // 
-            this.txttenkhen.Enabled = false;
-            this.txttenkhen.Location = new System.Drawing.Point(166, 99);
-            this.txttenkhen.Name = "txttenkhen";
-            this.txttenkhen.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.txttenkhen.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txttenkhen.Properties.Appearance.Options.UseBackColor = true;
-            this.txttenkhen.Properties.Appearance.Options.UseFont = true;
-            this.txttenkhen.Size = new System.Drawing.Size(163, 20);
-            this.txttenkhen.TabIndex = 5;
+            this.txtkhen.Location = new System.Drawing.Point(87, 99);
+            this.txtkhen.Name = "txtkhen";
+            this.txtkhen.Size = new System.Drawing.Size(73, 20);
+            this.txtkhen.TabIndex = 3;
+            this.txtkhen.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtkhen_KeyDown);
             // 
-            // label24
+            // txtkyluat
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(21, 239);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(41, 13);
-            this.label24.TabIndex = 43;
-            this.label24.Text = "&Chế độ";
+            this.txtkyluat.Location = new System.Drawing.Point(87, 55);
+            this.txtkyluat.Name = "txtkyluat";
+            this.txtkyluat.Size = new System.Drawing.Size(73, 20);
+            this.txtkyluat.TabIndex = 2;
+            this.txtkyluat.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtkyluat_KeyDown);
             // 
-            // txtmacd
+            // labelControl2
             // 
-            this.txtmacd.Location = new System.Drawing.Point(89, 236);
-            this.txtmacd.Name = "txtmacd";
-            this.txtmacd.Size = new System.Drawing.Size(72, 20);
-            this.txtmacd.TabIndex = 44;
-            this.txtmacd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtmacd_KeyDown);
+            this.labelControl2.Location = new System.Drawing.Point(17, 58);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(33, 13);
+            this.labelControl2.TabIndex = 1;
+            this.labelControl2.Text = "&Kỷ luật";
             // 
-            // txttencd
+            // labelControl1
             // 
-            this.txttencd.Enabled = false;
-            this.txttencd.Location = new System.Drawing.Point(167, 236);
-            this.txttencd.Name = "txttencd";
-            this.txttencd.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.txttencd.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txttencd.Properties.Appearance.Options.UseBackColor = true;
-            this.txttencd.Properties.Appearance.Options.UseFont = true;
-            this.txttencd.Size = new System.Drawing.Size(155, 20);
-            this.txttencd.TabIndex = 45;
-            // 
-            // textEdit15
-            // 
-            this.textEdit15.Location = new System.Drawing.Point(89, 272);
-            this.textEdit15.Name = "textEdit15";
-            this.textEdit15.Size = new System.Drawing.Size(89, 20);
-            this.textEdit15.TabIndex = 47;
-            this.textEdit15.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textEdit15_KeyDown);
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(23, 275);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(64, 13);
-            this.label25.TabIndex = 46;
-            this.label25.Text = "&Hệ số lương";
+            this.labelControl1.Location = new System.Drawing.Point(16, 102);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(62, 13);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "&Khen thưởng";
             // 
             // btnend
             // 
@@ -914,27 +933,15 @@
             this.btnbase.Size = new System.Drawing.Size(30, 30);
             this.btnbase.TabIndex = 5;
             // 
-            // separatorControl5
+            // cbbmanv
             // 
-            this.separatorControl5.Location = new System.Drawing.Point(5, 107);
-            this.separatorControl5.Name = "separatorControl5";
-            this.separatorControl5.Size = new System.Drawing.Size(370, 23);
-            this.separatorControl5.TabIndex = 37;
-            // 
-            // separatorControl6
-            // 
-            this.separatorControl6.Location = new System.Drawing.Point(2, 199);
-            this.separatorControl6.Name = "separatorControl6";
-            this.separatorControl6.Size = new System.Drawing.Size(370, 23);
-            this.separatorControl6.TabIndex = 48;
-            // 
-            // txtsohd
-            // 
-            this.txtsohd.Location = new System.Drawing.Point(112, 30);
-            this.txtsohd.Name = "txtsohd";
-            this.txtsohd.Size = new System.Drawing.Size(207, 20);
-            this.txtsohd.TabIndex = 33;
-            this.txtsohd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtsohd_KeyDown);
+            this.cbbmanv.FormattingEnabled = true;
+            this.cbbmanv.Location = new System.Drawing.Point(112, 21);
+            this.cbbmanv.Name = "cbbmanv";
+            this.cbbmanv.Size = new System.Drawing.Size(121, 21);
+            this.cbbmanv.TabIndex = 4;
+            this.cbbmanv.DropDown += new System.EventHandler(this.cbbmanv_DropDown);
+            this.cbbmanv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbbmanv_KeyDown_1);
             // 
             // BSH_NhanVien
             // 
@@ -964,22 +971,27 @@
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtdantoc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttongiao.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.noicap.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtemail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsdt.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ngaycap.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.socmnd.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbtinhtranghn.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtdiachi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnoisinh.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ngaysinh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbgioitinh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txthsl.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txttencd.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtmacd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtchuyenmon.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmapb.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmacv.Properties)).EndInit();
@@ -992,25 +1004,19 @@
             this.groupControl3.ResumeLayout(false);
             this.groupControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txttennv.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtmanv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             this.groupControl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsohd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbloaihd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
             this.groupControl5.ResumeLayout(false);
             this.groupControl5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtkyluat.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtkhen.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txttenkl.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttenkhen.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtmacd.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txttencd.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit15.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.separatorControl5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.separatorControl6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtsohd.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txttenkl.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtkhen.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtkyluat.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1020,40 +1026,39 @@
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.TextEdit txttennv;
-        private DevExpress.XtraEditors.TextEdit txtmanv;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.SimpleButton btnbase;
         private DevExpress.XtraEditors.SimpleButton btnprevious;
         private DevExpress.XtraEditors.SimpleButton btnnext;
         private DevExpress.XtraEditors.SimpleButton btnend;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.ComboBoxEdit cbbgioitinh;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private DevExpress.XtraEditors.SeparatorControl separatorControl1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private DevExpress.XtraEditors.TextEdit ngaysinh;
+        private System.Windows.Forms.DateTimePicker ngayvaolam;
         private System.Windows.Forms.Label label15;
-        private DevExpress.XtraEditors.TextEdit textEdit7;
+        private DevExpress.XtraEditors.TextEdit txtemail;
         private System.Windows.Forms.Label label14;
-        private DevExpress.XtraEditors.TextEdit textEdit6;
+        private DevExpress.XtraEditors.TextEdit txtsdt;
         private System.Windows.Forms.Label label13;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
+        private DevExpress.XtraEditors.TextEdit ngaycap;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
+        private DevExpress.XtraEditors.TextEdit socmnd;
         private System.Windows.Forms.Label label10;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit4;
+        private DevExpress.XtraEditors.ComboBoxEdit cbbtinhtranghn;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.TextEdit txtdiachi;
         private System.Windows.Forms.Label label6;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txtnoisinh;
         private System.Windows.Forms.Label label5;
         private DevExpress.XtraEditors.SeparatorControl separatorControl3;
         private DevExpress.XtraEditors.SeparatorControl separatorControl2;
-        private DevExpress.XtraEditors.TextEdit textEdit8;
+        private DevExpress.XtraEditors.TextEdit noicap;
         private System.Windows.Forms.Label label19;
         private DevExpress.XtraEditors.TextEdit txttentd;
         private DevExpress.XtraEditors.TextEdit txtmatd;
@@ -1082,7 +1087,7 @@
         private DevExpress.XtraEditors.ComboBoxEdit cbbloaihd;
         private System.Windows.Forms.Label label23;
         private DevExpress.XtraEditors.GroupControl groupControl5;
-        private DevExpress.XtraEditors.TextEdit textEdit15;
+        private DevExpress.XtraEditors.TextEdit txthsl;
         private System.Windows.Forms.Label label25;
         private DevExpress.XtraEditors.TextEdit txttencd;
         private DevExpress.XtraEditors.TextEdit txtmacd;
@@ -1096,5 +1101,6 @@
         private DevExpress.XtraEditors.SeparatorControl separatorControl6;
         private DevExpress.XtraEditors.SeparatorControl separatorControl5;
         private DevExpress.XtraEditors.TextEdit txtsohd;
+        private System.Windows.Forms.ComboBox cbbmanv;
     }
 }

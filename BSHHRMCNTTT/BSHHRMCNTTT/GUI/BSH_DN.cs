@@ -32,9 +32,6 @@ namespace BSHHRMCNTTT.SysForm
             //this.t_pass.Enter += new System.EventHandler(this.t_pass_Enter);
             //t_pass.Properties.UseSystemPasswordChar = false;
 
-
-
-
         }
 
         private void t_pass_EditValueChanged(object sender, EventArgs e)
@@ -51,7 +48,7 @@ namespace BSHHRMCNTTT.SysForm
             if (t_madv.Text.Trim().Equals(""))
             {
                 XtraMessageBox.Show(" Mã đơn vị không được để trống!");
-               
+
                 t_madv.Focus();
                 return;
             }
@@ -61,14 +58,18 @@ namespace BSHHRMCNTTT.SysForm
                 t_nsd.Focus();
                 return;
             }
-            string pass = MD5Encrypt.Encrypt(t_pass.Text);
+
+            InfoNSD.madv = t_madv.Text;
+            InfoNSD.nsd = t_nsd.Text;
+            InfoNSD.password = t_pass.Text;
+            string Password = MD5Encrypt.Encrypt(InfoNSD.password);
             SqlCommand cmd = new SqlCommand("SPBSH_NSD_DN", DBConnection.cnn);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@ma_dv", t_madv.Text);
-            cmd.Parameters.AddWithValue("@nsd", t_nsd.Text);
-            cmd.Parameters.AddWithValue("@matkhau",pass);
+            cmd.Parameters.AddWithValue("@ma_dv", InfoNSD.madv);
+            cmd.Parameters.AddWithValue("@nsd", InfoNSD.nsd);
+            cmd.Parameters.AddWithValue("@matkhau", Password);
             SqlDataReader dr = cmd.ExecuteReader();
-            while(dr.Read())
+            while (dr.Read())
             {
                 if (Int32.Parse(dr[0].ToString()) == 1)
                 {
@@ -103,7 +104,7 @@ namespace BSHHRMCNTTT.SysForm
             frmConnectDB frm = new frmConnectDB();
             frm.Show();
             this.Hide();
-                
+
         }
 
         private void t_madv_TextChanged(object sender, EventArgs e)
@@ -120,9 +121,9 @@ namespace BSHHRMCNTTT.SysForm
                     {
                         frmlselect frm = new frmlselect();
                         frm.caption = "Danh sách NSD";
-                        frm.query = "SELECT ma_dv as'Mã đơn vị',nsd as'NSD',quyendn as'Quyền',thoigiandn as'Thời gian ĐN gần nhất' FROM NSD";
-                        frm.cbbitem.Items.Add("nsd");
-                        frm.cbbitem.Items.Add("ma_dv");
+                        frm.query = "SELECT * FROM View_bsh_nsd";
+                        frm.cbbitem.Items.Add("Người sử dụng");
+                        frm.cbbitem.Items.Add("Mã đơn vị");
 
                         using (frm)
                         {
@@ -198,17 +199,17 @@ namespace BSHHRMCNTTT.SysForm
 
         private void frmlogin_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void frmlogin_Shown(object sender, EventArgs e)
         {
-            
+
         }
 
         private void frmlogin_KeyDown(object sender, KeyEventArgs e)
         {
-            
+
         }
 
         private void t_pass_EditValueChanged_1(object sender, EventArgs e)

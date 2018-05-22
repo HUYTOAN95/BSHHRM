@@ -76,7 +76,7 @@
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Location = new System.Drawing.Point(12, 31);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(411, 250);
+            this.groupControl1.Size = new System.Drawing.Size(411, 261);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Thông tin";
             // 
@@ -120,21 +120,23 @@
             // 
             // b_disconnect
             // 
+            this.b_disconnect.Cursor = System.Windows.Forms.Cursors.Hand;
             this.b_disconnect.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.b_disconnect.Location = new System.Drawing.Point(206, 214);
+            this.b_disconnect.Location = new System.Drawing.Point(216, 214);
             this.b_disconnect.Name = "b_disconnect";
-            this.b_disconnect.Size = new System.Drawing.Size(75, 23);
+            this.b_disconnect.Size = new System.Drawing.Size(66, 28);
             this.b_disconnect.TabIndex = 9;
-            this.b_disconnect.Text = "Bỏ Kết Nối";
+            this.b_disconnect.Text = "&Bỏ Kết Nối";
             this.b_disconnect.Click += new System.EventHandler(this.b_disconnect_Click);
             // 
             // b_connect
             // 
-            this.b_connect.Location = new System.Drawing.Point(112, 214);
+            this.b_connect.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.b_connect.Location = new System.Drawing.Point(132, 214);
             this.b_connect.Name = "b_connect";
-            this.b_connect.Size = new System.Drawing.Size(75, 23);
+            this.b_connect.Size = new System.Drawing.Size(66, 28);
             this.b_connect.TabIndex = 8;
-            this.b_connect.Text = "Kết Nối";
+            this.b_connect.Text = "&Kết Nối";
             this.b_connect.Click += new System.EventHandler(this.b_connect_Click);
             // 
             // labelControl4

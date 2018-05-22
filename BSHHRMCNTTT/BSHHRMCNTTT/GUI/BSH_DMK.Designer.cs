@@ -28,163 +28,195 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BSH_DMK));
             this.b_commit = new DevExpress.XtraEditors.SimpleButton();
             this.b_cancel = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.txtnhapla = new DevExpress.XtraEditors.TextEdit();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtmkmoi = new DevExpress.XtraEditors.TextEdit();
+            this.txtmkcu = new DevExpress.XtraEditors.TextEdit();
+            this.txtnsd = new DevExpress.XtraEditors.TextEdit();
+            this.txtmadv = new DevExpress.XtraEditors.TextEdit();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnhapla.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtmkmoi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtmkcu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnsd.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtmadv.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // b_commit
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(53, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mã đơn vị";
+            this.b_commit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.b_commit.Image = ((System.Drawing.Image)(resources.GetObject("b_commit.Image")));
+            this.b_commit.Location = new System.Drawing.Point(123, 254);
+            this.b_commit.Name = "b_commit";
+            this.b_commit.Size = new System.Drawing.Size(62, 28);
+            this.b_commit.TabIndex = 10;
+            this.b_commit.Text = "&Lưu";
+            this.b_commit.Click += new System.EventHandler(this.b_commit_Click);
             // 
-            // label2
+            // b_cancel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(53, 79);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "NSD";
+            this.b_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.b_cancel.Image = ((System.Drawing.Image)(resources.GetObject("b_cancel.Image")));
+            this.b_cancel.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.b_cancel.Location = new System.Drawing.Point(201, 254);
+            this.b_cancel.Name = "b_cancel";
+            this.b_cancel.Size = new System.Drawing.Size(62, 28);
+            this.b_cancel.TabIndex = 11;
+            this.b_cancel.Text = "&Hủy";
+            this.b_cancel.Click += new System.EventHandler(this.b_cancel_Click);
             // 
-            // label3
+            // groupControl1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(53, 124);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Mật khẩu cũ";
+            this.groupControl1.Controls.Add(this.txtnhapla);
+            this.groupControl1.Controls.Add(this.label5);
+            this.groupControl1.Controls.Add(this.label4);
+            this.groupControl1.Controls.Add(this.txtmkmoi);
+            this.groupControl1.Controls.Add(this.txtmkcu);
+            this.groupControl1.Controls.Add(this.txtnsd);
+            this.groupControl1.Controls.Add(this.txtmadv);
+            this.groupControl1.Controls.Add(this.label3);
+            this.groupControl1.Controls.Add(this.label2);
+            this.groupControl1.Controls.Add(this.label1);
+            this.groupControl1.Location = new System.Drawing.Point(19, 12);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(368, 229);
+            this.groupControl1.TabIndex = 12;
+            this.groupControl1.Text = "&Thông tin";
             // 
-            // textEdit1
+            // txtnhapla
             // 
-            this.textEdit1.Location = new System.Drawing.Point(143, 29);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(204, 20);
-            this.textEdit1.TabIndex = 3;
-            // 
-            // textEdit2
-            // 
-            this.textEdit2.Location = new System.Drawing.Point(143, 76);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(204, 20);
-            this.textEdit2.TabIndex = 4;
-            // 
-            // textEdit3
-            // 
-            this.textEdit3.Location = new System.Drawing.Point(143, 121);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(204, 20);
-            this.textEdit3.TabIndex = 5;
-            // 
-            // textEdit4
-            // 
-            this.textEdit4.Location = new System.Drawing.Point(143, 161);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(204, 20);
-            this.textEdit4.TabIndex = 6;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(53, 164);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Mật khẩu mới";
+            this.txtnhapla.Location = new System.Drawing.Point(124, 180);
+            this.txtnhapla.Name = "txtnhapla";
+            this.txtnhapla.Properties.UseSystemPasswordChar = true;
+            this.txtnhapla.Size = new System.Drawing.Size(201, 20);
+            this.txtnhapla.TabIndex = 19;
+            this.txtnhapla.Enter += new System.EventHandler(this.txtnhapla_Enter);
+            this.txtnhapla.Leave += new System.EventHandler(this.txtnhapla_Leave);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(48, 202);
+            this.label5.Location = new System.Drawing.Point(26, 183);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 13);
-            this.label5.TabIndex = 8;
+            this.label5.TabIndex = 18;
             this.label5.Text = "Nhập lại mật khẩu";
             // 
-            // textEdit5
+            // label4
             // 
-            this.textEdit5.Location = new System.Drawing.Point(146, 199);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(201, 20);
-            this.textEdit5.TabIndex = 9;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(31, 145);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 13);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Mật khẩu mới";
             // 
-            // b_commit
+            // txtmkmoi
             // 
-            this.b_commit.Location = new System.Drawing.Point(146, 247);
-            this.b_commit.Name = "b_commit";
-            this.b_commit.Size = new System.Drawing.Size(75, 23);
-            this.b_commit.TabIndex = 10;
-            this.b_commit.Text = "Ghi nhận";
+            this.txtmkmoi.Location = new System.Drawing.Point(124, 142);
+            this.txtmkmoi.Name = "txtmkmoi";
+            this.txtmkmoi.Properties.UseSystemPasswordChar = true;
+            this.txtmkmoi.Size = new System.Drawing.Size(201, 20);
+            this.txtmkmoi.TabIndex = 16;
             // 
-            // b_cancel
+            // txtmkcu
             // 
-            this.b_cancel.Location = new System.Drawing.Point(236, 247);
-            this.b_cancel.Name = "b_cancel";
-            this.b_cancel.Size = new System.Drawing.Size(75, 23);
-            this.b_cancel.TabIndex = 11;
-            this.b_cancel.Text = "Hủy Bỏ";
+            this.txtmkcu.Location = new System.Drawing.Point(124, 103);
+            this.txtmkcu.Name = "txtmkcu";
+            this.txtmkcu.Properties.UseSystemPasswordChar = true;
+            this.txtmkcu.Size = new System.Drawing.Size(201, 20);
+            this.txtmkcu.TabIndex = 15;
+            this.txtmkcu.Leave += new System.EventHandler(this.txtmkcu_Leave);
+            // 
+            // txtnsd
+            // 
+            this.txtnsd.Location = new System.Drawing.Point(124, 68);
+            this.txtnsd.Name = "txtnsd";
+            this.txtnsd.Size = new System.Drawing.Size(201, 20);
+            this.txtnsd.TabIndex = 14;
+            // 
+            // txtmadv
+            // 
+            this.txtmadv.Location = new System.Drawing.Point(124, 32);
+            this.txtmadv.Name = "txtmadv";
+            this.txtmadv.Size = new System.Drawing.Size(201, 20);
+            this.txtmadv.TabIndex = 13;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(31, 106);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 13);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Mật khẩu cũ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(31, 72);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(27, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "NSD";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(31, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Mã đơn vị";
             // 
             // BSH_DMK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(465, 290);
+            this.ClientSize = new System.Drawing.Size(403, 290);
+            this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.b_cancel);
             this.Controls.Add(this.b_commit);
-            this.Controls.Add(this.textEdit5);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textEdit4);
-            this.Controls.Add(this.textEdit3);
-            this.Controls.Add(this.textEdit2);
-            this.Controls.Add(this.textEdit1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.KeyPreview = true;
             this.Name = "BSH_DMK";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BSH - Đổi Mật Khẩu";
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
+            this.Load += new System.EventHandler(this.BSH_DMK_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BSH_DMK_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
+            this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnhapla.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtmkmoi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtmkcu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnsd.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtmadv.Properties)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
         private DevExpress.XtraEditors.SimpleButton b_commit;
         private DevExpress.XtraEditors.SimpleButton b_cancel;
+        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.TextEdit txtnhapla;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private DevExpress.XtraEditors.TextEdit txtmkmoi;
+        private DevExpress.XtraEditors.TextEdit txtmkcu;
+        private DevExpress.XtraEditors.TextEdit txtnsd;
+        private DevExpress.XtraEditors.TextEdit txtmadv;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

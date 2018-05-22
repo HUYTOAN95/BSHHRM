@@ -80,7 +80,7 @@ namespace BSHHRMCNTTT.GUI
                 {
                     string query = string.Format("SPBSH_TGIAO_XOA");
                     SqlParameter[] para = {
-                     new SqlParameter("@ma",ma),
+                    new SqlParameter("@ma",ma),
 
                 };
 

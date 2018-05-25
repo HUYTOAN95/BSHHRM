@@ -51,6 +51,8 @@
     <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraNavBar.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Portable.DataAnnotations, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Portable.DataAnnotations.1.0.0\lib\net45\Portable.DataAnnotations.dll</HintPath>
@@ -167,6 +169,13 @@
     <Compile Include="GUI\BSH_TrinhDo.Designer.cs">
       <DependentUpon>BSH_TrinhDo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\Hopdong.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hopdong.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Reports\LuongNV.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -194,6 +203,13 @@
       <DependentUpon>PhongBan.rpt</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TTNhanVien.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TTNhanVien.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="SO\InfoNSD.cs" />
     <Compile Include="SO\MD5Encrypt.cs" />
@@ -313,6 +329,11 @@
     <EmbeddedResource Include="GUI\BSH_NSD.resx">
       <DependentUpon>BSH_NSD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Hopdong.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Hopdong.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\LuongNV.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>LuongNV.cs</LastGenOutput>
@@ -331,6 +352,11 @@
     <EmbeddedResource Include="Reports\PhongBan.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>PhongBan.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TTNhanVien.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TTNhanVien.cs</LastGenOutput>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <None Include="App.config">
@@ -353,9 +379,23 @@
   <ItemGroup>
     <None Include="Icon\Oxygen-Icons.org-Oxygen-Apps-preferences-desktop-user-password.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\hrm.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hrm-cartoon-red-text-business-concept-doodle-illustration-human-resources-management-surrounded-stationery-web-banners-77654791.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5IMMCQ0M_400x400.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Phan-mem-quan-ly-HRM-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HRM_2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

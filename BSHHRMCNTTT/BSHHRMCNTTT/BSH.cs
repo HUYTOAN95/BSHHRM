@@ -20,34 +20,34 @@ namespace BSHHRMCNTTT
         {
             InitializeComponent();
         }
-        private bool IsFormActivated(Form form)
-        {
-            bool IsOpen = false;
-            if (MdiChildren.Count() > 0)
-            {
-                foreach (var item in MdiChildren)
-                {
-                    if (form.Name == item.Name)
-                    {
-                        xtraTabbedMdiManager.Pages[item].MdiChild.Activate();
-                        IsOpen = true;
-                    }
-                }
+        //private bool IsFormActivated(Form form)
+        //{
+        //    bool IsOpen = false;
+        //    if (MdiChildren.Count() > 0)
+        //    {
+        //        foreach (var item in MdiChildren)
+        //        {
+        //            if (form.Name == item.Name)
+        //            {
+        //                xtraTabbedMdiManager.Pages[item].MdiChild.Activate();
+        //                IsOpen = true;
+        //            }
+        //        }
 
-            }
-            return IsOpen;
+        //    }
+        //    return IsOpen;
 
-        }
-        private void ViewForm(Form _form)
-        {
-            if (!IsFormActivated(_form))
-            {
-                _form.MdiParent = this;
-                _form.StartPosition = FormStartPosition.CenterScreen;
-                _form.WindowState = FormWindowState.Normal;
-                _form.Show();
-            }
-        }
+        //}
+        //private void ViewForm(Form _form)
+        //{
+        //    if (!IsFormActivated(_form))
+        //    {
+        //        _form.MdiParent = this;
+        //        _form.StartPosition = FormStartPosition.CenterScreen;
+        //        _form.WindowState = FormWindowState.Normal;
+        //        _form.Show();
+        //    }
+        //}
         private void barButtonItemDN_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (XtraMessageBox.Show("Bạn muốn đăng xuất  !", "Thông Báo !", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -102,7 +102,8 @@ namespace BSHHRMCNTTT
 
         private void ItemHopdong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            BSH_HopDong frm = new BSH_HopDong();
+            frm.ShowDialog();
         }
 
         private void ItemPB_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

@@ -28,15 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BSH_BangLuong));
             this.GridView = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtNam = new DevExpress.XtraEditors.TextEdit();
-            this.labelvnd = new System.Windows.Forms.Label();
-            this.cbbthang = new DevExpress.XtraEditors.ComboBoxEdit();
             this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HSL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoNgayLV = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +41,11 @@
             this.NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Thang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtNam = new DevExpress.XtraEditors.TextEdit();
+            this.labelvnd = new System.Windows.Forms.Label();
+            this.cbbthang = new DevExpress.XtraEditors.ComboBoxEdit();
             this.btnloc = new DevExpress.XtraEditors.SimpleButton();
             this.btnpreview = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
@@ -74,10 +74,82 @@
             this.GridView.Location = new System.Drawing.Point(12, 47);
             this.GridView.Name = "GridView";
             this.GridView.ReadOnly = true;
-            this.GridView.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.GridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.GridView.Size = new System.Drawing.Size(913, 388);
             this.GridView.TabIndex = 0;
             this.GridView.Click += new System.EventHandler(this.GridView_Click);
+            // 
+            // MaNV
+            // 
+            this.MaNV.DataPropertyName = "MaNV";
+            this.MaNV.HeaderText = "Mã nhân viên";
+            this.MaNV.Name = "MaNV";
+            this.MaNV.ReadOnly = true;
+            this.MaNV.Width = 150;
+            // 
+            // HSL
+            // 
+            this.HSL.DataPropertyName = "HSL";
+            this.HSL.HeaderText = "Hệ số lương";
+            this.HSL.Name = "HSL";
+            this.HSL.ReadOnly = true;
+            // 
+            // SoNgayLV
+            // 
+            this.SoNgayLV.DataPropertyName = "SoNgayLV";
+            this.SoNgayLV.HeaderText = "Số ngày làm ";
+            this.SoNgayLV.Name = "SoNgayLV";
+            this.SoNgayLV.ReadOnly = true;
+            // 
+            // HSCV
+            // 
+            this.HSCV.DataPropertyName = "HSCV";
+            this.HSCV.HeaderText = "Hệ số chức vụ";
+            this.HSCV.Name = "HSCV";
+            this.HSCV.ReadOnly = true;
+            this.HSCV.Width = 150;
+            // 
+            // TrichKhoan
+            // 
+            this.TrichKhoan.DataPropertyName = "TrichKhoan";
+            dataGridViewCellStyle1.Format = "#,###";
+            dataGridViewCellStyle1.NullValue = "0";
+            this.TrichKhoan.DefaultCellStyle = dataGridViewCellStyle1;
+            this.TrichKhoan.HeaderText = "Trích khoản bảo hiểm";
+            this.TrichKhoan.Name = "TrichKhoan";
+            this.TrichKhoan.ReadOnly = true;
+            this.TrichKhoan.Width = 150;
+            // 
+            // LuongNhan
+            // 
+            this.LuongNhan.DataPropertyName = "LuongNhan";
+            dataGridViewCellStyle2.Format = "#,### ";
+            dataGridViewCellStyle2.NullValue = "0";
+            this.LuongNhan.DefaultCellStyle = dataGridViewCellStyle2;
+            this.LuongNhan.HeaderText = "Lương nhân";
+            this.LuongNhan.Name = "LuongNhan";
+            this.LuongNhan.ReadOnly = true;
+            // 
+            // NgayLap
+            // 
+            this.NgayLap.DataPropertyName = "NgayLap";
+            this.NgayLap.HeaderText = "Ngày lập";
+            this.NgayLap.Name = "NgayLap";
+            this.NgayLap.ReadOnly = true;
+            // 
+            // Thang
+            // 
+            this.Thang.DataPropertyName = "Thang";
+            this.Thang.HeaderText = "Tháng ";
+            this.Thang.Name = "Thang";
+            this.Thang.ReadOnly = true;
+            // 
+            // Nam
+            // 
+            this.Nam.DataPropertyName = "Nam";
+            this.Nam.HeaderText = "Năm";
+            this.Nam.Name = "Nam";
+            this.Nam.ReadOnly = true;
             // 
             // label1
             // 
@@ -134,71 +206,6 @@
             "12"});
             this.cbbthang.Size = new System.Drawing.Size(100, 20);
             this.cbbthang.TabIndex = 8;
-            // 
-            // MaNV
-            // 
-            this.MaNV.DataPropertyName = "MaNV";
-            this.MaNV.HeaderText = "Mã nhân viên";
-            this.MaNV.Name = "MaNV";
-            this.MaNV.Width = 150;
-            // 
-            // HSL
-            // 
-            this.HSL.DataPropertyName = "HSL";
-            this.HSL.HeaderText = "Hệ số lương";
-            this.HSL.Name = "HSL";
-            // 
-            // SoNgayLV
-            // 
-            this.SoNgayLV.DataPropertyName = "SoNgayLV";
-            this.SoNgayLV.HeaderText = "Số ngày làm ";
-            this.SoNgayLV.Name = "SoNgayLV";
-            // 
-            // HSCV
-            // 
-            this.HSCV.DataPropertyName = "HSCV";
-            this.HSCV.HeaderText = "Hệ số chức vụ";
-            this.HSCV.Name = "HSCV";
-            this.HSCV.Width = 150;
-            // 
-            // TrichKhoan
-            // 
-            this.TrichKhoan.DataPropertyName = "TrichKhoan";
-            dataGridViewCellStyle5.Format = "#,###";
-            dataGridViewCellStyle5.NullValue = "0";
-            this.TrichKhoan.DefaultCellStyle = dataGridViewCellStyle5;
-            this.TrichKhoan.HeaderText = "Trích khoản bảo hiểm";
-            this.TrichKhoan.Name = "TrichKhoan";
-            this.TrichKhoan.ReadOnly = true;
-            this.TrichKhoan.Width = 150;
-            // 
-            // LuongNhan
-            // 
-            this.LuongNhan.DataPropertyName = "LuongNhan";
-            dataGridViewCellStyle6.Format = "#,### ";
-            dataGridViewCellStyle6.NullValue = "0";
-            this.LuongNhan.DefaultCellStyle = dataGridViewCellStyle6;
-            this.LuongNhan.HeaderText = "Lương nhân";
-            this.LuongNhan.Name = "LuongNhan";
-            this.LuongNhan.ReadOnly = true;
-            // 
-            // NgayLap
-            // 
-            this.NgayLap.DataPropertyName = "NgayLap";
-            this.NgayLap.HeaderText = "Ngày lập";
-            this.NgayLap.Name = "NgayLap";
-            // 
-            // Thang
-            // 
-            this.Thang.DataPropertyName = "Thang";
-            this.Thang.HeaderText = "Tháng ";
-            this.Thang.Name = "Thang";
-            // 
-            // Nam
-            // 
-            this.Nam.DataPropertyName = "Nam";
-            this.Nam.HeaderText = "Năm";
-            this.Nam.Name = "Nam";
             // 
             // btnloc
             // 

@@ -80,6 +80,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.cbbmanv = new System.Windows.Forms.ComboBox();
             this.txttennv = new DevExpress.XtraEditors.TextEdit();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -108,7 +109,6 @@
             this.btnnext = new DevExpress.XtraEditors.SimpleButton();
             this.btnprevious = new DevExpress.XtraEditors.SimpleButton();
             this.btnbase = new DevExpress.XtraEditors.SimpleButton();
-            this.cbbmanv = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtdantoc.Properties)).BeginInit();
@@ -199,7 +199,7 @@
             this.txtdantoc.Location = new System.Drawing.Point(241, 181);
             this.txtdantoc.Name = "txtdantoc";
             this.txtdantoc.Size = new System.Drawing.Size(88, 20);
-            this.txtdantoc.TabIndex = 32;
+            this.txtdantoc.TabIndex = 8;
             this.txtdantoc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtdantoc_KeyDown);
             // 
             // txttongiao
@@ -207,7 +207,7 @@
             this.txttongiao.Location = new System.Drawing.Point(80, 181);
             this.txttongiao.Name = "txttongiao";
             this.txttongiao.Size = new System.Drawing.Size(88, 20);
-            this.txttongiao.TabIndex = 31;
+            this.txttongiao.TabIndex = 7;
             this.txttongiao.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txttongiao_KeyDown);
             // 
             // noicap
@@ -215,7 +215,7 @@
             this.noicap.Location = new System.Drawing.Point(260, 222);
             this.noicap.Name = "noicap";
             this.noicap.Size = new System.Drawing.Size(96, 20);
-            this.noicap.TabIndex = 30;
+            this.noicap.TabIndex = 11;
             // 
             // separatorControl3
             // 
@@ -238,7 +238,7 @@
             this.ngayvaolam.Name = "ngayvaolam";
             this.ngayvaolam.ShowUpDown = true;
             this.ngayvaolam.Size = new System.Drawing.Size(109, 21);
-            this.ngayvaolam.TabIndex = 27;
+            this.ngayvaolam.TabIndex = 14;
             // 
             // label15
             // 
@@ -254,7 +254,7 @@
             this.txtemail.Location = new System.Drawing.Point(98, 313);
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(252, 20);
-            this.txtemail.TabIndex = 25;
+            this.txtemail.TabIndex = 15;
             // 
             // label14
             // 
@@ -270,7 +270,7 @@
             this.txtsdt.Location = new System.Drawing.Point(98, 277);
             this.txtsdt.Name = "txtsdt";
             this.txtsdt.Size = new System.Drawing.Size(163, 20);
-            this.txtsdt.TabIndex = 23;
+            this.txtsdt.TabIndex = 13;
             // 
             // label13
             // 
@@ -289,7 +289,7 @@
             this.ngaycap.Properties.Mask.EditMask = "99/99/9999";
             this.ngaycap.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
             this.ngaycap.Size = new System.Drawing.Size(96, 20);
-            this.ngaycap.TabIndex = 21;
+            this.ngaycap.TabIndex = 12;
             // 
             // label12
             // 
@@ -314,7 +314,7 @@
             this.socmnd.Location = new System.Drawing.Point(80, 223);
             this.socmnd.Name = "socmnd";
             this.socmnd.Size = new System.Drawing.Size(133, 20);
-            this.socmnd.TabIndex = 17;
+            this.socmnd.TabIndex = 10;
             // 
             // label10
             // 
@@ -337,7 +337,7 @@
             "Ly Hôn",
             "Ly Thân"});
             this.cbbtinhtranghn.Size = new System.Drawing.Size(94, 20);
-            this.cbbtinhtranghn.TabIndex = 15;
+            this.cbbtinhtranghn.TabIndex = 9;
             // 
             // label9
             // 
@@ -371,7 +371,7 @@
             this.txtdiachi.Location = new System.Drawing.Point(80, 130);
             this.txtdiachi.Name = "txtdiachi";
             this.txtdiachi.Size = new System.Drawing.Size(351, 20);
-            this.txtdiachi.TabIndex = 9;
+            this.txtdiachi.TabIndex = 6;
             // 
             // label6
             // 
@@ -387,7 +387,7 @@
             this.txtnoisinh.Location = new System.Drawing.Point(80, 93);
             this.txtnoisinh.Name = "txtnoisinh";
             this.txtnoisinh.Size = new System.Drawing.Size(351, 20);
-            this.txtnoisinh.TabIndex = 7;
+            this.txtnoisinh.TabIndex = 5;
             // 
             // label5
             // 
@@ -406,7 +406,7 @@
             this.ngaysinh.Properties.Mask.EditMask = "99/99/0000";
             this.ngaysinh.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
             this.ngaysinh.Size = new System.Drawing.Size(122, 20);
-            this.ngaysinh.TabIndex = 5;
+            this.ngaysinh.TabIndex = 4;
             // 
             // label4
             // 
@@ -436,7 +436,7 @@
             "Nam",
             "Nữ"});
             this.cbbgioitinh.Size = new System.Drawing.Size(100, 20);
-            this.cbbgioitinh.TabIndex = 2;
+            this.cbbgioitinh.TabIndex = 3;
             // 
             // label3
             // 
@@ -471,7 +471,7 @@
             this.groupControl2.Location = new System.Drawing.Point(530, 96);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(380, 313);
-            this.groupControl2.TabIndex = 3;
+            this.groupControl2.TabIndex = 4;
             this.groupControl2.Text = "Trình độ chuyên môn";
             // 
             // separatorControl6
@@ -493,7 +493,7 @@
             this.txthsl.Location = new System.Drawing.Point(89, 272);
             this.txthsl.Name = "txthsl";
             this.txthsl.Size = new System.Drawing.Size(89, 20);
-            this.txthsl.TabIndex = 47;
+            this.txthsl.TabIndex = 25;
             this.txthsl.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textEdit15_KeyDown);
             // 
             // label25
@@ -522,7 +522,7 @@
             this.txtmacd.Location = new System.Drawing.Point(89, 236);
             this.txtmacd.Name = "txtmacd";
             this.txtmacd.Size = new System.Drawing.Size(72, 20);
-            this.txtmacd.TabIndex = 44;
+            this.txtmacd.TabIndex = 24;
             this.txtmacd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtmacd_KeyDown);
             // 
             // label24
@@ -551,7 +551,7 @@
             this.txtmapb.Location = new System.Drawing.Point(89, 81);
             this.txtmapb.Name = "txtmapb";
             this.txtmapb.Size = new System.Drawing.Size(88, 20);
-            this.txtmapb.TabIndex = 41;
+            this.txtmapb.TabIndex = 21;
             this.txtmapb.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtmapb_KeyDown);
             // 
             // txtmacv
@@ -559,7 +559,7 @@
             this.txtmacv.Location = new System.Drawing.Point(88, 36);
             this.txtmacv.Name = "txtmacv";
             this.txtmacv.Size = new System.Drawing.Size(89, 20);
-            this.txtmacv.TabIndex = 40;
+            this.txtmacv.TabIndex = 20;
             this.txtmacv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtmacv_KeyDown);
             // 
             // txtngoaingu
@@ -567,7 +567,7 @@
             this.txtngoaingu.Location = new System.Drawing.Point(88, 172);
             this.txtngoaingu.Name = "txtngoaingu";
             this.txtngoaingu.Size = new System.Drawing.Size(147, 20);
-            this.txtngoaingu.TabIndex = 39;
+            this.txtngoaingu.TabIndex = 23;
             // 
             // label19
             // 
@@ -596,7 +596,7 @@
             this.txtmatd.Location = new System.Drawing.Point(88, 135);
             this.txtmatd.Name = "txtmatd";
             this.txtmatd.Size = new System.Drawing.Size(52, 20);
-            this.txtmatd.TabIndex = 36;
+            this.txtmatd.TabIndex = 22;
             this.txtmatd.EditValueChanged += new System.EventHandler(this.txtmatd_EditValueChanged);
             this.txtmatd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtmatd_KeyDown);
             // 
@@ -660,14 +660,25 @@
             this.groupControl3.Location = new System.Drawing.Point(12, 22);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(624, 49);
-            this.groupControl3.TabIndex = 4;
+            this.groupControl3.TabIndex = 1;
+            // 
+            // cbbmanv
+            // 
+            this.cbbmanv.FormattingEnabled = true;
+            this.cbbmanv.Location = new System.Drawing.Point(112, 21);
+            this.cbbmanv.Name = "cbbmanv";
+            this.cbbmanv.Size = new System.Drawing.Size(121, 21);
+            this.cbbmanv.TabIndex = 1;
+            this.cbbmanv.DropDown += new System.EventHandler(this.cbbmanv_DropDown);
+            this.cbbmanv.SelectedIndexChanged += new System.EventHandler(this.cbbmanv_SelectedIndexChanged_1);
+            this.cbbmanv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbbmanv_KeyDown_1);
             // 
             // txttennv
             // 
             this.txttennv.Location = new System.Drawing.Point(308, 22);
             this.txttennv.Name = "txttennv";
             this.txttennv.Size = new System.Drawing.Size(292, 20);
-            this.txttennv.TabIndex = 3;
+            this.txttennv.TabIndex = 2;
             // 
             // label2
             // 
@@ -700,14 +711,14 @@
             this.groupControl4.Location = new System.Drawing.Point(12, 445);
             this.groupControl4.Name = "groupControl4";
             this.groupControl4.Size = new System.Drawing.Size(512, 147);
-            this.groupControl4.TabIndex = 9;
+            this.groupControl4.TabIndex = 3;
             // 
             // txtsohd
             // 
             this.txtsohd.Location = new System.Drawing.Point(112, 30);
             this.txtsohd.Name = "txtsohd";
             this.txtsohd.Size = new System.Drawing.Size(207, 20);
-            this.txtsohd.TabIndex = 33;
+            this.txtsohd.TabIndex = 16;
             this.txtsohd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtsohd_KeyDown);
             // 
             // cbbloaihd
@@ -722,7 +733,7 @@
             "3 Năm",
             "Không thời hạn"});
             this.cbbloaihd.Size = new System.Drawing.Size(100, 20);
-            this.cbbloaihd.TabIndex = 37;
+            this.cbbloaihd.TabIndex = 17;
             this.cbbloaihd.SelectedIndexChanged += new System.EventHandler(this.cbbloaihd_SelectedIndexChanged);
             // 
             // label23
@@ -741,7 +752,7 @@
             this.ngaykt.Name = "ngaykt";
             this.ngaykt.ShowUpDown = true;
             this.ngaykt.Size = new System.Drawing.Size(109, 21);
-            this.ngaykt.TabIndex = 35;
+            this.ngaykt.TabIndex = 19;
             // 
             // label22
             // 
@@ -759,7 +770,7 @@
             this.ngaybd.Name = "ngaybd";
             this.ngaybd.ShowUpDown = true;
             this.ngaybd.Size = new System.Drawing.Size(109, 21);
-            this.ngaybd.TabIndex = 33;
+            this.ngaybd.TabIndex = 18;
             // 
             // label21
             // 
@@ -792,7 +803,7 @@
             this.btnadd.Location = new System.Drawing.Point(600, 609);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(62, 28);
-            this.btnadd.TabIndex = 32;
+            this.btnadd.TabIndex = 28;
             this.btnadd.Text = "&Mới";
             this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
@@ -802,7 +813,7 @@
             this.btnedit.Location = new System.Drawing.Point(682, 609);
             this.btnedit.Name = "btnedit";
             this.btnedit.Size = new System.Drawing.Size(62, 28);
-            this.btnedit.TabIndex = 33;
+            this.btnedit.TabIndex = 29;
             this.btnedit.Text = "&Lưu";
             this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
             // 
@@ -812,8 +823,9 @@
             this.btndelete.Location = new System.Drawing.Point(765, 609);
             this.btndelete.Name = "btndelete";
             this.btndelete.Size = new System.Drawing.Size(62, 28);
-            this.btndelete.TabIndex = 34;
+            this.btndelete.TabIndex = 30;
             this.btndelete.Text = "&Xóa";
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
             // btnprint
             // 
@@ -821,8 +833,9 @@
             this.btnprint.Location = new System.Drawing.Point(843, 609);
             this.btnprint.Name = "btnprint";
             this.btnprint.Size = new System.Drawing.Size(62, 28);
-            this.btnprint.TabIndex = 35;
+            this.btnprint.TabIndex = 31;
             this.btnprint.Text = "&IN";
+            this.btnprint.Click += new System.EventHandler(this.btnprint_Click);
             // 
             // groupControl5
             // 
@@ -835,7 +848,7 @@
             this.groupControl5.Location = new System.Drawing.Point(531, 445);
             this.groupControl5.Name = "groupControl5";
             this.groupControl5.Size = new System.Drawing.Size(379, 145);
-            this.groupControl5.TabIndex = 36;
+            this.groupControl5.TabIndex = 5;
             this.groupControl5.Text = "Quá trình công tác";
             // 
             // txttenkhen
@@ -867,7 +880,7 @@
             this.txtkhen.Location = new System.Drawing.Point(87, 99);
             this.txtkhen.Name = "txtkhen";
             this.txtkhen.Size = new System.Drawing.Size(73, 20);
-            this.txtkhen.TabIndex = 3;
+            this.txtkhen.TabIndex = 27;
             this.txtkhen.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtkhen_KeyDown);
             // 
             // txtkyluat
@@ -875,7 +888,7 @@
             this.txtkyluat.Location = new System.Drawing.Point(87, 55);
             this.txtkyluat.Name = "txtkyluat";
             this.txtkyluat.Size = new System.Drawing.Size(73, 20);
-            this.txtkyluat.TabIndex = 2;
+            this.txtkyluat.TabIndex = 26;
             this.txtkyluat.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtkyluat_KeyDown);
             // 
             // labelControl2
@@ -902,7 +915,7 @@
             this.btnend.Location = new System.Drawing.Point(131, 598);
             this.btnend.Name = "btnend";
             this.btnend.Size = new System.Drawing.Size(30, 30);
-            this.btnend.TabIndex = 8;
+            this.btnend.TabIndex = 35;
             // 
             // btnnext
             // 
@@ -912,7 +925,7 @@
             this.btnnext.Location = new System.Drawing.Point(92, 598);
             this.btnnext.Name = "btnnext";
             this.btnnext.Size = new System.Drawing.Size(30, 30);
-            this.btnnext.TabIndex = 7;
+            this.btnnext.TabIndex = 34;
             // 
             // btnprevious
             // 
@@ -921,7 +934,7 @@
             this.btnprevious.Location = new System.Drawing.Point(53, 598);
             this.btnprevious.Name = "btnprevious";
             this.btnprevious.Size = new System.Drawing.Size(30, 30);
-            this.btnprevious.TabIndex = 6;
+            this.btnprevious.TabIndex = 33;
             // 
             // btnbase
             // 
@@ -931,17 +944,7 @@
             this.btnbase.Location = new System.Drawing.Point(15, 598);
             this.btnbase.Name = "btnbase";
             this.btnbase.Size = new System.Drawing.Size(30, 30);
-            this.btnbase.TabIndex = 5;
-            // 
-            // cbbmanv
-            // 
-            this.cbbmanv.FormattingEnabled = true;
-            this.cbbmanv.Location = new System.Drawing.Point(112, 21);
-            this.cbbmanv.Name = "cbbmanv";
-            this.cbbmanv.Size = new System.Drawing.Size(121, 21);
-            this.cbbmanv.TabIndex = 4;
-            this.cbbmanv.DropDown += new System.EventHandler(this.cbbmanv_DropDown);
-            this.cbbmanv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbbmanv_KeyDown_1);
+            this.btnbase.TabIndex = 32;
             // 
             // BSH_NhanVien
             // 
@@ -962,6 +965,7 @@
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
+            this.KeyPreview = true;
             this.Name = "BSH_NhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhân Viên";

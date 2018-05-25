@@ -41,7 +41,7 @@ namespace BSHHRMCNTTT.GUI
             }
             catch(SqlException ex)
             {
-                throw ex;
+                MessageBox.Show("Error" + ex);
             }
 
             crystalReportViewer1.ReportSource = cryRpt;

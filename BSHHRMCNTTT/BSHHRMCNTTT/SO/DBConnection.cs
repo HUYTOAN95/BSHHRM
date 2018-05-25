@@ -180,7 +180,7 @@ namespace BSHHRMCNTTT.SO
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = v_nameprc;
                 cmd.Parameters.AddRange(sqlparameter);
-                da.UpdateCommand = cmd;
+                //da.UpdateCommand = cmd;
                 cmd.ExecuteNonQuery();
             }
             catch (SqlException)

@@ -254,6 +254,8 @@ namespace BSHHRMCNTTT.GUI
                 ngaykt.Text = DateTime.Now.AddYears(2).ToString();
             else if (cbbloaihd.SelectedItem.ToString().Trim() == "3 Năm")
                 ngaykt.Text = DateTime.Now.AddYears(3).ToString();
+            else if (cbbloaihd.SelectedItem.ToString().Trim() == "Không thời hạn")
+                ngaykt.Text= ngaykt.MaxDate.ToShortDateString();
         }
 
         //private void txtmanv_KeyDown(object sender, KeyEventArgs e)
@@ -285,9 +287,9 @@ namespace BSHHRMCNTTT.GUI
         #region[AddRecord]
         private void AddRecord()
         {
-            //try
-            //{
-            DateTime v_ngaysinh = DateTime.Parse(ngaysinh.Text);
+            try
+            {
+                DateTime v_ngaysinh = DateTime.Parse(ngaysinh.Text);
             DateTime v_ngaybd = DateTime.Parse(ngaybd.Text);
             DateTime v_ngaykt = DateTime.Parse(ngaykt.Text);
             DateTime v_ngaycap = DateTime.Parse(ngaycap.Text);
@@ -329,86 +331,103 @@ namespace BSHHRMCNTTT.GUI
             if (i == true)
             {
                 XtraMessageBox.Show("Thêm mới bản ghi thành công !");
-                //LoadData();
-                //ClearData();
+                ClearData();
             }
             else
                 XtraMessageBox.Show("Thêm mới bản ghi lỗi !");
-            //}
-            //catch (Exception ex)
-            //{
-            //    throw ex;
-            //}
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
         #endregion
-        // xóa bản ghi 
-        //#region[DeleteRecord]
-        //private void DeleteRecord()
-        //{
-        //    string ma = GridView.CurrentRow.Cells[0].Value.ToString().Trim();
-        //    string bac = GridView.CurrentRow.Cells[1].Value.ToString().Trim();
-        //    if (XtraMessageBox.Show("Bạn muốn xóa bản ghi  !", "Thông Báo !", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-        //    {
-        //        try
-        //        {
-        //            string query = string.Format("SPBSH_BLU_XOA");
-        //            SqlParameter[] para = {
-        //             new SqlParameter("@ma",ma),
-        //             new SqlParameter("@bac",bac)
+        //xóa bản ghi
+        #region[DeleteRecord]
+        private void DeleteRecord()
+        {
+           
+            if (XtraMessageBox.Show("Bạn muốn xóa bản ghi  !", "Thông Báo !", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    string query = string.Format("SPBSH_NVIEN_XOA");
+                    SqlParameter[] para = {
+                     new SqlParameter("@manv",cbbmanv.Text)
+                                  };
 
-        //        };
+                    bool i = db.DeleteRecord(query, para);
+                    if (i == true)
+                    {
+                        XtraMessageBox.Show("Xóa bản ghi thành công !");
+                         ClearData();
+                    }
+                    else
+                        XtraMessageBox.Show("Xóa bản ghi lỗi !");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error" + ex);
+                }
+            }
+        }
+        #endregion
+        private void UpdateRecord()
+        {
+            try
+            {
+            DateTime v_ngaysinh = DateTime.Parse(ngaysinh.Text);
+            DateTime v_ngaybd = DateTime.Parse(ngaybd.Text);
+            DateTime v_ngaykt = DateTime.Parse(ngaykt.Text);
+            DateTime v_ngaycap = DateTime.Parse(ngaycap.Text);
+            DateTime v_ngayvaolam = DateTime.Parse(ngayvaolam.Text);
+            Decimal v_hsl = Decimal.Parse(txthsl.Text);
+            string query = string.Format("SPBSH_NVIEN_NH");
+            SqlParameter[] para = {
+                new SqlParameter("@manv",cbbmanv.Text),
+                new SqlParameter("@tennv",txttennv.Text),
+                new SqlParameter("@gioitinh", cbbgioitinh.Text),
+                new SqlParameter("@ngaysinh",v_ngaysinh) /*{Value=ngaysinh.Text }*/,
+                new SqlParameter("@noisinh",txtnoisinh.Text),
+                new SqlParameter("@diachi",txtdiachi.Text),
+                new SqlParameter("@matg",txttongiao.Text),
+                new SqlParameter("@madt",txtdantoc.Text),
+                new SqlParameter("@tthn",cbbtinhtranghn.Text),
+                new SqlParameter("@socmnd",socmnd.Text),
+                new SqlParameter("@ngaycap",v_ngaycap) /*{ Value=ngaycap.Text}*/,
+                new SqlParameter("@noicap",noicap.Text),
+                new SqlParameter("@sdt",txtsdt.Text),
+                new SqlParameter("@ngayvaolam",v_ngayvaolam),
+                new SqlParameter("@email",txtemail.Text),
+                new SqlParameter("@chucvu",txtmacv.Text),
+                new SqlParameter("@phongban",txtmapb.Text),
+                new SqlParameter("@trinhdo",txtmatd.Text),
+                new SqlParameter("@ngoaingu",txtngoaingu.Text),
+                new SqlParameter("@chedo",txtmacd.Text),
+                new SqlParameter("@hsl",v_hsl),
+                new SqlParameter("@makt",txtkhen.Text),
+                new SqlParameter("@makl",txtkyluat.Text),
+                new SqlParameter("@sohd",txtsohd.Text),
+                new SqlParameter("@loaihd",cbbloaihd.Text),
+                new SqlParameter("@ngaybd",v_ngaybd),
+                new SqlParameter("@ngaykt",v_ngaykt),
+                new SqlParameter("@StatementType", "EDIT")
 
-        //            bool i = db.DeleteRecord(query, para);
-        //            if (i == true)
-        //            {
-        //                XtraMessageBox.Show("Xóa bản ghi thành công !");
-        //                LoadData();
-        //                ClearData();
-        //            }
-        //            else
-        //                XtraMessageBox.Show("Xóa bản ghi lỗi !");
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            MessageBox.Show("Error" + ex);
-        //        }
-        //    }
-        //}
-        //#endregion
-        //#region[UpdateRecord]
-        //private void UpdateRecord()
-        //{
-        //    string ma = GridView.CurrentRow.Cells[0].Value.ToString().Trim();
-        //    string bac = GridView.CurrentRow.Cells[1].Value.ToString().Trim();
-        //    try
-        //    {
-        //        string query = string.Format("SPBSH_BLU_NH");
-        //        SqlParameter[] para = {
-        //        new SqlParameter("@ma",ma),
-        //        new SqlParameter("@bac",bac),
-        //        new SqlParameter("@hsl", txthsl.Text),
-        //        new SqlParameter("@StatementType", "EDIT")
-
-        //    };
-        //        bool i = db.AddRecord(query, para);
-        //        if (i == true)
-        //        {
-        //            XtraMessageBox.Show("Sửa đổi bản ghi thành công !");
-        //            LoadData();
-        //            ClearData();
-
-        //        }
-        //        else
-        //            XtraMessageBox.Show("Sửa đổi bản ghi lỗi !");
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Error" + ex);
-        //    }
-        //}
-
-        //#endregion
+            };
+            bool i = db.UpdateRecord(query, para);
+            if (i == true)
+            {
+                XtraMessageBox.Show("Cập nhật bản ghi thành công !");
+                ClearData();
+            }
+            else
+                XtraMessageBox.Show("Cập nhật bản ghi lỗi !");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         private void ClearData()
         {
             cbbmanv.Text = ""; txttennv.Text = ""; cbbgioitinh.Text = ""; txtngoaingu.Text = ""; txtsohd.Text = ""; txttenkhen.Text = ""; txttencv.Text = "";
@@ -467,6 +486,8 @@ namespace BSHHRMCNTTT.GUI
                 AddNew = false;
                 btnedit.Enabled = false;
             }
+            else
+                UpdateRecord();
         }
 
 
@@ -518,16 +539,50 @@ namespace BSHHRMCNTTT.GUI
         {
             try
             {
-                string query = string.Format("");
+                string query = string.Format("SPBSH_NHANVIEN_LKE");
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = SO.DBConnection.OpenConnection();
                 cmd.CommandText = query;
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@manv",cbbmanv.Text);
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
+                    txttennv.Text = dr[1].ToString();
+                    cbbgioitinh.Text = dr[2].ToString();
+                    string vngaysinh = dr[3].ToString();
+                    ngaysinh.Text = vngaysinh.Substring(0,10);
+                    txtnoisinh.Text = dr[4].ToString();
+                    txtdiachi.Text = dr[5].ToString();
+                    txttongiao.Text = dr[6].ToString();
+                    txtdantoc.Text = dr[7].ToString();
+                    cbbtinhtranghn.Text = dr[8].ToString();
+                    socmnd.Text = dr[9].ToString();
+                    noicap.Text = dr[10].ToString();
+                    ngaycap.Text = dr[11].ToString().Substring(0,10);
+                    txtsdt.Text = dr[12].ToString();
+                    ngayvaolam.Text = dr[13].ToString();
+                    txtemail.Text = dr[14].ToString();
+                    txtsohd.Text = dr[15].ToString();
+                    txtmacv.Text = dr[16].ToString();
+                    txtmapb.Text = dr[17].ToString();
+                    txtmatd.Text = dr[18].ToString();
+                    txtngoaingu.Text = dr[19].ToString();
+                    txtmacd.Text = dr[20].ToString();
+                    txthsl.Text = dr[21].ToString();
+                    txtkyluat.Text = dr[22].ToString();
+                    txtkhen.Text = dr[23].ToString();
+                    cbbloaihd.Text = dr[24].ToString();
+                    ngaybd.Text = dr[25].ToString();
+                    ngaykt.Text = dr[26].ToString();
+                    txttencv.Text = dr[27].ToString();
+                    txttenpb.Text = dr[28].ToString();
+                    txttentd.Text = dr[29].ToString();
+                    txtchuyenmon.Text = dr[30].ToString();
+                    txttencd.Text = dr[31].ToString();
+                    txttenkl.Text = dr[32].ToString();
+                    txttenkhen.Text = dr[33].ToString();
 
-                    dr.Read();
                 }
                 dr.Close();
             }
@@ -536,6 +591,23 @@ namespace BSHHRMCNTTT.GUI
                 MessageBox.Show("" + ex);
             }
 
+        }
+
+        private void cbbmanv_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            LoadData();
+            btnedit.Enabled = true;
+        }
+
+        private void btndelete_Click(object sender, EventArgs e)
+        {
+            DeleteRecord();
+        }
+
+        private void btnprint_Click(object sender, EventArgs e)
+        {
+            BSH_Report frm = new BSH_Report("TTNhanVien.rpt","SELECT * FROM NhanVien WHERE MaNV ='"+cbbmanv.Text+"'");
+            frm.ShowDialog();
         }
     }
 }

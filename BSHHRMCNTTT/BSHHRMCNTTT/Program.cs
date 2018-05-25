@@ -39,12 +39,14 @@ namespace BSHHRMCNTTT
             SkinManager.EnableMdiFormSkins();
             //UserLookAndFeel.Default.SetSkinStyle("Summer");
             UserLookAndFeel.Default.SkinName = "McSkin";
-            DevExpress.XtraEditors.WindowsFormsSettings.DefaultFont = new System.Drawing.Font("Tahoma", 9);
+            DevExpress.XtraEditors.WindowsFormsSettings.DefaultFont = new System.Drawing.Font("Tahoma",9);
 
-            //Application.Run(new SysForm.frmConnectDB());
+
+           //Application.Run(new SysForm.frmConnectDB());
             SO.DBConnection.InforConnect("127.0.0.1,1433", "BSHHRM", "admin", "admin");
             SO.DBConnection.OpenConnection();
-            Application.Run(new SysForm.BSH_NSD());
+            //Application.Run(new SysForm.BSH_NSD());
+            Application.Run(new BSH());
 
         }
     }

@@ -63,6 +63,16 @@ namespace BSHHRMCNTTT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _5IMMCQ0M_400x400 {
+            get {
+                object obj = ResourceManager.GetObject("5IMMCQ0M_400x400", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ampeross_Qetto_2_Settings {
             get {
                 object obj = ResourceManager.GetObject("Ampeross-Qetto-2-Settings", resourceCulture);
@@ -73,9 +83,50 @@ namespace BSHHRMCNTTT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hrm {
+            get {
+                object obj = ResourceManager.GetObject("hrm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HRM_2 {
+            get {
+                object obj = ResourceManager.GetObject("HRM_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hrm_cartoon_red_text_business_concept_doodle_illustration_human_resources_management_surrounded_stationery_web_banners_77654791 {
+            get {
+                object obj = ResourceManager.GetObject("hrm-cartoon-red-text-business-concept-doodle-illustration-human-resources-managem" +
+                        "ent-surrounded-stationery-web-banners-77654791", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Oxygen_Icons_org_Oxygen_Apps_preferences_desktop_user_password {
             get {
                 object obj = ResourceManager.GetObject("Oxygen-Icons.org-Oxygen-Apps-preferences-desktop-user-password", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Phan_mem_quan_ly_HRM_2 {
+            get {
+                object obj = ResourceManager.GetObject("Phan-mem-quan-ly-HRM-2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
